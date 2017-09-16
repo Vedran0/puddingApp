@@ -47,10 +47,19 @@ input{
   right: -200px;
   border-radius: 60px
 }
+
 .notice{
   border: 3px dashed $white;
   color: $white;
   background: $green;
   padding: 15px 20px 15px 20px;
   border-radius: 40px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
 }

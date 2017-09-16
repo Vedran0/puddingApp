@@ -13,6 +13,6 @@
     <%= yield %>
   </main>
   <%= render 'layouts/footer' %>
-  <%= render 'modals/modal' %>
+  <%= render 'modals/modal', about_page: @about_page if @about_page %>
 </body>
 </html>

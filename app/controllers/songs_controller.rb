@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_action :set_about_page, only: :index
 
   def index
     @songs = Song.all
@@ -48,6 +49,12 @@ class SongsController < ApplicationController
 
     def song_params
       params.require(:song).permit(:name, :url)
+    end
+
+    def set_about_page
+      @about_page = "<p>This is a list of our favorite songs.</p>
+                      <p>Here you can play the soundtracks of our story.</p>
+                      <p>Let's dance baby!.</p>"
     end
 
 end

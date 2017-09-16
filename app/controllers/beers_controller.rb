@@ -1,5 +1,6 @@
 class BeersController < ApplicationController
   before_action :set_beer, only: [:show, :edit, :update, :destroy]
+  before_action :set_about_page, only: :index
 
   def index
     @beers = Beer.all.order(rating: :desc)
@@ -50,4 +51,13 @@ class BeersController < ApplicationController
     def beer_params
       params.require(:beer).permit(:name, :image, :country, :rating, :beer_type)
     end
+
+
+    def set_about_page
+      @about_page = "<p>Beer, beer, beer...</p>
+                      <p>I think we plan to drink alot of it :)</p>
+                      <p>Who can remember them all, especially when it is us remembering xD</p>
+                      <p>I made this here so we can document it.</p>"
+    end
+
 end

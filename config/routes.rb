@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   resources :tournaments,   only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :matches,       only: [:new, :create, :edit, :update, :destroy]
 
+  %w( 404 422 500 ).each do |code|
+    get code, :to => "errors#show", :code => code
+  end
+
 end

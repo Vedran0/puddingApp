@@ -1,5 +1,6 @@
 class PostItsController < ApplicationController
   before_action :set_post_it, only: [:destroy]
+  before_action :set_about_page, only: :index
 
   def index
     @post_its = PostIt.all
@@ -36,5 +37,10 @@ class PostItsController < ApplicationController
 
     def post_it_params
       params.require(:post_it).permit(:pudding_id, :message)
+    end
+
+    def set_about_page
+      @about_page = "<p>If you need more explanation about this</p>
+                      <p>leave me a note and i'll contact you :P</p>"
     end
 end
