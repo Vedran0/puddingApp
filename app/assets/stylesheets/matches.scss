@@ -1,0 +1,43 @@
+.matches-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.match-outer-wrapper{
+  margin: 5px;
+  padding: 10px;
+  background-color: $white;
+  display: inline-block;
+  min-width: 300px;
+}
+.match-wrapper{
+  position: relative;
+  color: $brown;
+  padding: 30px;
+  border: 2px dashed $brown;
+}
+.match-links{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.match-date{
+  text-align: center;
+}
+.match-place{
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+}
+.match-results-wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+.match-result-wrapper{
+  font-size: 25px;
+  text-align: center;
+}
+.match-result{
+  font-size: 30px;
+}

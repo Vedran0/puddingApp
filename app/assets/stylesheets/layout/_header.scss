@@ -1,0 +1,24 @@
+.devise-header{
+  background-color: rgba(255,255,255,0.8);
+  padding-bottom: 15px;
+  transition: 0.3s all ease-out;
+  margin-bottom: 20px;
+}
+
+.header{
+  background-color: rgba(255,255,255,0.8);
+  padding-bottom: 15px;
+  transition: 0.3s all ease-out;
+}
+
+.devise-header:hover, .header:hover{
+  background-color: rgba(255,255,255,1);
+  padding-bottom: 15px;
+}
+
+.header-fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}

@@ -1,0 +1,46 @@
+.nav-title{
+  width: 30%;
+  float: left;
+  font-size: 40px;
+  padding: 5px 30px 0 30px;
+  margin: 0;
+  color: $yellow;
+  transition: 0.3s color ease-in;
+}
+.nav-title:hover{
+  color: lighten($brown, 30%);
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding-top: 10px;
+}
+
+.nav-link{
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px #4e342e;
+  text-align: center;
+  color: #4e342e;
+  border-bottom: 2px dashed transparent;
+  transition: all 0.2s ease-in;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.nav-link:active {
+  border-bottom: #4e342e;
+}
+
+
+.nav-link:hover, .nav-link:focus{
+  border-bottom: 2px dashed #4e342e;
+  transition: all 0.3s ease-in;
+
+}
+
+.nav-link-wrap {
+
+}

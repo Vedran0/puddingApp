@@ -1,0 +1,126 @@
+.clearfix {
+  overflow: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-inblock {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.center-inline-content {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center{
+  justify-content: center;
+}
+
+.flex-space-around{
+  justify-content: space-around;
+}
+
+.fixed-control{
+  position: fixed;
+  bottom: 15px;
+  right: 5px;
+}
+
+.what_is_this-button{
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 100px;
+}
+
+/*------------------------------------*\
+# TEXT
+\*------------------------------------*/
+
+.text--limiter {
+  max-width: 40rem;
+}
+
+.text--right {
+  text-align: right !important;
+}
+
+.full--height {
+  height: 100%;
+}
+
+.full--height-vh {
+  height: 100vh;
+}
+
+.full--width {
+  width: 100%;
+}
+
+.full--width-vw {
+  width: 100vw;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.margin--h2 {
+  @include breakpoint ($small) {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include breakpoint ($large) {
+    margin-bottom: 30px;
+  }
+}

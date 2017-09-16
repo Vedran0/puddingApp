@@ -1,0 +1,39 @@
+.beers-wrapper{
+  
+}
+
+.beer-outer_wrapper{
+  background-color: $white;
+  margin: 15px 0px;
+  padding: 15px;
+  border-radius: 15px;
+  .beer-wrapper{
+    color: $brown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 3px $brown dashed;
+    border-radius: 10px;
+    .beer-rating{
+      font-size: 30px;
+      color: $white;
+      background-color: $green;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    p{
+      padding: 20px;
+      font-size: 1.4rem;
+    }
+  }
+}
+.beer-links{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}

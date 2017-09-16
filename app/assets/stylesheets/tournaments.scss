@@ -1,0 +1,223 @@
+.tournaments-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tournament-outer-wrapper{
+  width: 400px;
+  background-color: $white;
+  margin: 15px 15px;
+  padding: 15px;
+  border-radius: 50px;
+  .tournament-wrapper{
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 40px;
+    .tournament-section{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .tournament-title{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      a{
+        transform: translateX(-30px);
+        padding: 3px 20px 3px 30px;
+      }
+    }
+    p{
+      color: $brown;
+      font-size: 1.4rem;
+      margin: 5px 0;
+    }
+  }
+}
+
+.tournament-active{
+  border: 2px $green dashed;
+}
+
+.tournament-finished{
+  border: 2px $yellow dashed;
+}
+
+.tournament-winner{
+  width: 100%;
+  text-align: center;
+}
+
+.tournament-score{
+  display: flex;
+  justify-content: center;
+}
+
+.tournament-show-title-outer-wrapper{
+  margin: 15px;
+  padding: 15px;
+  background-color: $white;
+  border-radius: 40px;
+}
+
+.tournament-show-title-wrapper{
+  border:2px dashed $brown;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $brown;
+  text-align: center;
+}
+
+.tournament-show-title{
+  color: $yellow;
+  font-size: 70px;
+}
+
+.tournament-show-dates{
+  font-size: 25px;
+}
+
+.tournament-show-links{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.tournament-pudding-score-outer-wrapper{
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  color: $brown;
+  padding: 15px;
+  background-color: $white;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.tournament-pudding-score-wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed $brown;
+  border-radius: 50px;
+}
+
+.tournament-pudding-score{
+  font-size: 100px;
+  color: $blue;
+}
+
+.winning{
+  color: $green;
+}
+
+.losing{
+  color: $red;
+}
+
+
+.tournament-pudding-name{
+  font-size: 40px;
+}
+/*------------------------------------*\
+** RIBBON
+\*------------------------------------*/
+
+.badge-ribbon {
+  margin-left: 30px;
+  position: relative;
+  background: $yellow;
+  height: 50px;
+  width: 50px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  z-index: 3;
+}
+
+.badge-ribbon:before, .badge-ribbon:after{
+  content: '';
+  position: absolute;
+  border-bottom: 35px solid $yellow;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  top: 35px;
+  left: -5px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  -o-transform: rotate(-140deg);
+}
+
+.badge-ribbon:after{
+  left: auto;
+  right: -5px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+}
+
+.winner-ribbon {
+  margin-left: 30px;
+  position: absolute;
+  background: $yellow;
+  height: 50px;
+  width: 50px;
+  color: $white;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  z-index: 3;
+}
+
+.winner-ribbon:before, .winner-ribbon:after{
+  content: '';
+  position: absolute;
+  border-bottom: 35px solid $yellow;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  top: 35px;
+  left: -5px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-140deg);
+  -ms-transform: rotate(-140deg);
+  -o-transform: rotate(-140deg);
+}
+
+.winner-ribbon:after{
+  left: auto;
+  right: -5px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+}
+.winner-ribbon-wrapper{
+  transform: translate(-10px, 70px);
+}

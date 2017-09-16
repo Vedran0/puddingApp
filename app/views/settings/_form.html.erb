@@ -1,0 +1,70 @@
+<%= form_for @setting, html: {class: "form"} do |f| %>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Choose Background</div>
+    </div>
+  </div>
+</div>
+
+<% ["default", "green", "blue", "gray"].each do |background| %>
+<div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
+  <div class="background-option-wrapper">
+    <div class="background-option gradient-pattern-checked-<%= background %>">
+      
+    </div>
+  </div>
+</div>
+<% end %>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Choose Your Notes Text Color</div>
+    </div>
+  </div>
+</div>
+
+<% ["default", "blue", "red", "green"].each do |post_it_color| %>
+<div class="background-option-outer-wrapper js_post_it_color js_post_it_color-<%= post_it_color %>" value="<%= post_it_color %>" onclick="textColorOptionClicked($(this))" >
+  <div class="background-option-wrapper">
+    <div class="background-option settings-text sticker-color-<%= post_it_color %>">
+      Chose Meee!
+    </div>
+  </div>
+</div>
+<% end %>
+  <div class="field">
+    <%= f.hidden_field :post_it_color %>
+    <%= f.hidden_field :background %>
+  </div>
+
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <%= f.submit "Save Changes", class: "button button-green" %>
+      <%= link_to "Cancel", root_path, class: "button button-red" %>
+    </div>
+  </div>
+
+<% end %>
+
+<script>
+  $(function(){
+    $(".js_background-<%= current_pudding.setting.background %>").children("div").css( "border", "3px dashed green" );
+    $(".js_post_it_color-<%= current_pudding.setting.post_it_color %>").children("div").css( "border", "3px dashed green" );
+  });
+
+  function backgroundOptionClicked(clicked){
+    $(".js_background").children("div").css( "border", "3px dashed white" );
+    $(clicked).children("div").css( "border", "3px dashed green" );
+    $("#setting_background").attr("value", clicked.attr("value"));
+  }
+
+  function textColorOptionClicked(clicked){
+    $(".js_post_it_color").children("div").css( "border", "3px dashed white" );
+    $(clicked).children("div").css( "border", "3px dashed green" );
+    $("#setting_post_it_color").attr("value", clicked.attr("value"));
+  }
+
+</script>

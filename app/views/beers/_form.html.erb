@@ -1,0 +1,48 @@
+<%= form_for @beer, html: {class:"form"} do |f| %>
+  <%= render partial: 'layouts/error_messages', as: :object, object: @beer %>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Name</div>
+      <%= f.text_field :name, class: "text-field", placeholder: "Name..." %>
+    </div>
+  </div>
+
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Country</div>
+      <%= render 'countries_select' %>
+    </div>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="field">
+    <div><div class="input-title">Rating</div></div>
+    <%= f.range_field :rating, class: "range-field", min: 1, max: 1000 %>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Beer Type</div>
+      <select id="beer_beer_type" name="beer[beer_type]" class="select">
+        <option value="" disabled selected class="placeholder">Select beer type...</option>
+        <option value="Lager">Lager</option>
+        <option value="Craft">Craft</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <%= f.submit "Submit", class: "button button-green" %>
+      <%= link_to 'Back', beers_path, class: "button button-red" %>
+    </div>
+  </div>
+</div>
+<% end %>

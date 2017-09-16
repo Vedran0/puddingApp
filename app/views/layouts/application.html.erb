@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PuddingApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="gradient-pattern-checked-<%= current_pudding.setting.background %>">
+  <%= render 'layouts/header' %>
+  <%= render 'layouts/notices' %>
+  <main class="main">
+    <%= yield %>
+  </main>
+  <%= render 'layouts/footer' %>
+  <%= render 'modals/modal' %>
+</body>
+</html>

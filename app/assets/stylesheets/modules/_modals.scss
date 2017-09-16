@@ -1,0 +1,87 @@
+.modal-display-toggle{
+  display: none;
+}
+.modal{
+  position: absolute;
+  z-index: 999;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //background-color: rgba(0,0,0,0.5)
+}
+.modal-outer-wrapper{
+  position: fixed;
+  background: $white;
+  padding: 10px;
+  width: 700px;
+  height: 400px;
+  border-radius: 65px;
+}
+
+.modal-wrapper{
+  border: 2px dashed $blue;
+  background: $white;
+  height: 100%;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-text{
+  margin-bottom: 50px;
+  padding: 40px;
+  p{
+  padding:0;
+  margin: 0;
+  color: $brown;
+  font-size: 30px;
+  text-align: center;
+  }
+}
+
+.wrapped-control-center{
+  width: 100%;
+  text-align: center;
+}
+.wrapped-modal-control{
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+.control-outer-wrapper{
+  display: inline-block;
+  color: $brown;
+  font-size: 25px;
+  background-color: $green;
+  //border: 3px $green solid;
+  border-radius: 70px;
+  margin: 10px 0 30px 0;
+  transition: 0.1s background-color;
+}
+.control-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 50px;
+}
+
+.green-control{
+  cursor: pointer;
+  color: $white;
+  background-color: $green;
+  transition: 0.1s background-color;
+}
+
+.control-outer-wrapper:hover{
+  background-color: $white;
+  .green-control{
+    color: $green;
+      background-color: $white;
+  }
+}

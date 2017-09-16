@@ -1,0 +1,85 @@
+.sticker {
+  font-size: 30px;
+  box-sizing: border-box;
+  width: 229px;
+  height: 208px;
+  content: "";
+  padding: 60px 0 0;
+  border-top: 0 solid;
+  border-right: 0 solid;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  border-left: 1px solid rgba(0,0,0,0.2);
+  border-radius: 0 10px 200px / 0 200px 14px 250px;
+  color: $green;
+  text-align: center;
+  text-overflow: clip;
+  white-space: pre;
+  background: #fcf59b;
+  box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
+  transform: rotateZ(-4deg);
+  a{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+  }
+  a:hover{
+    background-color: transparent;
+  }
+  .link-red{
+    display: none;
+  }
+  margin: 20px;
+}
+
+.sticker:hover{
+  .link-red{
+    display: block;
+  }
+}
+
+.sticker-color-default{
+  color: $brown;
+}
+.sticker-color-red{
+  color: $red;
+}
+.sticker-color-blue{
+  color: $blue;
+}
+.sticker-color-green{
+  color: $green;
+}
+.settings-text{
+  font-size: 50px;
+}
+
+.sticker::after {
+  font-size: 30px;
+  box-sizing: content-box;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  content: "";
+  top: 9px;
+  right: 0;
+  left: 122px;
+  border: none;
+  border-radius: 30px;
+  color: rgba(0,0,0,0.9);
+  text-overflow: clip;
+  background: radial-gradient(circle closest-side, rgba(25,119,196,1) 0, rgba(25,119,196,1) 4%, rgba(12,113,201,1) 77%, rgba(255,255,255,0) 89%, rgba(255,255,255,0) 100%), radial-gradient(circle closest-side, rgba(0,0,0,0.4) 0, rgba(0,0,0,0.2) 81%, rgba(255,255,255,0) 92%, rgba(255,255,255,0) 100%), radial-gradient(closest-side, rgba(64,150,238,1) 0, rgba(64,150,238,1) 100%), rgba(255,255,255,0.9);
+  background-repeat: no-repeat;
+  background-position: 96% -4%, 71% 43%, 50% 50%;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 20px 20px, 20px 20px, auto auto;
+  box-shadow: -4px 8px 5px 1px rgba(0,0,0,0.2) ;
+  text-shadow: none;
+}
+
+.sticker-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,164 @@
+/*------------------------------------*\
+# LAYOUT
+\*------------------------------------*/
+
+.layout {
+
+  &--text {
+    max-width: $text-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--main {
+    max-width: $width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--full {
+    width: 100%;
+    padding-left: $gutter;
+    padding-right: $gutter;
+
+    @include breakpoint ($medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--padded {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    @include breakpoint ($medium) {
+      padding-top: 2 * $gutter;
+      padding-bottom: 2 * $gutter;
+    }
+  }
+
+  &--padded--double {
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+
+    @include breakpoint ($medium) {
+      padding-top: 4 * $gutter;
+      padding-bottom: 4 * $gutter;
+    }
+  }
+
+  &--soft-horizontal-pad {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.subsection {
+  margin-bottom: $gutter;
+}
+
+.section {
+  margin-bottom: $gutter;
+
+  @include breakpoint ($medium) {
+    margin-bottom: 2 * $gutter;
+  }
+}
+
+.section--double {
+  margin-bottom: 2 * $gutter;
+
+  @include breakpoint ($medium) {
+    margin-bottom: 4 * $gutter;
+  }
+}
+
+
+
+/*------------------------------------*\
+# GRID
+\*------------------------------------*/
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: no-wrap !important;
+}
+
+.grid--gutters {
+  margin-left: calc( #{$gutter} / -2 );
+  margin-right: calc( #{$gutter} / -2 );
+}
+
+.grid--gutters > .cell {
+  padding-left: calc( #{$gutter} / 2 );
+  padding-right: calc( #{$gutter} / 2 );
+}
+
+.grid--gutters--double {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+.grid--gutters--double > .cell {
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.cell {
+  box-sizing: border-box;
+}
+
+.cell--auto {
+  flex: 1;
+}
+
+@for $i from 1 through 12 {
+  .cell--#{$i} {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: calc( 100% * ( #{$i} / 12 ) )
+  }
+}
+
+@each $key, $value in $breakpoints {
+  @include breakpoint ($value) {
+    @for $i from 1 through 12 {
+      .cell--#{$i}--#{$key} {
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: calc( 100% * ( #{$i} / 12 ) )
+      }
+    }
+  }
+}
+
+
+/*------------------------------------*\
+# GRID UTILITIES
+\*------------------------------------*/
+
+.grid--center {
+  justify-content: center;
+}
+
+
+
+/*------------------------------------*\
+# CONTAINER
+\*------------------------------------*/
+
+.container {
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+}

@@ -1,0 +1,12 @@
+<nav class="nav">
+  <%= link_to root_path do %><h2 class="nav-title">PuddingApp</h2><% end %>
+  <%= link_to "JukeBox", songs_path, class: "nav-link" %>
+  <%= link_to "TastingCenter", beers_path, class: "nav-link" %>
+  <%= link_to "Tournaments", tournaments_path, class: "nav-link" %>
+  <%= link_to "Toolkit", toolkit_path, class: "nav-link" %>
+  <%= link_to "Bucketlist", things_path, class: "nav-link" %>
+  <%= link_to "Notes xD", post_its_path, class: "nav-link" %>
+  <%= link_to "Settings", edit_setting_path("Vedran"), class: "nav-link" %>
+  <%= link_to "About", about_path, class: "nav-link" %>
+  <%= link_to "LogOut", destroy_pudding_session_path, data: {method: :delete}, class: 'nav-link' %>
+</nav>

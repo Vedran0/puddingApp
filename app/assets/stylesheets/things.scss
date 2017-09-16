@@ -1,0 +1,48 @@
+.things-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+.thing-outer-wrapper{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  width: 300px;
+  background-color: $white;
+  border-radius: 160px 160px 30px 30px;
+  padding: 10px;
+}
+
+.thing-wrapper{
+  position: relative;
+  border: 2px $yellow dashed;
+  border-radius: 150px 150px 30px 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.thing-description{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  p{
+    text-align: center;
+    color: $brown;
+    font-size: 50px;
+  }
+}
+
+.thing-bottom-part{
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+
+.thing-hardness{
+  color: $blue;
+}

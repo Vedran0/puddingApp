@@ -1,0 +1,410 @@
+/*------------------------------------*\
+** FORMS
+\*------------------------------------*/
+
+.form{
+  width: 100%;
+  text-align: center;
+}
+
+.form-field{
+  width: 100%;
+  text-align: center;
+}
+
+.field{
+  margin: 15px;
+}
+
+/*------------------------------------*\
+** FORM ELEMENTS WRAPPER
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+** BUTTONS
+\*------------------------------------*/
+
+.button {
+  font-size: 25px;
+  padding: 5px 20px;
+  margin: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+}
+
+.button-red {
+  background-color: $red;
+  box-shadow: 0 5px darken($red, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-red:hover{
+  background-color: lighten($red, 5%);
+}
+.button-red:active{
+  background-color: darken($red, 3%);
+  box-shadow: 0 2px darken($red, 5%);
+  transform: translateY(3px);
+}
+
+.button-green {
+  background-color: $green;
+  box-shadow: 0 5px darken($green, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-green:hover{
+  background-color: lighten($green, 5%);
+}
+.button-green:active{
+  background-color: darken($green, 3%);
+  box-shadow: 0 2px darken($green, 5%);
+  transform: translateY(3px);
+}
+
+.button-yellow {
+  background-color: $yellow;
+  box-shadow: 0 5px darken($yellow, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-yellow:hover{
+  background-color: lighten($yellow, 5%);
+}
+.button-yellow:active{
+  background-color: darken($yellow, 3%);
+  box-shadow: 0 2px darken($yellow, 5%);
+  transform: translateY(3px);
+}
+
+.button-blue {
+  background-color: $blue;
+  box-shadow: 0 5px darken($blue, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-blue:hover{
+  background-color: lighten($blue, 5%);
+}
+.button-blue:active{
+  background-color: darken($blue, 3%);
+  box-shadow: 0 2px darken($blue, 5%);
+  transform: translateY(3px);
+}
+
+.ok_button-outer-wrapper{
+  background-color: $white;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 55px;
+  cursor: pointer;
+}
+
+.ok_button-wrapper{
+  color: $brown;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 55px;
+  border: 2px $brown dashed;
+}
+
+/*------------------------------------*\
+** TEXT FIELD
+\*------------------------------------*/
+
+.text-field {
+  font-size: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+  overflow: hidden;
+  border: none;
+  border-radius: 25px;
+  color: rgba(0,0,0,1);
+  text-decoration: normal;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 1px 1px rgba(130,123,123,1) inset;
+  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+.text-field:hover {
+  transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+.text-field:focus {
+  width: 350px;
+  cursor: default;
+  padding: -13px 20px 0;
+  transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+/*------------------------------------*\
+** RENGE FIELD
+\*------------------------------------*/
+$thumb-color: $yellow;
+$track-color: linear-gradient(to right, $red, $yellow , $green);
+$track-focus: linear-gradient(to right, $red, $yellow , $green);
+
+.range-field{
+  background-color: white;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 50px;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 1px 1px 1px rgba(130,123,123,1) inset;
+}
+.input-title{
+  background-color: $white;
+  height: 26px;
+  border-radius: 70px 70px 0 0;
+  display: inline-block;
+  padding: 5px 30px 0 30px;
+  color: $brown;
+  box-shadow: 1px 1px 1px rgba(130,123,123,1) inset;
+  transform: translateY(5px);
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 0;
+  width: 600px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+// THUMB
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: $thumb-color;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: $thumb-color;
+  cursor: pointer;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: $thumb-color;
+  cursor: pointer;
+}
+
+// TRACK
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: $track-color;
+  border-radius: 8px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: $track-color;
+  border-radius: 8px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $track-color;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: $track-color;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $track-focus;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $track-focus;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $track-focus;
+}
+
+/*------------------------------------*\
+** SELECT
+\*------------------------------------*/
+select::-ms-expand{
+  display: none;
+}
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;      
+  appearance: none;
+  padding: 2px 30px 2px 2px;
+}
+select {
+  font-family: $base-font-family;
+  font-size: 20px;
+  -webkit-appearance: none;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 1px 1px 1px rgba(130,123,123,1) inset;
+  width: 250px;
+  background-color: $white;
+  padding-left: 15px;
+  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+select:hover {
+  transition: all 500ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+select:focus {
+  width: 340px;
+  cursor: default;
+  padding: -13px 20px 0;
+  transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+/*------------------------------------*\
+** NUMBER FIELD
+\*------------------------------------*/
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.number-field {
+  font-size: 30px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  color: rgba(0,0,0,1);
+  user-select: none;
+  transform: translateX(1px);
+  box-shadow: 0 0px 1px 1px rgba(130,123,123,1) inset;
+  transition: all 502ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+}
+
+
+.number-field:focus {
+  cursor: default;
+}
+
+.form-field-outer-wrapper{
+  display: inline-block;
+  padding: 5px;
+  background-color: $white;
+  border-radius: 50px;
+  margin: 15px auto;
+}
+
+.form-field-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  padding: 20px;
+  border-radius: 50px;
+  border: 2px $brown dashed;
+  text-align: center;
+}
+.form-field-label{
+  color: $brown;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.number-field-control{
+  font-size: 60px;
+  width: 48px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(-3px, -3px);
+  user-select: none;
+  transition: 0.3s background-color ease-in;
+}
+.number-field-control:active{
+  transform: translateX(1px);
+}
+
+.number-field-decrement{
+  background-color: $red;
+  border-radius: 50px 0 0 50px;
+  box-shadow: 3px 3px darken($red, 15%);
+}
+
+.number-field-decrement:hover{
+  background-color: lighten($red, 5%);
+}
+
+.number-field-decrement:active{
+  box-shadow: 1px 1px darken($red, 15%);
+}
+
+.number-field-increment{
+  background-color: $green;
+  border-radius: 0 50px 50px 0;
+  box-shadow: 3px 3px darken($green, 15%);
+}
+
+.number-field-increment:hover{
+  background-color: lighten($green, 5%);
+}
+
+.number-field-increment:active{
+  box-shadow: 1px 1px darken($green, 15%);
+}

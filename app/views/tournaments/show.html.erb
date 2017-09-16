@@ -1,0 +1,53 @@
+<div class="tournament-show-title-outer-wrapper">
+  <div class="tournament-show-title-wrapper">
+    <div class="tournament-show-title">
+      <%= @tournament.name %>
+    </div>
+    <div class="tournament-show-dates">
+      <%= @tournament.created_at.strftime("%d.%m.%Y.") %> - <%= @tournament.end_date.strftime("%d.%m.%Y.") %>
+    </div>
+    <div class="tournament-show-links">
+      <%= link_to 'Edit', edit_tournament_path(@tournament), class: "link-yellow" %>
+      <%= link_to 'Destroy', @tournament, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+</div>
+<div class="tournament-score">
+  <% @tournament.puddings.each do |pudding| %>
+    <div class="tournament-pudding-score-outer-wrapper">
+      <div class="tournament-pudding-score-wrapper">
+        <%= winner_ribbon(pudding, @tournament) %>
+        <div class="tournament-pudding-score <%= score_color(pudding, @tournament) %>">
+          <%= @tournament.pudding_points(pudding) %>
+        </div>
+        <div class="tournament-pudding-name">
+          <%= pudding.name %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= link_to '+AddMatch', new_match_path(tournament_id: @tournament.id), class: "button button-blue fixed-control" if @tournament.active? %>
+<h2>Matches</h2>
+<div class="matches-wrapper">
+  <% @tournament.matches.each do |match| %>
+    <div class="match-outer-wrapper">
+      <div class="match-wrapper">
+        <div class="match-links">
+          <%= link_to "Edit", edit_match_path(match), class: "link-yellow" %>
+          <%= link_to 'Destroy', match, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="match-place"><%= match.place %></div>
+        <div class="match-date"><%= match.created_at.strftime("%d.%m.%Y.") %></div>
+        <div class="match-results-wrapper">
+          <% @tournament.puddings.each do |pudding| %>
+            <div class="match-result-wrapper">
+              <div class="match-player-name"><%= pudding.name %></div>
+              <div class="match-result <%= match_score_color(match, pudding) %>"><%= match.results.find_by(pudding_id: pudding.id).points %></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

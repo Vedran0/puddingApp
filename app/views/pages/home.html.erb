@@ -1,0 +1,1 @@
+<%= render 'post_its/note', post_it: PostIt.where.not(pudding_id: current_pudding.id).last if PostIt.where.not(pudding_id: current_pudding.id).any? %>

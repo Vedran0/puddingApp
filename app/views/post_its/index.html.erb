@@ -1,0 +1,11 @@
+<h1>Notes</h1>
+  <div class="sticker-wrapper">
+    <% @post_its.each do |post_it| %>
+      <div class="sticker sticker-color-<%= post_it.pudding.setting.post_it_color %>"><%= post_it.message %>
+        <%= link_to 'Delete', post_it, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+  </div>
+
+<div class="button button-blue what_is_this-button">What!?</div>
+<%= link_to '+AddNote', new_post_it_path, class: "button button-blue fixed-control" %>

@@ -1,0 +1,26 @@
+<h1>Tournaments</h1>
+
+<div class="tournaments-wrapper">
+  <% @tournaments.each_with_index do |tournament, index| %>
+      <div class="tournament-outer-wrapper">
+        <div class="tournament-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
+          <div class="tournament-title">
+            <div class="badge-ribbon"><%= index+1 %></div>
+            <%= link_to tournament.name, tournament, class:"link-big" %>
+          </div>
+          <div class="tournament-section">
+            <p><%= scoreboard(tournament) %></p>
+          </div>
+          <div class="tournament-section">
+            <p><%= time_left(tournament) %></p>
+          </div>
+        </div>
+      </div>
+    <%#= link_to 'Show', tournament %>
+    <%#= link_to 'Edit', edit_tournament_path(tournament) %>
+    <%#= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
+
+<div class="button button-blue what_is_this-button">What!?</div>
+<%= link_to '+AddTournament', new_tournament_path, class: "button button-green fixed-control" %>

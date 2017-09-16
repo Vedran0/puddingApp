@@ -1,0 +1,47 @@
+.gradient-pattern-checked-default{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  text-overflow: clip;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(200,0,0,0.498039) 50%, rgba(200,0,0,0.498039) 0), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(200,0,0,0.498039) 50%, rgba(200,0,0,0.498039) 0), #FFFFFF;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px 50px;
+}
+
+.gradient-pattern-checked-blue{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  text-overflow: clip;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(0,0,100,0.498039) 50%, rgba(0,0,100,0.498039) 0), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(0,0,100,0.498039) 50%, rgba(0,0,100,0.498039) 0), #FFFFFF;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px 50px;
+}
+
+.gradient-pattern-checked-green{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  text-overflow: clip;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(0,100,0,0.498039) 50%, rgba(0,100,0,0.498039) 0), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(0,100,0,0.498039) 50%, rgba(0,100,0,0.498039) 0), #FFFFFF;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px 50px;
+}
+
+.gradient-pattern-checked-gray{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  text-overflow: clip;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(30,30,30,0.498039) 50%, rgba(30,30,30,0.498039) 0), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(30,30,30,0.498039) 50%, rgba(30,30,30,0.498039) 0), #FFFFFF;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px 50px;
+}

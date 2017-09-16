@@ -1,0 +1,45 @@
+.patch_note-description-wrapper{
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: $white;
+  color: $brown;
+  border-radius: 55px;
+  h2{
+    color: $yellow;
+  }
+}
+.patch_note-description{
+  padding: 40px;
+  border: 2px dashed $yellow;
+  border-radius: 50px;
+  p{
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.about-wrapper{
+  h1{
+    color: $yellow;
+  }
+  width: 100%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding: 10px;
+  background: $white;
+  color: $brown;
+  border-radius: 60px;
+}
+.about{
+  padding: 40px 80px;
+  border: 2px dashed $yellow;
+  border-radius: 50px;
+  p{
+    font-size: 25px;
+    text-align: center;
+  }
+}
