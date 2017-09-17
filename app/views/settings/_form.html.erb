@@ -9,9 +9,10 @@
 </div>
 
 <% ["default", "green", "blue", "gray"].each do |background| %>
+<%# ["default", "green", "blue", "gray", "polka_dot_green", "madras_pink", "madras_green"].each do |background| %>
 <div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
   <div class="background-option-wrapper">
-    <div class="background-option gradient-pattern-checked-<%= background %>">
+    <div class="background-option background-pattern-<%= background %>">
       
     </div>
   </div>

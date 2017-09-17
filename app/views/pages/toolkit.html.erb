@@ -307,17 +307,6 @@ show of!
   </div>
 </div>
 
-    <div id="error_explanation">
-      <div class="alert-error-list">
-        <div class="error-wrapper">
-          <p class="error">This is error</p>
-        </div>
-        <div class="error-wrapper">
-          <p class="error">This is error</p>
-        </div>
-      </div>
-    </div>
-
 <div class="wrapped-text-center">
   <div class="text-outer-wrapper js_forms">
     <div class="text-wrapper">
@@ -326,65 +315,96 @@ show of!
   </div>
 </div>
 
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <div class="form-field-label">Vedran</div>
-      <input type="text" name="" placeholder="Text field..." class="text-field">
+  <div id="error_explanation">
+    <div class="alert-error-list">
+      <div class="error-wrapper">
+        <p class="error">*I am error</p>
+      </div>
+      <div class="error-wrapper">
+        <p class="error">*No, i am error!</p>
+      </div>
+    </div>
+  </div>
+
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Text</div>
+        <input type="text" name="" placeholder="Text field..." class="text-field">
+    </div>
   </div>
 </div>
 
-
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <div class="form-field-label">Vedran</div>
-    <div class="number-field-decrement number-field-control">-</div>
-      <input type="number" name="" value= 0 class="number-field" min="0" disabled>
-    <div class="number-field-increment number-field-control">+</div>
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Numbers</div>
+      <div class="number-field-decrement number-field-control">-</div>
+        <input type="number" name="" value= 0 class="number-field" min="0" disabled>
+      <div class="number-field-increment number-field-control">+</div>
+    </div>
   </div>
 </div>
 
-
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <div class="form-field-label">Vedran</div>
-      <select id="" name="" class="select">
-        <option disabled selected>Select option...</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper">
+        <div class="form-field-label">Select</div>
+          <select id="" name="" class="select">
+            <option disabled selected>Select option...</option>
+            <option>Option 1</option>
+            <option>Option 2</option>
+          </select>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-<div>
-  <div><div class="input-title">Rating</div></div>
-  <input type="range" class="range-field" min= 1 max= 1000 %>
-</div>
-</div>
-</div>
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper datetime-fields">
+        <div class="form-field-label">Date Selector</div>
+        <%= date_select :date_selector, start_year: DateTime.now.year %>
+      </div>
+    </div>
+  </div>
 
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <div>
-      <div><div class="input-title">Rating</div></div>
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">Rating</div>
       <input type="range" class="range-field" min= 1 max= 1000 %>
     </div>
   </div>
 </div>
 
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <%= link_to "Button", "#", class: "button button-red" %>
-    <%= link_to "Button", "#", class: "button button-green" %>
-    <%= link_to "Button", "#", class: "button button-blue" %>
-    <%= link_to "Button", "#", class: "button button-yellow" %>
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div>
+        <div><div class="input-title">Rating</div></div>
+        <input type="range" class="range-field" min= 1 max= 1000 %>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="form-field-outer-wrapper">
-  <div class="form-field-wrapper">
-    <%= link_to "Button", "#", class: "button button-red" %>
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <%= link_to "Red", "#", class: "button button-red" %>
+      <%= link_to "Green", "#", class: "button button-green" %>
+      <%= link_to "Blue", "#", class: "button button-blue" %>
+      <%= link_to "Yellow", "#", class: "button button-yellow" %>
+    </div>
+  </div>
+</div>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <%= link_to "Button", "#", class: "button button-red" %>
+    </div>
   </div>
 </div>
 

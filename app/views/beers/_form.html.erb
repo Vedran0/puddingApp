@@ -12,15 +12,16 @@
   <div class="form-field-outer-wrapper">
     <div class="form-field-wrapper">
       <div class="form-field-label">Country</div>
-      <%= render 'countries_select' %>
+      <%= f.select :country, options_for_select(countries, f.object.country), class: 'select' %>
     </div>
   </div>
 </div>
 
-<div class="form-field">
-  <div class="field">
-    <div><div class="input-title">Rating</div></div>
-    <%= f.range_field :rating, class: "range-field", min: 1, max: 1000 %>
+<div class="form-field-outer-wrapper">
+  <div class="form-field-wrapper">
+    <div class="form-field-label">Rating</div>
+      <%= f.range_field :rating, class: "range-field", min: 1, max: 1000 %>
+    </div>
   </div>
 </div>
 
@@ -28,11 +29,7 @@
   <div class="form-field-outer-wrapper">
     <div class="form-field-wrapper">
       <div class="form-field-label">Beer Type</div>
-      <select id="beer_beer_type" name="beer[beer_type]" class="select">
-        <option disabled selected class="placeholder">Select beer type...</option>
-        <option value="Lager">Lager</option>
-        <option value="Craft">Craft</option>
-      </select>
+      <%= f.select :beer_type, options_for_select([["Select beer type...", ""], "Lager", "Craft"], f.object.beer_type), class: 'select' %>
     </div>
   </div>
 </div>

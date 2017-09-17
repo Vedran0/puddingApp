@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="gradient-pattern-checked-<%= current_pudding.setting.background %>">
+<body class="background-pattern-<%= current_pudding.setting.background %>">
   <%= render 'layouts/header' %>
   <%= render 'layouts/notices' %>
   <main class="main">
