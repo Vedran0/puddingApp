@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_pudding!
   before_action :set_pudding_quote, if: :devise_controller?
 
-
-
   def set_pudding_quote
     unless params[:hint_step]
       @random_quote = get_default_quotes.sample()
@@ -45,4 +43,12 @@ class ApplicationController < ActionController::Base
               "...in notes.",
               "Open your phone and look it up!"]
   end
+
+  def check_resource_permission
+    question = Question.find_by(resource: params[:controller])
+    unless current_pudding.answered(question)
+      redirect_to new_answering_path(pudding_id: current_pudding.id, question_id: question.id)
+    end
+  end
+
 end

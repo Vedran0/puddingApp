@@ -1,6 +1,7 @@
 class BeersController < ApplicationController
   before_action :set_beer, only: [:show, :edit, :update, :destroy]
   before_action :set_about_page, only: :index
+  before_action :check_resource_permission
 
   def index
     @beers = Beer.all.order(rating: :desc)

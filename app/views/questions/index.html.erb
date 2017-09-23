@@ -1,0 +1,16 @@
+<h1>Listing Questions</h1>
+
+    <% @questions.each do |question| %>
+      <div class="text-outer-wrapper">
+        <div class="text-wrapper">
+          Resource: <%= question.resource %></br>
+          Q: <%= question.text %></br>
+          A: <%= question.answer %></br>
+          Date available: <%= question.date_available.strftime("%d.%m.%Y") %></br>
+          <%= link_to 'Edit', edit_question_path(question), class: "link-yellow" %>
+          <%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-red" %>
+        </div>
+      </div>
+    <% end %>
+
+<%= link_to '+New Question', new_question_path, class: "button button-green fixed-control" %>

@@ -3,16 +3,16 @@
       <h1>About PuddingApp</h1>
       <p>Pudding App was created to celebrate anniversary of one very special year.</p>
       <p>Whole application is designed and made by Ruby On Rails developer Vedran Mijatović as his first independent project. I think it is important to emphasize that PuddingApp doesen't contain any pictures and all its art is made exclusively with written code.</p>
-      <p>It is not finished and new patches will be released as well as new features on which you will be noticed through application.</p>
-      <p>If you notice some bugs or errors during your stay here, please, feel free to notify your personal developer xD</p>
+      <p>It's composed of 4728 lines of code (at moment this was written) of which at least 2000 are handwritten. Application is not finished and new patches will be released as well as new features of which you will be notfied through application.</p>
+      <p>If you notice some bugs or errors during your stay here, please, feel free to contact your personal developer xD</p>
     </div>
   </div>
   <h1>Patch Notes</h1>
-<% @patch_notes.each do |note| %>
-  <div class="patch_note-description-wrapper">
-    <div class="patch_note-description">
-      <h2><%= note.version %></h2>
-      <%= note.description.html_safe %>
+  <% @patch_notes.each do |note| %>
+    <div class="patch_note-description-wrapper">
+      <div class="patch_note-description">
+        <h2><%= note.version %></h2>
+        <%= note.description.html_safe %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>

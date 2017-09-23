@@ -1,0 +1,12 @@
+<% if @question.available %>
+  <%= render 'form' %>
+<% else %>
+  <div class="form-field">
+    <div class="answering-question">
+      This question will be available in <%= distance_of_time_in_words(DateTime.now, @question.date_available) %>
+    </div>
+  </div>
+  <div class="form-field">
+    <%= link_to "Go listen to some music", songs_path, class: "button button-blue" %>
+  </div>
+<% end %>

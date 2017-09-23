@@ -13,14 +13,8 @@
     <div class="form-field-outer-wrapper">
       <div class="form-field-wrapper">
         <div class="form-field-label">How hard it is?</div>
-          <select id="thing_achievement_heaviness" name="thing[achievement_heaviness]" class="select">
-            <option disabled selected>Select...</option>
-            <option value="1">Very easy</option>
-            <option value="2">Easy</option>
-            <option value="3">We will do it</option>
-            <option value="4">We CAN do it!</option>
-            <option value="5">One day</option>
-          </select>
+        <% heaviness = [["Very easy","1"],["Easy","2"],["We will do it","3"],["We CAN do it!","4"],["One day","5"]] %>
+        <%= f.select :achievement_heaviness, options_for_select(heaviness, f.object.achievement_heaviness), class: 'select' %>
       </div>
     </div>
   </div>

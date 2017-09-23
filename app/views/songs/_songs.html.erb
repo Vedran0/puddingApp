@@ -1,0 +1,41 @@
+<%= link_to "Play Random", "/jukebox?page=#{rand(1..@songs.total_pages)}&random=t", class: "button button-green", remote: true %>
+  <div class="songs-wrapper">
+    <% @songs.each do |song| %>
+      <%= render song %>
+    <% end %>
+  </div>
+
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper" style="padding: 3px;">
+        <div class="pagination-wrapper">
+          <div class="pagination-element-outer-wrapper outer-left">
+            <div class="pagination-element-wrapper inner-left">
+              <%= link_to 'Previous', "/jukebox?page=#{@songs.first_page? ? @songs.total_pages : @songs.current_page-1}", class: "pagination-element", remote: true %>
+            </div>
+          </div>
+          <% @songs.total_pages.times do |index| %>
+            <div class="pagination-element-outer-wrapper center <%= "active" if @songs.current_page-1 == index %>">
+              <div class="pagination-element-wrapper">
+                <%= link_to index+1, "/jukebox?page=#{index+1}", onclick: "$(this).addClass('active')", class: "pagination-element", remote: true %>
+              </div>
+            </div>
+          <% end %>
+          <div class="pagination-element-outer-wrapper outer-right">
+            <div class="pagination-element-wrapper inner-right">
+            <%= link_to 'Next', "/jukebox?page=#{@songs.last_page? ? 1 : @songs.current_page+1}" , class: "pagination-element", remote: true %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+<% if params[:random] %>
+  $(function(){
+    $(".song")[<%= rand(0..@songs.size-1) %>].src+= "&autoplay=1";
+  });
+<% end %>
+</script>

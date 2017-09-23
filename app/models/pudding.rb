@@ -22,15 +22,34 @@ class Pudding < ActiveRecord::Base
   has_many :tournaments, through: :tournament_players
 
   has_many :matches, through: :tournaments
-  has_many :results, through: :matches
+  has_many :results
 
   has_one :setting, dependent: :destroy
   has_many :post_its
+
+  has_many :answered
+  has_many :questions, through: :answered
 
   devise :database_authenticatable, :trackable
 
   def winning(tournament)
     tournament.pudding_winning == self ? true : false
+  end
+
+  def answered(question)
+    questions.include? question
+  end
+
+  def total_points
+    sum = 0
+    results.each do |result|
+      sum += result.points
+    end
+    sum
+  end
+
+  def total_points_status
+    total_points >= Pudding.where.not(id: id).first.total_points ? "winning" : "losing"
   end
 
 end

@@ -1,0 +1,18 @@
+<div class="match-outer-wrapper">
+  <div class="match-wrapper">
+    <div class="match-links">
+      <%= link_to "Edit", edit_match_path(match), class: "link-yellow" %>
+      <%= link_to 'Destroy', match, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+    <div class="match-place"><%= match.place %></div>
+    <div class="match-date"><%= match.created_at.strftime("%d.%m.%Y.") %></div>
+    <div class="match-results-wrapper">
+      <% match.puddings.each do |pudding| %>
+        <div class="match-result-wrapper">
+          <div class="match-player-name"><%= pudding.name %></div>
+          <div class="match-result <%= match_score_color(match, pudding) %>"><%= match.results.find_by(pudding_id: pudding.id).points %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

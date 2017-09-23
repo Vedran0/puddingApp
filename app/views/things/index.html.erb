@@ -1,19 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1>To Do</h1>
 
 
 <div class="things-wrapper">
   <% @things.each do |thing| %>
     <div class="thing-outer-wrapper">
-      <div class="thing-wrapper">
-        <div class="thing-description"><p><%= thing.description %></p></div>
-        <div class="thing-bottom-part">
-          <div class="thing-hardness" style="color: <%= achievement_heaviness_color(thing.achievement_heaviness) %>"><%= achievement_heaviness_text(thing.achievement_heaviness) %></div>
-          <%= link_to 'Edit', edit_thing_path(thing), class: "link-yellow" %>
-          <%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-red" %>
-          <a href="#" class="link-green">Mark as Done</a>
-        </div>
+      <div class="thing-wrapper js_thing-<%= thing.id %>">
+        <%= render 'things/thing', thing: thing %>
       </div>
     </div>
   <% end %>

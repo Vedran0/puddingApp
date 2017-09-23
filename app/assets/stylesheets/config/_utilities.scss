@@ -65,8 +65,20 @@
   justify-content: center;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-align-center{
+  align-content: center;
+}
+
 .flex-space-around{
   justify-content: space-around;
+}
+
+.flex-column{
+  flex-direction: column;
 }
 
 .fixed-control{

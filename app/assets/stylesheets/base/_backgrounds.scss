@@ -47,7 +47,23 @@
 }
 
 .background-pattern-polka_dot_green{
-  background-color:#00c853;
+  background-color:#4caf50;
+  background-image: radial-gradient(white 15%, transparent 16%),
+  radial-gradient(white 15%, transparent 16%);
+  background-size:90px 90px;
+  background-position: 0 0, 45px 45px;
+}
+
+.background-pattern-polka_dot_blue{
+  background-color:#0a0b28;
+  background-image: radial-gradient(white 15%, transparent 16%),
+  radial-gradient(white 15%, transparent 16%);
+  background-size:90px 90px;
+  background-position: 0 0, 45px 45px;
+}
+
+.background-pattern-polka_dot_orange{
+  background-color:#fb8c00;
   background-image: radial-gradient(white 15%, transparent 16%),
   radial-gradient(white 15%, transparent 16%);
   background-size:90px 90px;
@@ -82,4 +98,8 @@
   background-origin: padding-box;
   background-clip: border-box;
   background-size: auto auto;
+}
+
+[class^="background-pattern-"] {
+  background-attachment: fixed;
 }

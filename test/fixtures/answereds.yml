@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: answereds
+#
+#  id          :integer          not null, primary key
+#  pudding_id  :integer
+#  question_id :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pudding_id: 1
+  question_id: 1
+
+two:
+  pudding_id: 1
+  question_id: 1

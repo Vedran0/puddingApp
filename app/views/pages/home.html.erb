@@ -1,1 +1,68 @@
-<%= render 'post_its/note', post_it: PostIt.where.not(pudding_id: current_pudding.id).last if PostIt.where.not(pudding_id: current_pudding.id).any? %>
+<div class="flex flex-space-around flex-wrap">
+
+  <div class="flex flex-column">
+
+    <%= render 'post_its/note', post_it: @last_post_it if @last_post_it %>
+
+    <% if @random_thing %>
+
+    <div class="text-outer-wrapper">
+      <div class="text-wrapper">
+        Random Thing
+      </div>
+    </div>
+    <div class="thing-outer-wrapper">
+      <div class="thing-wrapper js_thing-<%= @random_thing.id %>">
+      <%= render 'things/thing', thing: @random_thing %>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+
+  <div class="flex flex-center flex-column">
+    <div class="text-outer-wrapper">
+      <div class="text-wrapper">
+        Song of the day
+      </div>
+    </div>
+    <%= render 'songs/song', song: @song_of_the_day %>
+  </div>
+
+</div>
+
+<div style="text-align: center;">
+  <% if @last_tasted_beer %>
+    <div class="text-outer-wrapper">
+      <div class="text-wrapper">
+        Last beer tasted <%= distance_of_time_in_words(@last_tasted_beer.created_at, DateTime.now) %> ago
+      </div>
+    </div>
+    <%= render 'beers/beer', beer: @last_tasted_beer, index: 0 %>
+  <% end %>
+  <div class="text-outer-wrapper">
+    <div class="text-wrapper">
+      All Matches Score
+    </div>
+  </div>
+  <div class="tournament-score">
+    <% @puddings.each do |pudding| %>
+    <div class="tournament-pudding-score-outer-wrapper">
+      <div class="tournament-pudding-score-wrapper">
+        <div class="tournament-pudding-score <%= pudding.total_points_status %>">
+          <%= pudding.total_points %>
+        </div>
+        <div class="tournament-pudding-name">
+          <%= pudding.name %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="matches-wrapper">
+  <% @last_matches.each do |match| %>
+    <%= render match %>
+  <% end %>
+</div>

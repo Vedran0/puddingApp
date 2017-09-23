@@ -1,17 +1,20 @@
 <% flash.each do |name, msg| %>
-  <% if msg.is_a?(String) and msg.length > 0 %>
-        <div class="js_close_flash">
-          <div data-alert class="<%= name.to_s == 'notice' ? 'success' : 'alert' %>">
-            <%= content_tag :p, msg %>
+  <div class="notification-wrapper <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+    <% if msg.is_a?(String) and msg.length > 0 %>
+          <div class="notification js_close_flash">
+            <div data-alert>
+              <%= msg %>
+            </div>
           </div>
-        </div>
-  <% end %>
+    <% end %>
+  </div>
 <% end %>
 
 <script>
-  // $(".js_close_flash").delay(5000);
-  // $(".js_close_flash").slideLeft(500,function() { $(".alert-box").remove() });
-  // $(".js_close_flash").on("click", function() {
-  //     $(".alert-box").slideUp(500,function() { $(".alert-box").remove() });
-  // });
+$(function(){
+  $(".notification-wrapper").css("width", "300px");
+  $(".js_close_flash").fadeIn(800);
+  $(".js_close_flash").delay(4500).fadeOut();
+  $(".notification-wrapper").delay(5000).fadeOut(800);
+});
 </script>

@@ -1,9 +1,14 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
   before_action :set_about_page, only: :index
+  before_action :check_resource_permission
 
   def index
-    @songs = Song.all
+    @songs = Song.order(created_at: :desc).page(params[:page]).per(4)
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def new

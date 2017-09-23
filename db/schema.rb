@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914125008) do
+ActiveRecord::Schema.define(version: 20170921123554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answereds", force: :cascade do |t|
+    t.integer  "pudding_id"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "beers", force: :cascade do |t|
     t.string   "name"
@@ -68,6 +75,16 @@ ActiveRecord::Schema.define(version: 20170914125008) do
 
   add_index "puddings", ["email"], name: "index_puddings_on_email", unique: true, using: :btree
 
+  create_table "questions", force: :cascade do |t|
+    t.string   "text"
+    t.string   "answer"
+    t.datetime "date_available"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "resource"
+    t.string   "path_name"
+  end
+
   create_table "results", force: :cascade do |t|
     t.integer  "match_id"
     t.integer  "pudding_id"
@@ -82,6 +99,13 @@ ActiveRecord::Schema.define(version: 20170914125008) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
     t.string   "post_it_color", default: "default"
+  end
+
+  create_table "song_of_the_days", force: :cascade do |t|
+    t.integer  "song_id"
+    t.date     "of_the_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "songs", force: :cascade do |t|

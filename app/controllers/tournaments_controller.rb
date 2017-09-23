@@ -2,6 +2,8 @@ class TournamentsController < ApplicationController
   before_action :set_tournament, only: [:show, :edit, :update, :destroy]
   before_action :set_tournament_players, only: :create
   before_action :set_about_page, only: :index
+  before_action :check_resource_permission
+
 
   def index
     @tournaments = Tournament.all

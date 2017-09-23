@@ -1,6 +1,7 @@
 class PostItsController < ApplicationController
   before_action :set_post_it, only: [:destroy]
   before_action :set_about_page, only: :index
+  before_action :check_resource_permission
 
   def index
     @post_its = PostIt.all

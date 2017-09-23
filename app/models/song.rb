@@ -11,7 +11,11 @@
 
 class Song < ActiveRecord::Base
 
+  has_many :song_of_the_days, dependent: :destroy
+
   validates_presence_of :name, :url
+
+  scope :random, -> {all.sample(1)}
 
   def strip_url
     stripped_url = self.url.split("watch?v=").last

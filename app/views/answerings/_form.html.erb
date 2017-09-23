@@ -1,0 +1,30 @@
+<%= form_for @answering, html: {class:"form"} do |f| %>
+  <%= render partial: 'layouts/error_messages', as: :object, object: @answering %>
+
+  <div class="form-field">
+    <div class="answering-question">
+      <%= @question.text %>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <div class="form-field-label answer">And Your Answer Iiiis:</div>
+    <%= f.text_field :answer, class: "answering-text-field" %>
+  </div>
+
+  <div class="answering-notice"><%= flash.notice %></div>
+  <div class="answering-alert"><%= flash.alert %></div>
+
+
+  <%= f.hidden_field :pudding_id, value: current_pudding.id %>
+  <%= f.hidden_field :question_id, value: @question.id %>
+
+  <%= f.submit "Answer", class: "button button-blue fixed-control" %>
+
+<% end %>
+
+<script>
+  $(function(){
+    $(".answering-text-field").focus();
+  });
+</script>

@@ -1,5 +1,6 @@
 class SettingsController < ApplicationController
   before_action :set_setting, only: [:show, :edit, :update, :destroy]
+  before_action :check_resource_permission
 
   def edit
   end

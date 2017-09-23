@@ -1,7 +1,14 @@
 class PagesController < ApplicationController
 before_action :set_about_page, only: :toolkit
+before_action :check_resource_permission, only: :home
 
   def home
+    @song_of_the_day = SongOfTheDay.today
+    @random_thing = Thing.all.sample
+    @last_tasted_beer = Beer.last
+    @puddings = Pudding.all
+    @last_matches = Match.last(3)
+    @last_post_it = PostIt.where.not(pudding_id: current_pudding.id).last
   end
 
   def toolkit
@@ -16,8 +23,8 @@ before_action :set_about_page, only: :toolkit
 
     def set_about_page
       @about_page = "<p>This is toolkit.</p>
-                      <p>Every project has one and this is a place where magic is born.</p>
-                      <p>Here i test the looks of things.</p>"
+                    <p>Every project has one and this is a place where magic is born.</p>
+                    <p>Here i test the looks of things.</p>"
     end
 
 end

@@ -8,7 +8,9 @@
 </head>
 <body class="background-pattern-<%= current_pudding.setting.background %>">
   <%= render 'layouts/header' %>
-  <%= render 'layouts/notices' %>
+  <div class="js_notices">
+    <%= render 'layouts/notices' %>
+  </div>
   <main class="main">
     <%= yield %>
   </main>
