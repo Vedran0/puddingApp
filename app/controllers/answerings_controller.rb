@@ -11,7 +11,7 @@ layout "answering"
     @answering = Answering.new(answering_params)
     if @answering.correct(@question)
       @question.answered.create(pudding_id: params[:answering][:pudding_id])
-      redirect_to "#{request.base_url}/#{@question.path_name}", notice: "Congrats! You have unlocked new feature!"
+      redirect_to "#{request.base_url}/#{@question.path_name}", notice: "Congrats! You have unlocked a new feature!"
     else
       flash.now[:alert] = "That is not correct :("
       render 'new'
