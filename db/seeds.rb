@@ -11,37 +11,37 @@ Question.create(text: "Kako se zove cvijet koji se u proljeće belji?",
                 answer: "betičica",
                 resource: "pages",
                 path_name: "",
-                date_available: DateTime.now#new(2017, 9, 26, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 26, 0, 0, 0))
 Question.create(text: "Koji ti je najdraži dan u tjednu?",
                 answer: "doručkovo",
                 resource: "songs",
                 path_name: "jukebox",
-                date_available: DateTime.now#new(2017, 9, 26, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 26, 0, 0, 0))
 Question.create(text: "Koja ti je najdraža životinja?",
                 answer: "vedran",
                 resource: "beers",
                 path_name: "tasting_center",
-                date_available: DateTime.now#new(2017, 9, 27, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 27, 0, 0, 0))
 Question.create(text: "Njegov nadimak?",
                 answer: "vektor",
                 resource: "post_its",
                 path_name: "notes",
-                date_available: DateTime.now#new(2017, 9, 27, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 27, 0, 0, 0))
 Question.create(text: "Ključ za Vedranovo otvaranje?",
                 answer: "pivo",
                 resource: "tournaments",
                 path_name: "tournaments",
-                date_available: DateTime.now#new(2017, 9, 28, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 28, 0, 0, 0))
 Question.create(text: "Što imaju zajedničko koza i konobar iz barce?",
                 answer: "glupi su",
                 resource: "things",
                 path_name: "bucketlist",
-                date_available: DateTime.now#new(2017, 9, 28, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 28, 0, 0, 0))
 Question.create(text: "Koje boje je torba?",
                 answer: "plave",
                 resource: "settings",
                 path_name: "settings",
-                date_available: DateTime.now#new(2017, 9, 29, 0, 0, 0))
+                date_available: DateTime.now)#new(2017, 9, 29, 0, 0, 0))
 puts "Questions created"
 
 # PatchNote.create(version: "version 1.0.0",
