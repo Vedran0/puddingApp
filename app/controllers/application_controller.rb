@@ -51,4 +51,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  private
+
+    def after_sign_out_path_for(pudding)
+      new_pudding_session_path
+    end
+
 end

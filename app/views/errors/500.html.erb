@@ -1,6 +1,9 @@
-<div class="page__error">
-
-  <h1 class="text--center"><%= t('text500') %></h1>
-  <p class="text--center"><%= t('error_bottom_text') %> <%= link_to t('our_homepage'), root_path, class: 'link' %>!</p>
-
+<div class="error-page-title">error 500, the worst one</div>
+<div class="error-page-description">
+  <div class="text-outer-wrapper">
+    <div class="text-wrapper">
+      Please remember what you did before this screen and contact Vedran so he can fix it.
+    </div>
+  </div></br>
+  <%= link_to "Return Home", root_path, class: "button button-blue" %>
 </div>

@@ -11,9 +11,11 @@
         Random Thing
       </div>
     </div>
-    <div class="thing-outer-wrapper">
-      <div class="thing-wrapper js_thing-<%= @random_thing.id %>">
-      <%= render 'things/thing', thing: @random_thing %>
+    <div class="things-wrapper">
+      <div class="thing-outer-wrapper">
+        <div class="thing-wrapper js_thing-<%= @random_thing.id %>">
+        <%= render 'things/thing', thing: @random_thing %>
+        </div>
       </div>
     </div>
     <% end %>

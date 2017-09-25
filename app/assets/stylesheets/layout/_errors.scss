@@ -18,3 +18,18 @@
       border: 2px dashed $white;
       border-radius: 35px;
     }
+
+.error-page-title{
+  font-family: $heading-font-family;
+  font-size: 80px;
+  text-shadow: -1px 0 $brown, 0 1px $brown, 1px 0 $brown, 0 -1px $brown;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.error-page-description{
+  text-align: center;
+  .text-outer-wrapper{
+    margin-top: 15px;
+  }
+}

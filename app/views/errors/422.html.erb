@@ -1,6 +1,9 @@
-<div class="page__error">
-
-  <h1 class="text--center"><%= t('text422') %></h1>
-  <p class="text--center"><%= t('error_bottom_text') %> <%= link_to t('our_homepage'), root_path, class: 'link' %>!</p>
-dsadsasa
+<div class="error-page-title">Error 422</div>
+<div class="error-page-description">
+  <div class="text-outer-wrapper">
+    <div class="text-wrapper">
+      Something went wrong :(
+    </div>
+  </div></br>
+  <%= link_to "Return Home", root_path, class: "button button-blue" %>
 </div>
