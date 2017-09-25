@@ -45,7 +45,7 @@
 # puts "Questions created"
 
 Question.all do |question|
-  Answering.create(pudding_id: Pudding.first, question_id: question.id)
+  Answered.create(pudding_id: Pudding.first, question_id: question.id)
 end
 
 # PatchNote.create(version: "version 1.0.0",
