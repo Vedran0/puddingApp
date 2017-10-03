@@ -1,0 +1,2 @@
+$(".js-random_button").attr("href", "/jukebox?page=<%= rand(1..@songs.total_pages) %>&random=t");
+$(".js-songs").html("<%= j render 'songs/songs' %>");

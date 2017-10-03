@@ -7,7 +7,7 @@
       <p>If you notice some bugs or errors during your stay here, please, feel free to contact your personal developer xD</p>
     </div>
   </div>
-  <h1>Patch Notes</h1>
+  <h1 class="js_patch_notes">Patch Notes</h1>
   <% @patch_notes.each do |note| %>
     <div class="patch_note-description-wrapper">
       <div class="patch_note-description">
@@ -16,3 +16,14 @@
       </div>
     </div>
   <% end %>
+
+<script>
+<% if params[:new_patch_note] == "t" %>
+  $(function(){
+    var $container = $("html,body");
+    var $scrollTo = $(".js_patch_notes");
+
+    $container.animate({scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop(), scrollLeft: 0},1000);
+  });
+<% end %>
+</script>

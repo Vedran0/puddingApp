@@ -17,6 +17,7 @@ before_action :check_resource_permission, only: :home
 
   def about
     @patch_notes = PatchNote.all.order(created_at: :desc)
+    current_pudding.setting.update(last_patch_seen: @patch_notes.first.id) if params[:new_patch_note] == "t"
   end
 
   private

@@ -1,1 +1,0 @@
-$(".js-songs").html("<%= j render 'songs/songs' %>");

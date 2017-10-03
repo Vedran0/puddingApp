@@ -44,14 +44,9 @@
 #                 date_available: DateTime.new(2017, 9, 29, 0, 0, 0))
 # puts "Questions created"
 
-Question.all do |question|
-  Answered.create(pudding_id: Pudding.first, question_id: question.id)
-end
-
-# PatchNote.create(version: "version 1.0.0",
-#                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
-# puts "Patch Note created"
-
+# Question.all do |question|
+#   Answered.create(pudding_id: Pudding.first, question_id: question.id)
+# end
 
 # Song.create(name: "Nuttin A Go So", url: "https://www.youtube.com/watch?v=0TnVU-Q0-Xs")
 # Song.create(name: "November Rain", url: "https://www.youtube.com/watch?v=8SbUC-UaAxE")
@@ -73,3 +68,11 @@ end
 # Song.create(name: "Honey", url: "https://www.youtube.com/watch?v=753_mUwbOJ4")
 # Song.create(name: "Escape", url: "https://www.youtube.com/watch?v=TazHNpt6OTo")
 # puts "Songs created"
+
+# PatchNote.create(version: "version 1.0.0",
+#                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
+# puts "Patch Note created"
+
+# PatchNote.create(version: "version 1.0.0",
+#                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
+# puts "Patch Note created"

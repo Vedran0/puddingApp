@@ -1,5 +1,15 @@
 <div class="button button-blue what_is_this-button"><strong>?</strong></div>
 
+<div class="patch_note-description-wrapper">
+  <div class="patch_note-description">
+    <h2>The new update is here!</h2>
+    <p>Click button to see what's new in your favorite app :)</p>
+    <div class="form-field">
+      <%= link_to "Show Me, Show Me, Show Meeeeee!", "#{request.base_url}/about?new_patch_note=t", class: "button button-green" %>
+    </div>
+  </div>
+</div>
+
 <h1>Toolkit</h1>
 <div class="wrapped-control-center">
   <div class="control-outer-wrapper js_things">

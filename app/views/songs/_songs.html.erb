@@ -1,4 +1,4 @@
-<%= link_to "Play Random", "/jukebox?page=#{rand(1..@songs.total_pages)}&random=t", class: "button button-green", remote: true %>
+<%#= link_to "Play Random", "/jukebox?page=#{rand(1..@songs.total_pages)}&random=t", class: "button button-green", remote: true %>
   <div class="songs-wrapper">
     <% @songs.each do |song| %>
       <%= render song %>
