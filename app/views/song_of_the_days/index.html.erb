@@ -1,0 +1,48 @@
+<h1>Time Travel</h1>
+
+<div class="js-songs">
+  <%= render 'song_of_the_days/song_of_the_days' %>
+</div>
+
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper" style="padding: 3px;">
+      <div class="pagination-wrapper">
+        <div class="pagination-element-outer-wrapper outer-left">
+          <div class="pagination-element-wrapper inner-left">
+            <%= link_to 'Previous', "/time_travel?page=#{@song_of_the_days.first_page? ? @song_of_the_days.total_pages : @song_of_the_days.current_page-1}", class: "pagination-element js_previous", remote: true %>
+          </div>
+        </div>
+        <div class="datepicker-wrapper">
+          <div class="datepicker-label">Pick a Date</div>
+          <%= form_tag song_of_the_days_path, method: :get, id: "time_travel_datepicker", remote: true do |f| %>
+           <input type="text" name="date_picked" onchange="$('#time_travel_datepicker').submit();" class="datepicker" placeholder="Click Here...">
+          <% end %>
+        </div>
+        <div class="pagination-element-outer-wrapper outer-right">
+          <div class="pagination-element-wrapper inner-right">
+            <%= link_to 'Next', "/time_travel?page=#{@song_of_the_days.last_page? ? 1 : @song_of_the_days.current_page+1}", class: "pagination-element js_next", remote: true %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="button button-blue what_is_this-button">What!?</div>
+
+<script>
+  function available(date) {
+    var availableDates = <%= raw get_available_dates.to_json %>;
+    dmy = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
+    console.log(dmy+' : '+($.inArray(dmy, availableDates)));
+    if ($.inArray(dmy, availableDates) != -1) {
+      return [true, "","Available"];
+    } else {
+      return [false,"","unAvailable"];
+    }
+  }
+  $(function() {
+    $('.datepicker').datepicker({ beforeShowDay: available, dateFormat: 'dd-mm-yy' });
+  });
+</script>

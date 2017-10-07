@@ -1,0 +1,5 @@
+<div class="songs-wrapper">
+  <% @song_of_the_days.each do |song_of_the_day| %>
+    <%= render 'song_of_the_days/song_of_the_day', song_of_the_day: song_of_the_day %>
+  <% end %>
+</div>

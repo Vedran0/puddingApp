@@ -73,6 +73,9 @@
 #                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
 # puts "Patch Note created"
 
-# PatchNote.create(version: "version 1.0.0",
-#                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
-# puts "Patch Note created"
+PatchNote.create(version: "version 1.1.2",
+                description: "<p>Here are our new changes, i hope you like it!</p>
+                              <p>New beer types added: <i>Dark Beer</i> and <i>Red Beer</i> so we can drink them all!.</p>
+                              <p>Now you can rewind time and see the song of any day you want in our JukeBox. The time travel is reaaaal!!</p>
+                              <p>You love polka dot! You just don't know it yet. Try out new background patterns called \"Polka Dot\"</p>")
+puts "Patch Note created"

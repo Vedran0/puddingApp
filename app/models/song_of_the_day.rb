@@ -27,4 +27,9 @@ class SongOfTheDay < ActiveRecord::Base
     song
   end
 
+  def page(order = :id, per_page = 2)
+    position = SongOfTheDay.order(of_the_day: :desc).where("#{order} >= ?", self.send(order)).count
+    (position.to_f/per_page).ceil
+  end
+
 end

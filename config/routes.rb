@@ -7,15 +7,16 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   devise_for :puddings
   resources :questions
-  resources :answerings,    only: [:new, :create]
+  resources :answerings,        only: [:new, :create]
   get "settings", to: "settings#edit"
-  resources :settings,      only: [:update]
-  resources :songs,         only: [:index, :new, :create, :edit, :update, :destroy], path: "jukebox"
-  resources :beers,         only: [:index, :new, :create, :edit, :update, :destroy], path: "tasting_center"
-  resources :things,        only: [:index, :new, :create, :edit, :update, :destroy], path: "bucketlist"
+  resources :settings,          only: [:update]
+  resources :songs,             only: [:index, :new, :create, :edit, :update, :destroy], path: "jukebox"
+  resources :song_of_the_days,  only: [:index], path: "time_travel"
+  resources :beers,             only: [:index, :new, :create, :edit, :update, :destroy], path: "tasting_center"
+  resources :things,            only: [:index, :new, :create, :edit, :update, :destroy], path: "bucketlist"
   get "change_status", to: "things#change_status"
-  resources :tournaments,   only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  resources :matches,       only: [:new, :create, :edit, :update, :destroy]
+  resources :tournaments,       only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :matches,           only: [:new, :create, :edit, :update, :destroy]
 
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code
