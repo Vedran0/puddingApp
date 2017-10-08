@@ -16,7 +16,7 @@
         <div class="datepicker-wrapper">
           <div class="datepicker-label">Pick a Date</div>
           <%= form_tag song_of_the_days_path, method: :get, id: "time_travel_datepicker", remote: true do |f| %>
-           <input type="text" name="date_picked" onchange="$('#time_travel_datepicker').submit();" class="datepicker" placeholder="Click Here...">
+           <input type="text" name="date_picked" class="datepicker time_travel_datepicker" placeholder="Click Here...">
           <% end %>
         </div>
         <div class="pagination-element-outer-wrapper outer-right">
@@ -31,6 +31,7 @@
 <div class="button button-blue what_is_this-button">What!?</div>
 
 <script>
+
   function available(date) {
     var availableDates = <%= raw get_available_dates.to_json %>;
     dmy = date.getDate() + "-" + (date.getMonth()+1) + "-" + date.getFullYear();
@@ -41,6 +42,10 @@
       return [false,"","unAvailable"];
     }
   }
+
+  $(".time_travel_datepicker").on("change", function(ev){
+    $("#time_travel_datepicker").submit();
+  });
   $(function() {
     $('.datepicker').datepicker({ beforeShowDay: available, dateFormat: 'dd-mm-yy' });
   });
