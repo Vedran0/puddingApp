@@ -90,6 +90,20 @@
   transform: translateY(3px);
 }
 
+.button-brown {
+  background-color: $light_brown;
+  box-shadow: 0 5px darken($light_brown, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-brown:hover{
+  background-color: lighten($light_brown, 5%);
+}
+.button-brown:active{
+  background-color: darken($light_brown, 3%);
+  box-shadow: 0 2px darken($light_brown, 5%);
+  transform: translateY(3px);
+}
+
 .ok_button-outer-wrapper{
   background-color: $white;
   display: inline-block;

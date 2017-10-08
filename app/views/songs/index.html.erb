@@ -1,6 +1,15 @@
 <h1>JukeBox</h1>
-<%= link_to "Play Random", "/jukebox?page=#{rand(1..@songs.total_pages)}&random=t", class: "button button-green js-random_button", remote: true %>
-<%= link_to "Time Travel", song_of_the_days_path, class: "button button-green js-random_button" %>
+
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper" style="padding: 3px;">
+      <div class="pagination-wrapper">
+        <%= link_to "Play Random", "/jukebox?page=#{rand(1..@songs.total_pages)}&random=t", class: "button button-brown js-random_button", remote: true %>
+        <%= link_to "Time Travel", song_of_the_days_path, class: "button button-brown js-random_button" %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="js-songs">
   <%= render 'songs/songs' %>

@@ -1,8 +1,17 @@
+.nav-title-wrapper{
+  display: flex;
+  align-items: center;
+}
+
+.nav-title-icon{
+  width: 40px;
+}
+
 .nav-title{
   width: 30%;
-  float: left;
+  //float: left;
   font-size: 45px;
-  padding: 5px 30px 0 30px;
+  padding: 5px 30px 0 0px;
   margin: 0;
   color: $yellow;
   transition: 0.3s color ease-in;

@@ -173,6 +173,15 @@ ol li {
   color: $brown;
 }
 
+.in_text-link{
+  color: darken($yellow, 5%);
+  transition: 0.3s all;
+}
+.in_text-link:hover{
+  color: $brown;
+  text-decoration: underline;
+}
+
 /*------------------------------------*\
 ** OTHER
 \*------------------------------------*/
