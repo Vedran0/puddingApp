@@ -1,0 +1,38 @@
+/*------------------------------------*\
+** RESOURCE FILTER WRAPPER
+\*------------------------------------*/
+
+.resource-filter{
+  width: 100%;
+  text-align: center;
+}
+
+.resource-filter-outer-wrapper{
+  display: inline-block;
+  padding: 5px;
+  background-color: $white;
+  border-radius: 50px;
+  margin: 15px auto;
+}
+
+.resource-filter-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px $brown dashed;
+  text-align: center;
+}
+
+.resource-filter-element{
+  margin: 0 15px;
+}
+
+.resource-filter-label{
+  font-size: 20px;
+  color: $brown;
+  margin-left: 15px;
+
+}

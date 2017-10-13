@@ -13,4 +13,8 @@
 #
 
 class Thing < ActiveRecord::Base
+
+  scope :done, -> {where(done: true)}
+  scope :to_do, -> {where(done: false)}
+
 end

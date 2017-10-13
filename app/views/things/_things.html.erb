@@ -1,0 +1,7 @@
+<% @things.each do |thing| %>
+  <div class="thing-outer-wrapper js_things-<%= thing.id %>">
+    <div class="thing-wrapper js_thing-<%= thing.id %>">
+      <%= render 'things/thing', thing: thing %>
+    </div>
+  </div>
+<% end %>

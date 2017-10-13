@@ -21,8 +21,9 @@
 
 .error-page-title{
   font-family: $heading-font-family;
+  color: $red;
   font-size: 80px;
-  text-shadow: -1px 0 $brown, 0 1px $brown, 1px 0 $brown, 0 -1px $brown;
+  text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
   text-align: center;
   margin-top: 20%;
 }

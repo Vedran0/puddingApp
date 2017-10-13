@@ -1,15 +1,45 @@
 <h1>To Do</h1>
 
+<div class="resource-filter">
+  <div class="resource-filter-outer-wrapper">
+    <%= form_for things_path, id: "bucketlist-filter-form", remote: true, method: :get do |f| %>
+      <div class="resource-filter-wrapper">
+
+        <div class="resource-filter-label">By Doneness</div>
+        <div class="resource-filter-element">
+          <div class="btn-switch">
+              <input type="radio" id="yes" name="done" value="true" class="btn-switch__radio btn-switch__radio_yes" />
+              <input type="radio" checked id="no" name="done" value="false" class="btn-switch__radio btn-switch__radio_no" />
+              <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Done</span></label>
+              <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">ToDo</span></label>
+          </div>
+        </div>
+
+        <div class="resource-filter-label">By Hardeness</div>
+        <div class="resource-filter-element">
+          <select id="" name="achievement_heaviness" class="select" style="width: 80px;">
+            <option selected value= 0>All Things</option>
+            <option value= 1>Very Easy</option>
+            <option value= 2>Easy</option>
+            <option value= 3>We Will Do It</option>
+            <option value= 4>We CAN Do It</option>
+            <option value= 5>One day</option>
+          </select>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <div class="things-wrapper">
-  <% @things.each do |thing| %>
-    <div class="thing-outer-wrapper">
-      <div class="thing-wrapper js_thing-<%= thing.id %>">
-        <%= render 'things/thing', thing: thing %>
-      </div>
-    </div>
-  <% end %>
+  <%= render 'things/things' %>
 </div>
 
 <div class="button button-blue what_is_this-button">What!?</div>
 <%= link_to '+AddThing', new_thing_path, class: "button button-green fixed-control" %>
+
+<script>
+  $("input,select").change(function(){
+    $(this).closest("form").submit();
+  });
+</script>

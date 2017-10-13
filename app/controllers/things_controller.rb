@@ -4,7 +4,12 @@ class ThingsController < ApplicationController
   before_action :set_about_page, only: :index
 
   def index
-    @things = Thing.all
+    @things = params[:done]=="true" ? Thing.done : Thing.to_do
+    @things = @things.where(achievement_heaviness: params[:achievement_heaviness]) if params[:achievement_heaviness] && params[:achievement_heaviness] != "0"
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def new

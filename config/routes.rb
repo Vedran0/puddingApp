@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
+  root "pages#home"
   resources :patch_notes
   resources :post_its, path: "notes"
-  root "pages#home"
   get "toolkit", to: "pages#toolkit"
   get "about", to: "pages#about"
   devise_for :puddings

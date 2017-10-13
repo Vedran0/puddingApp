@@ -432,3 +432,100 @@ input[type=number] {
     box-shadow: 0 1px 1px 1px rgba(130,123,123,1) inset;
   }
 }
+
+/*------------------------------------*\
+** RADIO BUTTON
+\*------------------------------------*/
+
+
+$no_color_btn: $white;
+$yes_color_btn: $white;
+$no_color_bg: $red;
+$yes_color_bg: $green;
+$no_color_txt: $white;
+$yes_color_txt: $white;
+
+.btn-switch {
+  label{
+    font-weight: 400;
+  }
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+.btn-switch__radio {
+  display: none;
+}
+.btn-switch__label {
+  display: inline-block;
+  padding: .75em .5em .75em .75em;
+  vertical-align: top;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $yes_color_txt;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+.btn-switch__label + .btn-switch__label {
+  padding-right: .75em;
+  padding-left: 0;
+}
+.btn-switch__txt {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+   min-width: 1.5em;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity .2s ease-in-out;
+}
+.btn-switch__radio_no:checked ~ .btn-switch__label_yes .btn-switch__txt,
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no .btn-switch__txt {
+  opacity: 0;
+}
+.btn-switch__label:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $no_color_bg;
+  border-radius: 1.5em;
+  box-shadow: inset 0px 3px darken($no_color_bg, 10%);
+  transition: all .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label:before {
+  background: $yes_color_bg;
+  box-shadow: inset 0px 3px darken($yes_color_bg, 10%);
+
+}
+.btn-switch__label_no:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: .5em;
+  bottom: .5em;
+  left: .5em;
+  width: 2em;
+  background: $no_color_btn;
+  border-radius: 1em; 
+  pointer-events: none;
+  box-shadow: 0px 3px darken($no_color_btn, 25%);
+  transition: left .2s ease-in-out, background .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no:after {
+  left: calc(100% - 2.5em);
+  background: $yes_color_btn;
+  box-shadow: 0px 3px darken($yes_color_btn, 25%);
+}
+.btn-switch__radio_no:checked ~ .btn-switch__label_yes:before,
+.btn-switch__radio_yes:checked ~ .btn-switch__label_no:before {
+  z-index: 1;
+}
+.btn-switch__radio_yes:checked ~ .btn-switch__label_yes {
+  color: $no_color_txt;
+}
