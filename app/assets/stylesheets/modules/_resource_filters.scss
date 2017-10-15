@@ -18,7 +18,7 @@
 .resource-filter-wrapper{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   background-color: $white;
   padding: 10px;
   border-radius: 50px;
@@ -27,12 +27,41 @@
 }
 
 .resource-filter-element{
-  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
 }
 
 .resource-filter-label{
   font-size: 20px;
   color: $brown;
-  margin-left: 15px;
+  transform: translateY(2px);
+}
 
+.resource-filter-button-label{
+  margin: 0 5px 0 0;
+  color: $brown;
+  border-radius: 20px;
+}
+
+.resource-filter-button{
+  margin: 10px 0;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: $yellow;
+  box-shadow: 0px 4px darken($yellow, 15%);
+}
+
+.resource-filter-button:hover{
+  background-color: lighten($yellow, 3%);
+}
+
+.resource-filter-button:active{
+  background-color: darken($yellow, 3%);
+  box-shadow: 0 2px darken($yellow, 15%);
+  transform: translateY(2px);
 }

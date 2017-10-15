@@ -1,12 +1,33 @@
 <div class="button button-blue what_is_this-button"><strong>?</strong></div>
-<div class="form-field">
-  <div class="form-field-outer-wrapper">
-    <div class="form-field-wrapper" style="padding: 5px;">
-      <div class="btn-switch">
-        <input type="radio" id="yes" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
-        <input type="radio" checked id="no" name="switch" class="btn-switch__radio btn-switch__radio_no" />
-        <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">ToDo</span></label>
-        <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Done</span></label>
+<div class="resource-filter">
+  <div class="resource-filter-outer-wrapper">
+    <div class="resource-filter-wrapper">
+      <div class="resource-filter-element">
+        <div class="resource-filter-button-label">Filter Button</div>
+        <div class="resource-filter-button-stroke">
+          <div class="resource-filter-button"></div>
+        </div>
+      </div>
+      <div class="resource-filter-label">By Doneness</div>
+      <div class="resource-filter-element">
+        <div class="btn-switch">
+            <input type="radio" id="yes" name="done" value="true" class="btn-switch__radio btn-switch__radio_yes" />
+            <input type="radio" checked id="no" name="done" value="false" class="btn-switch__radio btn-switch__radio_no" />
+            <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Done</span></label>
+            <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">ToDo</span></label>
+        </div>
+      </div>
+
+      <div class="resource-filter-label">By Hardeness</div>
+      <div class="resource-filter-element">
+        <select id="" name="achievement_heaviness" class="select" style="width: 80px;">
+          <option selected value= 0>All Things</option>
+          <option value= 1>Very Easy</option>
+          <option value= 2>Easy</option>
+          <option value= 3>We Will Do It</option>
+          <option value= 4>We CAN Do It</option>
+          <option value= 5>One day</option>
+        </select>
       </div>
     </div>
   </div>

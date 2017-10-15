@@ -5,8 +5,8 @@
     <%= form_for things_path, id: "bucketlist-filter-form", remote: true, method: :get do |f| %>
       <div class="resource-filter-wrapper">
 
-        <div class="resource-filter-label">By Doneness</div>
         <div class="resource-filter-element">
+          <div class="resource-filter-button-label">By Doneness</div>
           <div class="btn-switch">
               <input type="radio" id="yes" name="done" value="true" class="btn-switch__radio btn-switch__radio_yes" />
               <input type="radio" checked id="no" name="done" value="false" class="btn-switch__radio btn-switch__radio_no" />
@@ -15,9 +15,9 @@
           </div>
         </div>
 
-        <div class="resource-filter-label">By Hardeness</div>
         <div class="resource-filter-element">
-          <select id="" name="achievement_heaviness" class="select" style="width: 80px;">
+          <div class="resource-filter-button-label">By Hardeness</div>
+          <select id="" name="achievement_heaviness" class="select" style="width: 130px;">
             <option selected value= 0>All Things</option>
             <option value= 1>Very Easy</option>
             <option value= 2>Easy</option>

@@ -81,5 +81,7 @@ PatchNote.create(version: "version TODO",
                 description: "<p>Changes are good!</p>
                 <p>★ Changed color of error text.</p>
                 <p>★ Added filter to bucketlist</p>
-                <p>★ </p>")
+                <p>★ Redesigned \"Time Travel\" page controls</p>
+                <p>★ Fixed \"Play Random\" button bug</p>
+                <p>★ Changed blue color from #1976d2 to #0277bd</p>")
 puts "Patch Note created"
