@@ -77,11 +77,15 @@
 #                 description: "<p>Here are our new changes, i hope you like it!</p><p>★ New <a class='in_text-link' href='/tasting_center'>beer types</a> added: <i>Dark Beer</i> and <i>Red Beer</i> so we can drink them all!.</p><p>★ Now you can rewind time and see the song of any day you want in our JukeBox. The <a class='in_text-link' href='/time_travel'>time travel</a> is reaaaal!!</p><p>★ You love polka dot! You just don't know it yet. Try out new <a class='in_text-link' href='/settings'>background patterns</a> called \"Polka Dot\"</p>")
 # puts "Patch Note created"
 
-PatchNote.create(version: "version TODO",
-                description: "<p>Changes are good!</p>
-                <p>★ Changed color of error text.</p>
-                <p>★ Added filter to bucketlist</p>
-                <p>★ Redesigned \"Time Travel\" page controls</p>
-                <p>★ Finaly fixed time travel date picking</p>
-                <p>★ Fixed \"Play Random\" button bug</p>")
+PatchNote.create(version: "version 1.3.6",
+                description: "<p>Behold, the goodness of improvements!</p>
+                <p>★ Changed color of <a class='in_text-link' href='/500'>error text</a> on error pages.</p>
+                <p>★ Added filter to <a class='in_text-link' href='/bucketlist'>bucketlist</a> to differentiate \"done\" from \"to do\".</p>
+                <p>★ Redesigned <a class='in_text-link' href='/time_travel'>time travel</a> page controls (always striving for perfection).</p>
+                <p>★ Finaly fixed <a class='in_text-link' href='/time_travel'>time travel</a> date picking so now you can travel to desired time in two clicks! Ha!</p>
+                <p>★ Fixed <a class='in_text-link' href='/jukebox'>play random</a> button bug becouse bugs are mean, bugs are bad.</p>
+                <p>★ Added <a class='in_text-link' href='/settings'>madras pink</a> background pattern which will be available for limited time.</p>")
 puts "Patch Note created"
+
+# PatchNote.create(version: "version TODO",
+#                 description: "<p>Changes are good!</p>

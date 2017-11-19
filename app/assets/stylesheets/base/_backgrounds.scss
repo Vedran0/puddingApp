@@ -96,16 +96,28 @@
   background-size: auto auto;
 }
 
+
+// NOT YET FINISHED
+$madras-color-one: rgba(0,80,70,0.5);
+$madras-color-three: rgba(10,119,60,0.5);
+$madras-color-five: rgba(17,50,124,0.5);
+$madras-color-seven: rgb(255, 255, 255);
+$madras-color-six: rgba(0,0,0,0);
+$madras-color-four: rgba(255,255,255,0);
+$madras-color-two: rgba(220,119,220,0);
+
 .background-pattern-madras_green{
   box-sizing: content-box;
   border: none;
   color: rgb(255, 255, 255);
   text-overflow: clip;
-  background: repeating-linear-gradient(45deg, rgba(0,0,0,0) 5px, rgba(0,80,70,0.498039) 5px, rgba(0,80,70,0.498039) 10px, rgba(0,119,0,0) 10px, rgba(0,119,0,0) 35px, rgba(0,119,0,0.498039) 35px, rgba(0,119,0,0.498039) 40px, rgba(0,80,70,0.498039) 40px, rgba(0,80,70,0.498039) 50px, rgba(0,80,70,0) 50px, rgba(0,80,70,0) 60px, rgba(0,119,0,0.498039) 60px, rgba(0,119,0,0.498039) 70px, rgba(247,179,84,0.498039) 70px, rgba(247,179,84,0.498039) 80px, rgba(247,179,84,0) 80px, rgba(247,179,84,0) 90px, rgba(0,119,0,0.498039) 90px, rgba(0,119,0,0.498039) 110px, rgba(0,119,0,0) 110px, rgba(0,119,0,0) 120px, rgba(0,80,70,0.498039) 120px, rgba(0,80,70,0.498039) 140px), repeating-linear-gradient(135deg, rgba(0,0,0,0) 5px, rgba(0,80,70,0.498039) 5px, rgba(0,80,70,0.498039) 10px, rgba(0,119,0,0) 10px, rgba(0,119,0,0) 35px, rgba(0,119,0,0.498039) 35px, rgba(0,119,0,0.498039) 40px, rgba(0,80,70,0.498039) 40px, rgba(0,80,70,0.498039) 50px, rgba(0,80,70,0) 50px, rgba(0,80,70,0) 60px, rgba(0,119,0,0.498039) 60px, rgba(0,119,0,0.498039) 70px, rgba(247,179,84,0.498039) 70px, rgba(247,179,84,0.498039) 80px, rgba(247,179,84,0) 80px, rgba(247,179,84,0) 90px, rgba(0,119,0,0.498039) 90px, rgba(0,119,0,0.498039) 110px, rgba(0,119,0,0) 110px, rgba(0,119,0,0) 140px, rgba(0,80,70,0.498039) 140px, rgba(0,80,70,0.498039) 160px), rgb(234, 213, 185);
+  background: repeating-linear-gradient(45deg, rgba(0,0,0,0) 5px, $madras-color-one 5px, $madras-color-one 10px, $madras-color-two 10px, $madras-color-two 35px, $madras-color-three 35px, $madras-color-three 40px, $madras-color-one 40px, $madras-color-one 50px, $madras-color-six 50px, $madras-color-six 60px, $madras-color-three 60px, $madras-color-three 70px, $madras-color-five 70px, $madras-color-five 80px, $madras-color-four 80px, $madras-color-four 90px, $madras-color-three 90px, $madras-color-three 110px, $madras-color-two 110px, $madras-color-two 120px, $madras-color-one 120px, $madras-color-one 140px), repeating-linear-gradient(135deg, rgba(0,0,0,0) 5px, $madras-color-one 5px, $madras-color-one 10px, $madras-color-two 10px, $madras-color-two 35px, $madras-color-three 35px, $madras-color-three 40px, $madras-color-one 40px, $madras-color-one 50px, $madras-color-six 50px, $madras-color-six 60px, $madras-color-three 60px, $madras-color-three 70px, $madras-color-five 70px, $madras-color-five 80px, $madras-color-four 80px, $madras-color-four 90px, $madras-color-three 90px, $madras-color-three 110px, $madras-color-two 110px, $madras-color-two 140px, $madras-color-one 140px, $madras-color-one 160px), $madras-color-seven;
   background-origin: padding-box;
   background-clip: border-box;
   background-size: auto auto;
 }
+
+
 
 [class^="background-pattern-"] {
   background-attachment: fixed;
