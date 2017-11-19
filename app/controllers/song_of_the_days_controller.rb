@@ -12,7 +12,6 @@ class SongOfTheDaysController < ApplicationController
   private
 
   def set_page
-    binding.pry
     page = 1
     page = params[:page]
     page = SongOfTheDay.find_by(of_the_day: params[:date_picked].to_date).page if params[:date_picked]
