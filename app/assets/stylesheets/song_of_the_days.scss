@@ -14,4 +14,8 @@
   background-color: $blue;
   border: none;
   cursor: pointer;
-}
+  }
+  .datepicker::placeholder {
+    color: white;
+    opacity: 1;
+  }

@@ -43,9 +43,10 @@
     }
   }
 
-  $(".time_travel_datepicker").on("change", function(ev){
-    $("#time_travel_datepicker").submit();
+  $(".time_travel_datepicker").change(function(){
+    $(this).closest("form").submit();
   });
+
   $(function() {
     $('.datepicker').datepicker({ beforeShowDay: available, dateFormat: 'dd-mm-yy' });
   });

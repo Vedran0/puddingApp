@@ -25,18 +25,26 @@
 
 .thing-description{
   width: 90%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: 30px;
   p{
     margin: 0;
     text-align: center;
     color: $brown;
-    font-size: 40px;
   }
 }
+
+.thing-description-small{
+  font-size: 30px;
+}
+
+.thing-description-normal{
+  font-size: 40px;
+}
+
 
 .thing-bottom-part{
   position: absolute;
@@ -49,4 +57,15 @@
   color: $blue;
   margin-bottom: 10px;
   font-size: 25px;
+}
+
+.thing-done-date{
+  color: $green;
+  text-align: center;
+  margin-top: 45px;
+  min-height: 28px;
+}
+
+.thing-description-line_through{
+  text-decoration: line-through;
 }

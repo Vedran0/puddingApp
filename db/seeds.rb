@@ -82,6 +82,6 @@ PatchNote.create(version: "version TODO",
                 <p>★ Changed color of error text.</p>
                 <p>★ Added filter to bucketlist</p>
                 <p>★ Redesigned \"Time Travel\" page controls</p>
-                <p>★ Fixed \"Play Random\" button bug</p>
-                <p>★ Changed blue color from #1976d2 to #0277bd</p>")
+                <p>★ Finaly fixed time travel date picking</p>
+                <p>★ Fixed \"Play Random\" button bug</p>")
 puts "Patch Note created"

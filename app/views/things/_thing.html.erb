@@ -1,8 +1,9 @@
+<div class="thing-done-date"><%= thing.done_date.strftime("%d.%B.%Y") if thing.done %></div>
 
-    <div class="thing-description"><p><%= thing.description %></p></div>
-    <div class="thing-bottom-part">
-      <div class="thing-hardness" style="color: <%= achievement_heaviness_color(thing.achievement_heaviness) %>"><%= achievement_heaviness_text(thing.achievement_heaviness) %></div>
-      <%= link_to 'Edit', edit_thing_path(thing), class: "link-yellow" %>
-      <%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-red" %>
-      <%= link_to "#{thing.done ? 'Undone' : 'Done'}", change_status_path(id: thing.id), class: "link-green", remote: true %>
-    </div>
+<div class="thing-description"><p class="thing-description-<%= thing.description.size > 42 ? "small" : "normal" %> <%= thing.done ? "thing-description-line_through" : "" %>"><%= thing.description %></p></div>
+<div class="thing-bottom-part">
+  <div class="thing-hardness" style="color: <%= achievement_heaviness_color(thing.achievement_heaviness) %>"><%= achievement_heaviness_text(thing.achievement_heaviness) %></div>
+  <%= link_to 'Edit', edit_thing_path(thing), class: "link-yellow" %>
+  <%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-red" %>
+  <%= link_to "#{thing.done ? 'Undone' : 'Done'}", change_status_path(id: thing.id), class: "link-green", remote: true %>
+</div>

@@ -4,7 +4,7 @@ before_action :check_resource_permission, only: :home
 
   def home
     @song_of_the_day = SongOfTheDay.today
-    @random_thing = Thing.all.sample
+    @random_thing = Thing.to_do.sample
     @last_tasted_beer = Beer.last
     @puddings = Pudding.all
     @last_matches = Match.last(3)
