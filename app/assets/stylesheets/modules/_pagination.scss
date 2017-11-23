@@ -7,19 +7,19 @@
 .pagination-element-outer-wrapper{
   margin: 5px;
   padding: 5px;
-  background-color: $blue;
-  box-shadow: 4px 4px darken($blue, 10%);
+  background-color: $green;
+  box-shadow: 4px 4px darken($green, 10%);
   transition: 0.3s background-color ease-in;
 }
 
 .pagination-element-outer-wrapper:hover{
-  background-color: lighten($blue, 5%);
+  background-color: lighten($green, 5%);
 }
 
 .pagination-element-outer-wrapper:active, .pagination-element-outer-wrapper.active{
   transform: translate(3px, 3px);
-  box-shadow: 1px 1px darken($blue, 10%);
-  background-color: darken($blue, 10%);
+  box-shadow: 1px 1px darken($green, 10%);
+  background-color: darken($green, 10%);
 }
 
 .pagination-element-wrapper{
@@ -35,8 +35,8 @@
 
 .center{
   padding: 0px;
-  background-color: $blue;
-  box-shadow: 3px 3px darken($blue, 10%);
+  background-color: $green;
+  box-shadow: 3px 3px darken($green, 10%);
   border-radius: 50px;
   div{
     border-radius: 40px;

@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $regular;
   text-align: center;
   color: white;
-  text-shadow: -1px 0 #3e2723, 0 1px #3e2723, 1px 0 #3e2723, 0 -1px #3e2723;
+  text-shadow: -1px 0 $red, 0 1px $red, 1px 0 $red, 0 -1px $red;
 }
 
 h1 {
@@ -54,9 +54,10 @@ h1 {
 h1.app-title{
   font-size: 70px;
   text-align: center;
-  color: $yellow;
+  color: $white;
   margin: 0;
   padding-top: 10px;
+  text-shadow: -1px 0 $red, 0 1px $red, 1px 0 $red, 0 -1px $red;
 }
 
 h2 {
@@ -174,7 +175,7 @@ ol li {
 }
 
 .in_text-link{
-  color: darken($yellow, 5%);
+  color: darken($red, 5%);
   transition: 0.3s all;
 }
 .in_text-link:hover{
