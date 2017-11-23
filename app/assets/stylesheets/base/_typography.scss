@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $regular;
   text-align: center;
   color: white;
-  text-shadow: -1px 0 $red, 0 1px $red, 1px 0 $red, 0 -1px $red;
+  text-shadow: -1px 0 $green, 0 1px $green, 1px 0 $green, 0 -1px $green;
 }
 
 h1 {
@@ -57,7 +57,7 @@ h1.app-title{
   color: $white;
   margin: 0;
   padding-top: 10px;
-  text-shadow: -1px 0 $red, 0 1px $red, 1px 0 $red, 0 -1px $red;
+  text-shadow: -1px 0 $green, 0 1px $green, 1px 0 $green, 0 -1px $green;
 }
 
 h2 {
