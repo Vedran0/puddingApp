@@ -47,24 +47,23 @@
       <%= link_to "Cancel", root_path, class: "button button-red" %>
     </div>
   </div>
-
 <% end %>
 
 <script>
   $(function(){
-    $(".js_background-<%= current_pudding.setting.background %>").children("div").css( "border", "3px dashed green" );
-    $(".js_post_it_color-<%= current_pudding.setting.post_it_color %>").children("div").css( "border", "3px dashed green" );
+    $(".js_background-<%= current_pudding.setting.background %>").children("div").css( "border", "3px dashed #2A5837" );
+    $(".js_post_it_color-<%= current_pudding.setting.post_it_color %>").children("div").css( "border", "3px dashed #2A5837" );
   });
 
   function backgroundOptionClicked(clicked){
     $(".js_background").children("div").css( "border", "3px dashed white" );
-    $(clicked).children("div").css( "border", "3px dashed green" );
+    $(clicked).children("div").css( "border", "3px dashed #2A5837" );
     $("#setting_background").attr("value", clicked.attr("value"));
   }
 
   function textColorOptionClicked(clicked){
     $(".js_post_it_color").children("div").css( "border", "3px dashed white" );
-    $(clicked).children("div").css( "border", "3px dashed green" );
+    $(clicked).children("div").css( "border", "3px dashed #2A5837" );
     $("#setting_post_it_color").attr("value", clicked.attr("value"));
   }
 

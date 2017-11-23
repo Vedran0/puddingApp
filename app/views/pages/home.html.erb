@@ -1,3 +1,41 @@
+<% if DateTime.now < "25.12.2017".to_date %>
+  <div style="text-align: center;">
+    <div class="text-outer-wrapper">
+      <div class="text-wrapper">
+        Christmas is coming baby!
+      </div>
+    </div>
+    <div id="clockdiv">
+      <div class="digits-wrapper">
+        <div>
+          <div class="days"></div>
+          <div class="smalltext">Days</div>
+        </div>
+      </div>
+      <div class="digits-wrapper">
+        <div>
+          <div class="hours"></div>
+          <div class="smalltext">Hours</div>
+        </div>
+      </div>
+      <div class="digits-wrapper">
+        <div>
+          <div class="minutes"></div>
+          <div class="smalltext">Minutes</div>
+        </div>
+      </div>
+      <div class="digits-wrapper">
+        <div>
+          <div class="seconds"></div>
+          <div class="smalltext">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h1>Merry Christmas!</h1>
+<% end %>
+
 <%= render 'patch_notes/new_patch' if new_patch_to(current_pudding)%>
 <div class="flex flex-space-around flex-wrap">
 
