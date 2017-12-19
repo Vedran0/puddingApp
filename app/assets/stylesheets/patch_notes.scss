@@ -7,14 +7,14 @@
   background: $white;
   color: $brown;
   border-radius: 55px;
-  h2{
+  h2, h1{
     color: $red;
     text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
   }
 }
 .patch_note-description{
   padding: 40px;
-  border: 2px dashed $yellow;
+  border: 2px dashed $green;
   border-radius: 50px;
   p{
     font-size: 25px;

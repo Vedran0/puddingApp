@@ -6,35 +6,47 @@
         Christmas is coming baby!
       </div>
     </div>
-    <div id="clockdiv">
-      <div class="digits-wrapper">
-        <div>
-          <div class="days"></div>
-          <div class="smalltext">Days</div>
+    <div id="clockdiv" class="digits-pair">
+
+      <div class="digits-pair">
+        <div class="digits-wrapper">
+          <div class="digits-inner-wrapper">
+            <div class="digits days"></div>
+            <div class="digits smalltext">Days</div>
+          </div>
+        </div>
+        <div class="digits-wrapper">
+          <div class="digits-inner-wrapper">
+            <div class="digits hours"></div>
+            <div class="digits smalltext">Hours</div>
+          </div>
         </div>
       </div>
-      <div class="digits-wrapper">
-        <div>
-          <div class="hours"></div>
-          <div class="smalltext">Hours</div>
+
+      <div class="digits-pair">
+        <div class="digits-wrapper">
+          <div class="digits-inner-wrapper">
+            <div class="digits minutes"></div>
+            <div class="digits smalltext">Minutes</div>
+          </div>
+        </div>
+        <div class="digits-wrapper">
+          <div class="digits-inner-wrapper">
+            <div class="digits seconds"></div>
+            <div class="digits smalltext">Seconds</div>
+          </div>
         </div>
       </div>
-      <div class="digits-wrapper">
-        <div>
-          <div class="minutes"></div>
-          <div class="smalltext">Minutes</div>
-        </div>
-      </div>
-      <div class="digits-wrapper">
-        <div>
-          <div class="seconds"></div>
-          <div class="smalltext">Seconds</div>
-        </div>
-      </div>
+
     </div>
   </div>
 <% else %>
-  <h1>Merry Christmas!</h1>
+  <div class="patch_note-description-wrapper">
+    <div class="patch_note-description">
+      <br>
+      <h1>Merry Christmas, my love!</h1>
+    </div>
+  </div>
 <% end %>
 
 <div class="flex flex-space-around flex-wrap">
