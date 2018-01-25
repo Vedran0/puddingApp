@@ -4,7 +4,7 @@ class SongsController < ApplicationController
   before_action :check_resource_permission
 
   def index
-    @songs = Song.order(created_at: :desc).page(params[:page]).per(4)
+    @songs = Song.includes(:song_of_the_days).order(created_at: :desc).page(params[:page]).per(4)
     respond_to do |format|
       format.js
       format.html
