@@ -1,0 +1,84 @@
+.holidays-outer-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.holiday-outer-wrapper{
+  padding: 5px;
+  background-color: $white;
+  border-radius: 47px;
+  margin: 5px;
+}
+
+.holiday-inner-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: dashed 2px $green;
+  background-color: $white;
+  padding: 10px;
+  font-size: 40px;
+  color: $brown;
+  border-radius: 45px;
+}
+
+.holiday-date-wrapper{
+  background-color: $green;
+  color: $white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.holiday-day{
+  font-size: 100px;
+}
+
+.holiday-month{
+  font-size: 30px;
+}
+
+.holiday-buttons-inner-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dashed 2px $brown;
+  border-radius: 40px;
+}
+
+.holiday-buttons-outer-wrapper{
+  display: none;
+  background-color: $white;
+  border-radius: 40px;
+  width: 150px;
+  padding: 5px;
+}
+
+.holiday-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.holiday-wrapper{
+  min-height: 370px;
+  cursor: pointer;
+}
+
+.holiday-wrapper:hover .holiday-buttons-outer-wrapper{
+  display: block;
+}
+
+.holiday-countdown{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

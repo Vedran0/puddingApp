@@ -1,0 +1,19 @@
+<div class="holiday-wrapper">
+  <div class="holiday-outer-wrapper">
+    <div class="holiday-inner-wrapper">
+      <div class="holiday-name"><%= holiday.name %></div>
+      <div class="holiday-date-wrapper">
+        <div class="holiday-day"><%= holiday.date.strftime("%d.") %></div>
+        <div class="holiday-month"><%= holiday.date.strftime("%B") %></div>
+      </div>
+    </div>
+  </div>
+  <div class="holiday-buttons">
+    <div class="holiday-buttons-outer-wrapper">
+      <div class="holiday-buttons-inner-wrapper">
+        <%= link_to "Edit", edit_holiday_path(holiday), class: "link-yellow" %>
+        <%= link_to "Delete", holiday_path(holiday), method: :delete, class: "link-red", data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  </div>
+</div>

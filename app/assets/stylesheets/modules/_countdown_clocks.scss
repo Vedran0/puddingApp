@@ -1,0 +1,45 @@
+.countdown_clock{
+  display: flex;
+}
+
+.digits{
+  font-size: 40px;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: $red;
+  color: $white;
+}
+
+.digits-inner-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100px;
+  height: 130px;
+  font-size: 25px;
+  text-align: center;
+  color: $brown;
+  border: 2px dashed black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.digits-outer-wrapper{
+  margin: 5px;
+  padding: 10px;
+  background-color: $white;
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+
+.countdown-clock-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+<div class="holiday-countdown">
+  <div class="text-outer-wrapper">
+    <div class="text-wrapper">
+      Next: <%= @holidays.first.name %>
+    </div>
+  </div>
+  <%= render 'shared/countdown_clock' %>
+</div>
+
+<h1>Holidays</h1>
+<div class="holidays-outer-wrapper">
+  <% @holidays.each do |holiday| %>
+    <%= render 'holidays/holiday', holiday: holiday %>
+  <% end %>
+</div>
+
+<div class="button button-blue what_is_this-button">What!?</div>
+<%= link_to '+AddHoliday', new_holiday_path, class: "button button-green fixed-control" %>
