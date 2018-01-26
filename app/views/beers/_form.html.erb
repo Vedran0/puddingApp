@@ -19,8 +19,17 @@
 
 <div class="form-field-outer-wrapper">
   <div class="form-field-wrapper">
-    <div class="form-field-label">Rating</div>
-      <%= f.range_field :rating, class: "range-field", min: 1, max: 1000 %>
+    <div class="form-field-label">Will we drink it again?</div>
+          <div class="btn-switch">
+            <%= f.radio_button :drink_again, true, id: "yes", class:"btn-switch__radio btn-switch__radio_yes" %>
+            <%= f.radio_button :drink_again, false, id: "no", class:"btn-switch__radio btn-switch__radio_no" %>
+            <label for="yes" class="btn-switch__label btn-switch__label_yes">
+              <span class="btn-switch__txt">Yes</span>
+            </label>
+            <label for="no" class="btn-switch__label btn-switch__label_no">
+              <span class="btn-switch__txt">No</span>
+            </label>
+        </div>
     </div>
   </div>
 </div>

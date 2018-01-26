@@ -4,19 +4,19 @@ class BeersController < ApplicationController
   before_action :check_resource_permission
 
   def index
-    @beers = Beer.all.order(rating: :desc)
+    @beers = Beer.all
   end
 
   def new
-    @beer = Beer.new
+    @beer = Beer.new(drink_again: false)
   end
 
   def edit
   end
 
   def create
+    binding.pry
     @beer = Beer.new(beer_params)
-
     respond_to do |format|
       if @beer.save
         format.html { redirect_to beers_path, notice: 'Beer was successfully created.' }
@@ -50,7 +50,7 @@ class BeersController < ApplicationController
     end
 
     def beer_params
-      params.require(:beer).permit(:name, :image, :country, :rating, :beer_type)
+      params.require(:beer).permit(:name, :image, :country, :drink_again, :beer_type)
     end
 
 
