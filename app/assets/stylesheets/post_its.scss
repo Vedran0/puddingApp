@@ -29,11 +29,21 @@
   .link-red{
     display: none;
   }
+  .date{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 17px;
+  }
   margin: 20px;
 }
 
 .sticker:hover{
   .link-red{
+    display: block;
+  }
+  .date{
     display: block;
   }
 }

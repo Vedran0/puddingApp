@@ -2,6 +2,7 @@
   <div class="sticker-wrapper">
     <% @post_its.each do |post_it| %>
       <div class="sticker sticker-color-<%= post_it.pudding.setting.post_it_color %>"><%= post_it.message %>
+        <div class="date"><%= post_it.created_at.strftime("%H:%M  %d.%m.%Y") %></div>
         <%= link_to 'Delete', post_it, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     <% end %>
