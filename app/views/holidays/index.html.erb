@@ -1,18 +1,33 @@
 <div class="holiday-countdown">
-  <div class="text-outer-wrapper">
-    <div class="text-wrapper">
-      Next: <%= @holidays.first.name %>
-    </div>
-  </div>
-  <%= render 'shared/countdown_clock' %>
+  <%= render 'shared/countdown_clock', holiday: Holiday.next %>
 </div>
 
 <h1>Holidays</h1>
-<div class="holidays-outer-wrapper">
+<div class="owl-carousel">
   <% @holidays.each do |holiday| %>
     <%= render 'holidays/holiday', holiday: holiday %>
   <% end %>
 </div>
-
 <div class="button button-blue what_is_this-button">What!?</div>
 <%= link_to '+AddHoliday', new_holiday_path, class: "button button-green fixed-control" %>
+
+
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:2,
+        },
+        900:{
+            items:3,
+        },
+        1200:{
+            items:4,
+        }
+    }
+  });
+</script>

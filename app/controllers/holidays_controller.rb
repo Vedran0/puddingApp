@@ -4,7 +4,13 @@ class HolidaysController < ApplicationController
   before_action :set_about_page, only: :index
 
   def index
-    @holidays = Holiday.all
+    @holidays = Holiday.order_by_date
+  end
+
+  def show
+    respond_to do |format|
+      format.js
+    end
   end
 
   def new
@@ -16,6 +22,7 @@ class HolidaysController < ApplicationController
 
   def create
     @holiday = Holiday.new(holiday_params)
+    @holiday.date = @holiday.date.change(year: 2000).midnight
     respond_to do |format|
       if @holiday.save
         format.html { redirect_to holidays_path, notice: 'Holiday was successfully created.' }
@@ -46,6 +53,7 @@ class HolidaysController < ApplicationController
   private
     def set_holiday
       @holiday = Holiday.find(params[:id])
+      # @holiday.date = @holiday.date.change(year: 2001) if @holiday.date < Holiday.today
     end
 
     def holiday_params

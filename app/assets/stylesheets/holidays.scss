@@ -9,7 +9,9 @@
   padding: 5px;
   background-color: $white;
   border-radius: 47px;
-  margin: 5px;
+  width: 230px;
+  margin: auto;
+  margin-bottom: 5px;
 }
 
 .holiday-inner-wrapper{
@@ -20,7 +22,7 @@
   border: dashed 2px $green;
   background-color: $white;
   padding: 10px;
-  font-size: 40px;
+  font-size: 35px;
   color: $brown;
   border-radius: 45px;
 }
@@ -34,7 +36,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 35px;
+}
+
+.red-background{
+  background-color: $red;
+}
+
+.red-border{
+  border: dashed 2px $red;
+}
+
+
+.blue-background{
+  background-color: $blue;
+}
+
+.blue-border{
+  border: dashed 2px $blue;
 }
 
 .holiday-day{
@@ -62,6 +81,7 @@
 }
 
 .holiday-buttons{
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +90,7 @@
 .holiday-wrapper{
   min-height: 370px;
   cursor: pointer;
+  text-align: center;
 }
 
 .holiday-wrapper:hover .holiday-buttons-outer-wrapper{

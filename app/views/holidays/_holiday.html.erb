@@ -1,13 +1,15 @@
 <div class="holiday-wrapper">
-  <div class="holiday-outer-wrapper">
-    <div class="holiday-inner-wrapper">
+  <%= link_to holiday, class: "holiday-outer-wrapper holiday-#{holiday.id}", remote: true do %>
+  <!-- <div class="holiday-outer-wrapper"> -->
+    <div class="holiday-inner-wrapper <%= "red-border" if holiday.next? %> <%= "blue-border" if holiday.next? %>">
       <div class="holiday-name"><%= holiday.name %></div>
-      <div class="holiday-date-wrapper">
+      <div class="holiday-date-wrapper <%= "red-background" if holiday.next? %> <%= "blue-background" if holiday.next? %>">
         <div class="holiday-day"><%= holiday.date.strftime("%d.") %></div>
         <div class="holiday-month"><%= holiday.date.strftime("%B") %></div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
+  <% end %>
   <div class="holiday-buttons">
     <div class="holiday-buttons-outer-wrapper">
       <div class="holiday-buttons-inner-wrapper">

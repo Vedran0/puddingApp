@@ -1,0 +1,5 @@
+$(".blue-background").removeClass("blue-background");
+$(".blue-border").removeClass("blue-border");
+$(".holiday-<%= @holiday.id %>").children(".holiday-inner-wrapper").addClass("blue-border");
+$(".holiday-<%= @holiday.id %>").children(".holiday-inner-wrapper").children(".holiday-date-wrapper").addClass("blue-background");
+$(".holiday-countdown").html("<%= j render 'shared/countdown_clock', holiday: @holiday %>");

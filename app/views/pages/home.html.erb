@@ -1,12 +1,7 @@
-<%#= render 'patch_notes/new_patch' if new_patch_to(current_pudding)%>
+<%= render 'patch_notes/new_patch' if new_patch_to(current_pudding)%>
 <div class="flex flex-space-around flex-wrap">
   <div class="countdown-clock-wrapper">
-    <div class="text-outer-wrapper">
-      <div class="text-wrapper">
-        Until Rakunovo
-      </div>
-    </div>
-    <%= render 'shared/countdown_clock' %>
+    <%= render 'shared/countdown_clock', holiday: Holiday.next %>
   </div>
   <div class="flex flex-column">
 

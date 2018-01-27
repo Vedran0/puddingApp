@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :song_of_the_days,  only: [:index], path: "time_travel"
   resources :beers,             only: [:index, :new, :create, :edit, :update, :destroy], path: "tasting_center"
   resources :things,            only: [:index, :new, :create, :edit, :update, :destroy], path: "bucketlist"
-  resources :holidays,          only: [:index, :new, :create, :edit, :update, :destroy]
+  resources :holidays,          only: [:index, :show, :new, :create, :edit, :update, :destroy]
   get "change_status", to: "things#change_status"
   resources :tournaments,       only: [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :matches,           only: [:new, :create, :edit, :update, :destroy]
