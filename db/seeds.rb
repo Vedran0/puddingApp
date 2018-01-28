@@ -87,24 +87,24 @@
 #                 <p>★ Added <a class='in_text-link' href='/settings'>madras pink</a> background pattern which will be available for limited time.</p>")
 # puts "Patch Note created"
 
-PatchNote.create(version: "version 1.4.9",
-                description: "<p>Changes are GOOD!</p>
-                <p>★ Added new page for <a class='in_text-link' href='/holidays'>Holidays</a> so you don't miss them again.</p>
-                <p>★ Added timestamps to <a class='in_text-link' href='/notes'>notes</a> (on hover) becouse you asked for it.</p>
-                <p>★ Changed <a class='in_text-link' href='/tasting_center'>beer</a> ratings for us <a class='in_text-link' href='https://media2.giphy.com/media/xT0xeseEWv7alfGrDy/giphy.gif' target='_blank'>indecisive</a> folks</p>
-                <p>★ Implemented <a class='in_text-link' href='/jukebox'>song of the day</a> counter becouse we are so curious about how many times Again was again.</p>
-                <p>★ And as you already saw \"madras pink\" background is removed as promised.</p>")
-puts "Patch Note created"
+# PatchNote.create(version: "version 1.4.9",
+#                 description: "<p>Changes are GOOD!</p>
+#                 <p>★ Added new page for <a class='in_text-link' href='/holidays'>Holidays</a> so you don't miss them again.</p>
+#                 <p>★ Added timestamps to <a class='in_text-link' href='/notes'>notes</a> (on hover) becouse you asked for it.</p>
+#                 <p>★ Changed <a class='in_text-link' href='/tasting_center'>beer</a> ratings for us <a class='in_text-link' href='https://media2.giphy.com/media/xT0xeseEWv7alfGrDy/giphy.gif' target='_blank'>indecisive</a> folks</p>
+#                 <p>★ Implemented <a class='in_text-link' href='/jukebox'>song of the day</a> counter becouse we are so curious about how many times Again was again.</p>
+#                 <p>★ And as you already saw \"madras pink\" background is removed as promised.</p>")
+# puts "Patch Note created"
 
-Question.create(text: "Festival svih festivala?",
-                answer: "love festival",
-                resource: "holidays",
-                path_name: "holidays",
-                date_available: DateTime.new(2018, 1, 27, 0, 0, 0))
+# Question.create(text: "Festival svih festivala?",
+#                 answer: "love festival",
+#                 resource: "holidays",
+#                 path_name: "holidays",
+#                 date_available: DateTime.new(2018, 1, 27, 0, 0, 0))
 
-Holiday.create(name: "Rakunovo", message: "Sretno Rakunovooo!!", date: Date.new.change(year: 2000, month: 2, day: 16))
-Holiday.create(name: "Love Festival", message: "The power of love!", date: Date.new.change(year: 2000, month: 6, day: 6))
-Holiday.create(name: "Redemption Day", message: "Redemption daaaay!", date: Date.new.change(year: 2000, month: 9, day: 26))
-Holiday.create(name: "Story Telling", message: "Let me tell you a story...", date: Date.new.change(year: 2000, month: 10, day: 1))
-Holiday.create(name: "Boom Boom Day", message: "I want you in my room...", date: Date.new.change(year: 2000, month: 11, day: 25))
-Holiday.create(name: "GIF Day", message: "Send me some GIFs", date: Date.new.change(year: 2000, month: 12, day: 9))
+# Holiday.create(name: "Rakunovo", message: "Sretno Rakunovooo!!", date: Date.new.change(year: 2000, month: 2, day: 16))
+# Holiday.create(name: "Love Festival", message: "The power of love!", date: Date.new.change(year: 2000, month: 6, day: 6))
+# Holiday.create(name: "Redemption Day", message: "Redemption daaaay!", date: Date.new.change(year: 2000, month: 9, day: 26))
+# Holiday.create(name: "Story Telling", message: "Let me tell you a story...", date: Date.new.change(year: 2000, month: 10, day: 1))
+# Holiday.create(name: "Boom Boom Day", message: "I want you in my room...", date: Date.new.change(year: 2000, month: 11, day: 25))
+# Holiday.create(name: "GIF Day", message: "Send me some GIFs", date: Date.new.change(year: 2000, month: 12, day: 9))

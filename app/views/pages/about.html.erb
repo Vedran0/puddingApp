@@ -13,6 +13,7 @@
       <div class="patch_note-description">
         <h2><%= note.version %></h2>
         <%= note.description.html_safe %>
+        <em><p class="patch_note-date">Released on <%= note.created_at.strftime("%A, %B the #{note.created_at.day.ordinalize} of %Y") %></p></em>
       </div>
     </div>
   <% end %>

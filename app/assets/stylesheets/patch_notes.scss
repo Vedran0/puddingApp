@@ -15,9 +15,19 @@
   padding: 40px;
   border: 2px dashed $yellow;
   border-radius: 50px;
+  text-align: center;
   p{
     font-size: 25px;
     text-align: center;
+  }
+  .patch_note-date{
+    font-size: 18px;
+    color: $white;
+    display: inline-block;
+    margin: auto;
+    background-color: $brown;
+    padding: 3px 10px;
+    border-radius: 30px;
   }
 }
 
