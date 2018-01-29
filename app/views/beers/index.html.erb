@@ -1,9 +1,45 @@
 <h1>Tasting Center</h1>
+
+<div class="resource-filter">
+  <div class="resource-filter-outer-wrapper">
+    <%= form_for things_path, id: "bucketlist-filter-form", remote: true, method: :get do |f| %>
+      <div class="resource-filter-wrapper">
+
+        <div class="resource-filter-element">
+          <div class="resource-filter-button-label">Drink Again?</div>
+          <div class="btn-switch">
+              <input type="radio" checked id="yes" name="drink_again" value="true" class="btn-switch__radio btn-switch__radio_yes" />
+              <input type="radio" id="no" name="drink_again" value="false" class="btn-switch__radio btn-switch__radio_no" />
+              <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Yes</span></label>
+              <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">No</span></label>
+          </div>
+        </div>
+
+        <div class="resource-filter-element">
+          <div class="resource-filter-button-label">Beer Type</div>
+          <select id="" name="beer_type" class="select" style="width: 130px;">
+            <option selected value= "">All Types</option>
+            <option value= "Lager">Lager</option>
+            <option value= "Craft">Craft</option>
+            <option value= "Wheat Beer">Wheat Beer</option>
+            <option value= "Dark Beer">Dark Beer</option>
+            <option value= "Red Beer">Red Beer</option>
+          </select>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <div class="beers-wrapper">
-  <% @beers.each_with_index do |beer, index| %>
-    <%= render beer, index: index %>
-  <% end %>
+  <%= render 'beers/beers', beers: @beers %>
 </div>
 
 <div class="button button-blue what_is_this-button">What!?</div>
 <%= link_to '+AddBeer', new_beer_path, class: "button button-green fixed-control" %>
+
+<script>
+  $("input,select").change(function(){
+    $(this).closest("form").submit();
+  });
+</script>

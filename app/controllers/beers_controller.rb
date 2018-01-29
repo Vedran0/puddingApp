@@ -5,6 +5,12 @@ class BeersController < ApplicationController
 
   def index
     @beers = Beer.all
+    @beers = @beers.drink_again(params[:drink_again] ? params[:drink_again] : true)
+    @beers = @beers.by_beer_type(params[:beer_type]) unless params[:beer_type].blank?
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def new
