@@ -47,9 +47,8 @@
 .nav-link:hover, .nav-link:focus{
   border-bottom: 2px dashed #4e342e;
   transition: all 0.3s ease-in;
-
 }
 
-.nav-link-wrap {
-
+.nav-link.active{
+  border-bottom: 2px dashed $brown;
 }
