@@ -9,7 +9,6 @@
 </div>
 
 <% ["default", "green", "blue", "gray", "polka_dot_green", "polka_dot_blue", "polka_dot_brown", "polka_dot_yellow", "vertical_red", "vertical_green", "vertical_yellow", "vertical_grey"].each do |background| %>
-<%# ["default", "green", "blue", "gray", "polka_dot_green", "polka_dot_blue", "polka_dot_orange", "madras_pink", "madras_green"].each do |background| %>
 <div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
   <div class="background-option-wrapper">
     <div class="background-option background-pattern-<%= background %>">
