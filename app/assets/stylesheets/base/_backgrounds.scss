@@ -98,7 +98,7 @@
 
 
 // NOT YET FINISHED
-$madras-color-one: rgba(0,80,70,0.5);
+/*$madras-color-one: rgba(0,80,70,0.5);
 $madras-color-three: rgba(10,119,60,0.5);
 $madras-color-five: rgba(17,50,124,0.5);
 $madras-color-seven: rgb(255, 255, 255);
@@ -115,8 +115,61 @@ $madras-color-two: rgba(220,119,220,0);
   background-origin: padding-box;
   background-clip: border-box;
   background-size: auto auto;
+}*/
+
+.background-pattern-vertical_yellow{
+  box-sizing: content-box;
+  //width: 320px;
+  //height: 320px;
+  border: none;
+  color: rgba(255,255,255,1);
+  //text-overflow: clip;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), rgb(255, 153, 0);
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px auto;
+  background-repeat: repeat;
 }
 
+.background-pattern-vertical_green{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  //text-overflow: clip;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), $green;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px auto;
+  background-repeat: repeat;
+}
+
+.background-pattern-vertical_grey{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  //text-overflow: clip;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), $grey;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px auto;
+  background-repeat: repeat;
+}
+
+.background-pattern-vertical_red{
+  box-sizing: content-box;
+  border: none;
+  color: rgba(255,255,255,1);
+  //text-overflow: clip;
+  background: linear-gradient(90deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), $red;
+  background-position: auto auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  background-size: 50px auto;
+  background-repeat: repeat;
+}
 
 
 [class^="background-pattern-"] {
