@@ -108,3 +108,12 @@
 # Holiday.create(name: "Story Telling", message: "Let me tell you a story...", date: Date.new.change(year: 2000, month: 10, day: 1))
 # Holiday.create(name: "Boom Boom Day", message: "I want you in my room...", date: Date.new.change(year: 2000, month: 11, day: 25))
 # Holiday.create(name: "GIF Day", message: "Send me some GIFs", date: Date.new.change(year: 2000, month: 12, day: 9))
+
+PatchNote.create(version: "version 1.5.13",
+                description: "<p>Wait, what!? A new patch again!?</p>
+                <p>★ Finaly fixed info window positions!! Weeee.</p>
+                <p>★ Removed hints from <a class='in_text-link' data-method='delete' href='/puddings/sign_out'>login form</a> becouse you don't need it anymore.</p>
+                <p>★ Added filters to <a class='in_text-link' href='/tasting_center'>TastingCenter</a> and now it's cooler.</p>
+                <p>★ Introducing new set of <a class='in_text-link' href='/settings'>backgrounds</a> and there is a green one in the set ;)</p>
+                <p>★ And navigation links are active links now.</p>")
+puts "Patch Note created"

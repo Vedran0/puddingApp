@@ -19,7 +19,6 @@ class SettingsController < ApplicationController
       @setting = Setting.find(current_pudding.setting.id)
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def setting_params
       params.require(:setting).permit(:background, :post_it_color)
     end
