@@ -3,15 +3,14 @@ class SettingsController < ApplicationController
   before_action :check_resource_permission
 
   def edit
+    session[:return_to] ||= request.referer
   end
 
   def update
-    respond_to do |format|
-      if @setting.update(setting_params)
-        format.html { redirect_to root_path, notice: 'Your settings are saved.' }
-      else
-        format.html { render :edit }
-      end
+    if @setting.update(setting_params)
+      redirect_to session.delete(:return_to), notice: 'Your settings are saved.'
+    else
+      render :edit
     end
   end
 
