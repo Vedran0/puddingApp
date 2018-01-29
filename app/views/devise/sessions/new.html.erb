@@ -1,6 +1,6 @@
-<h1>Log In</h1>
+<h1>Good Day</h1>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"form", autocomplete:"off", style: "#{'display: none;' if params[:hint_step]}"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"form", autocomplete:"off"}) do |f| %>
   <div class="form-field">
     <div class="form-field-outer-wrapper">
       <div class="form-field-wrapper">
@@ -29,7 +29,6 @@
     <div class="form-field-outer-wrapper">
       <div class="form-field-wrapper">
         <%= f.submit "Log in", class: "button button-green" %>
-        <%= link_to "Password Hint#{params[:hint_step] ? (' No. '+(params[:hint_step].to_i+1).to_s) : '' }?", new_pudding_session_path(hint_step: params[:hint_step] || 0), class: "button button-blue" %>
       </div>
     </div>
   </div>
@@ -43,20 +42,3 @@
     </div>
   </div>
 </div>
-
-<% if params[:hint_step] %>
-  <div class="ok_button wrapped-control-center" onclick="showForm()">
-    <div class="ok_button-outer-wrapper">
-      <div class="ok_button-wrapper">
-        OK
-      </div>
-    </div>
-  </div>
-<% end %>
-
-<script>
-  function showForm(){
-    $(".ok_button").hide();
-    $("#new_pudding").slideDown();
-  }
-</script>

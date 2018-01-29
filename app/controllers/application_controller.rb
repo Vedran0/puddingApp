@@ -4,19 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_pudding_quote, if: :devise_controller?
 
   def set_pudding_quote
-    unless params[:hint_step]
       @random_quote = get_default_quotes.sample()
-    else
-      params[:hint_step] = params[:hint_step].to_i>5 ? 4 : params[:hint_step].to_i+1
-      @random_quote = get_hint[params[:hint_step].to_i-1]
-    end
-    if params[:pudding] && params[:pudding][:name].chomp.downcase == "beta"
-      @random_quote = "Your name, not your nickname!"
-      params[:hint_step] = 0
-    elsif params[:pudding] && params[:pudding][:name] == "elizabeta"
-      @random_quote = "Capital \"E\" would be nice..."
-      params[:hint_step] = 0
-    end
   end
 
   def get_default_quotes
@@ -33,15 +21,6 @@ class ApplicationController < ActionController::Base
               "We are all in the gutter, but some of us are looking at the pudding.",
               "The man who does not eat pudding has no advantage over the man who cannot eat pudding."
                  ]
-  end
-
-  def get_hint
-    quotes = ["Here you go: MySuperproofPassword290918102208",
-              "I'm joking, why would i gave it so easly dummy xD",
-              "Ok, i'll help you, hit that button one more time :)",
-              "People keep passwords on their phone...",
-              "...in notes.",
-              "Open your phone and look it up!"]
   end
 
   def check_resource_permission
