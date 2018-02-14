@@ -24,7 +24,7 @@ class Holiday < ActiveRecord::Base
   def self.next
     today = Holiday.today
     order_by_date.each do |holiday|
-      return holiday if holiday.date > today
+      return holiday if holiday.date >= today
     end
   end
 

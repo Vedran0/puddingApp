@@ -103,3 +103,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.holiday-description-wrapper{
+  background-color: $white;
+  width: 60%;
+  padding: 10px;
+  border-radius: 200px 200px;
+  margin: 45px 0;
+}
+
+.holiday-description{
+  padding: 50px 20px;
+  border: dashed 2px $green;
+  border-radius: 200px 200px;
+  h1{
+    color: $yellow;
+  }
+  p{
+    color: $brown;
+    font-size: 30px;
+    text-align: center;
+  }
+}
