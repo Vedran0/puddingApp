@@ -16,7 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'kaminari'
 gem 'jquery-ui-rails'
 gem 'owlcarousel2'
-
+gem 'rest-client'
 gem 'mini_magick'
 gem 'carrierwave'
 
