@@ -362,6 +362,11 @@ input[type=number] {
   border: 2px $brown dashed;
   text-align: center;
 }
+
+.button-wrapper{
+  padding: 5px 7px 10px 7px;
+}
+
 .form-field-label{
   color: $brown;
   font-size: 30px;

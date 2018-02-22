@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   get "settings", to: "settings#edit"
   resources :settings,          only: [:update]
   resources :songs,             only: [:index, :new, :create, :edit, :update, :destroy], path: "jukebox"
-  resources :song_of_the_days,  only: [:index], path: "time_travel"
-  resources :beers,             only: [:index, :new, :create, :edit, :update, :destroy], path: "tasting_center"
+  resources :song_of_the_days,  only: [:index], path: "time-travel"
+  get "song-of-the-day", to: "song_of_the_days#show", as: "song_of_the_day"
+  resources :beers,             only: [:index, :new, :create, :edit, :update, :destroy], path: "tasting-center"
   resources :things,            only: [:index, :new, :create, :edit, :update, :destroy], path: "bucketlist"
   resources :holidays,          only: [:index, :show, :new, :create, :edit, :update, :destroy]
   get "change_status", to: "things#change_status"

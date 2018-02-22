@@ -9,3 +9,4 @@ JSON.parse(response)[3][0]
 # more randomization (2xshuffle)
 # autocomplete for places
 # result by places
+# song of the day page
