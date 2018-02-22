@@ -1,6 +1,7 @@
 class MatchesController < ApplicationController
   before_action :set_match, only: [:show, :edit, :update, :destroy]
   before_action :set_tournament, only: [:new, :edit]
+  before_action :get_all_places, only: [:new, :edit]
 
   def new
     @match = @tournament.matches.build
@@ -53,4 +54,9 @@ class MatchesController < ApplicationController
     def match_params
       params.require(:match).permit(:place, :tournament_id, results_attributes: [:id, :pudding_id, :points])
     end
+
+    def get_all_places
+      @places = Match.all.map(&:place).uniq
+    end
+
 end

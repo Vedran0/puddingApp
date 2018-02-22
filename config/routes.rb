@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   resources :holidays,          only: [:index, :show, :new, :create, :edit, :update, :destroy]
   get "change_status", to: "things#change_status"
   resources :tournaments,       only: [:index, :show, :new, :create, :edit, :update, :destroy]
-  resources :matches,           only: [:new, :create, :edit, :update, :destroy]
+  resources :matches,           only: [:new, :create, :edit, :update, :destroy] do
+    get :autocomplete_place, :on => :collection
+  end
 
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code

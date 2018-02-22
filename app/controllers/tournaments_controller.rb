@@ -7,6 +7,7 @@ class TournamentsController < ApplicationController
 
   def index
     @tournaments = Tournament.all
+    @places = Match.all.map(&:place).uniq
   end
 
   def show

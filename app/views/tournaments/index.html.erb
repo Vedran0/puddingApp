@@ -16,9 +16,27 @@
           </div>
         </div>
       </div>
-    <%#= link_to 'Show', tournament %>
-    <%#= link_to 'Edit', edit_tournament_path(tournament) %>
-    <%#= link_to 'Destroy', tournament, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div><br/>
+<h2>Total points by place</h2>
+
+<div class="matches-wrapper">
+  <% @places.each do |place| %>
+    <div class="place_match-outer-wrapper">
+      <div class="place_match-wrapper">
+        <div class="place_match-place"><%= place %></div>
+        <div class="place_match-results-wrapper">
+          <% Pudding.all.each do |pudding| %>
+            <div class="place_match-result-wrapper">
+              <div class="place_match-player-name"><%= pudding.name %></div>
+              <div class="place_match-result <%= matches_by_place_score_color(pudding, place) %>">
+                <%= Match.pudding_points_by_place(pudding, place) %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 

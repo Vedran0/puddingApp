@@ -1,6 +1,10 @@
 class SongOfTheDaysController < ApplicationController
   before_action :set_about_page, only: :index
 
+  def show
+    @song_of_the_day = SongOfTheDay.last
+  end
+
   def index
     @song_of_the_days = SongOfTheDay.all.order(created_at: :desc).page(set_page).per(2)
     respond_to do |format|

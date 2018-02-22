@@ -41,3 +41,37 @@
 .match-result{
   font-size: 30px;
 }
+
+//RESULTS BY PLACE
+
+.place_match-outer-wrapper{
+  border-radius: 30px;
+  margin: 5px;
+  padding: 10px;
+  background-color: $white;
+  display: inline-block;
+  min-width: 300px;
+}
+.place_match-wrapper{
+  border-radius: 25px;
+  color: $brown;
+  padding: 30px;
+  border: 2px dashed $brown;
+}
+.place_match-place{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: $green;
+}
+.place_match-results-wrapper{
+  display: flex;
+  justify-content: space-around;
+}
+.place_match-result-wrapper{
+  font-size: 25px;
+  text-align: center;
+}
+.place_match-result{
+  font-size: 30px;
+}

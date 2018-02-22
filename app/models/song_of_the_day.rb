@@ -18,7 +18,7 @@ class SongOfTheDay < ActiveRecord::Base
   def self.today
     todays_song = self.find_or_initialize_by(of_the_day: DateTime.now.to_date)
     if todays_song.new_record?
-      song = Song.random.first
+      song = Song.all.shuffle.shuffle.sample
       todays_song.song_id = song.id
       todays_song.save
     else
