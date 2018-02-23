@@ -3,6 +3,8 @@ class SongOfTheDaysController < ApplicationController
 
   def show
     @song_of_the_day = SongOfTheDay.last
+    @lyrics = @song_of_the_day.song.get_lyrics
+    @artist_info = @song_of_the_day.song.get_artist_wiki_summary
   end
 
   def index

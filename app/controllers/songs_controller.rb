@@ -53,7 +53,7 @@ class SongsController < ApplicationController
     end
 
     def song_params
-      params.require(:song).permit(:name, :url)
+      params.require(:song).permit(:name, :url, :artist)
     end
 
     def set_about_page

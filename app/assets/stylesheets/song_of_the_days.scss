@@ -19,3 +19,55 @@
     color: white;
     opacity: 1;
   }
+
+.song_of_the_day-main-wrapper{
+  h1, h2{
+    color: $yellow;
+  }
+  width: 100%;
+  margin: auto;
+  margin-top: 70px;
+  margin-bottom: 80px;
+  padding: 10px;
+  background: $white;
+  color: $brown;
+}
+.song_of_the_day-main{
+  padding: 40px 80px;
+  border: 2px dashed $yellow;
+  p{
+    font-size: 25px;
+    text-align: center;
+  }
+}
+
+.song_of_the_day-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.song_of_the_day-video{
+  border-radius:  600px;
+  border: none;
+}
+
+.song_of_the_day-info{
+  margin-top: 20px;
+  padding: 0 50px;
+}
+
+.song_of_the_day-subtitle{
+  font-size: 50px;
+  margin-bottom: 1px;
+  color: $green;
+}
+
+.song-of-the-day-show-counter{
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: $green;
+  color: $white;
+  display: inline-block;
+}

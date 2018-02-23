@@ -1,2 +1,26 @@
 <h1>Song of the Day</h1>
 
+<div class="song_of_the_day-main-wrapper">
+  <div class="song_of_the_day-main">
+    <h2><%= "#{@song_of_the_day.song.artist} - #{@song_of_the_day.song.name}" %></h2>
+    <div class="song_of_the_day-wrapper">
+      <iframe width="480" height="480" src="https://www.youtube.com/embed/<%= @song_of_the_day.song.strip_url %>?autoplay=0&showinfo=0&controls=0" class="song_of_the_day-video"></iframe>
+    </div>
+    <div class="song_of_the_day-info">
+      <p><span class="song_of_the_day-subtitle">About Song of the Day</span></p>
+      <p>
+      Drawn today at <%= @song_of_the_day.created_at.strftime("%H:%m") %><br/>
+      Was song of the day for <span class="song-of-the-day-show-counter"><%= @song_of_the_day.song.song_of_the_days.size %></span> times including today<br/>
+      First time drawn at <%= @song_of_the_day.song.song_of_the_days.first.created_at.strftime("%d. %B %Y") %>
+      </p>
+      <p><span class="song_of_the_day-subtitle">About Artist</span></p>
+      <p style="text-align: justify"><%= @artist_info %></p>
+      <p><span class="song_of_the_day-subtitle">Lyrics</span></p>
+      <p><em><%= @lyrics.html_safe %></em></p>
+    </div>
+    <div class="song_of_the_day-button">
+      <%= link_to "Go back home", root_path, class: "button button-blue" %>
+    </div>
+
+  </div>
+</div>

@@ -109,11 +109,19 @@
 # Holiday.create(name: "Boom Boom Day", message: "I want you in my room...", date: Date.new.change(year: 2000, month: 11, day: 25))
 # Holiday.create(name: "GIF Day", message: "Send me some GIFs", date: Date.new.change(year: 2000, month: 12, day: 9))
 
-PatchNote.create(version: "version 1.5.13",
-                description: "<p>Wait, what!? A new patch again!?</p>
-                <p>★ Finaly fixed info window positions!! Weeee.</p>
-                <p>★ Removed hints from <a class='in_text-link' data-method='delete' href='/puddings/sign_out'>login form</a> becouse you don't need it anymore.</p>
-                <p>★ Added filters to <a class='in_text-link' href='/tasting_center'>TastingCenter</a> and now it's cooler.</p>
-                <p>★ Introducing new set of <a class='in_text-link' href='/settings'>backgrounds</a> and there is a green one in the set ;)</p>
-                <p>★ And navigation links are active links now.</p>")
+# PatchNote.create(version: "version 1.5.13",
+#                 description: "<p>Wait, what!? A new patch again!?</p>
+#                 <p>★ Finaly fixed info window positions!! Weeee.</p>
+#                 <p>★ Removed hints from <a class='in_text-link' data-method='delete' href='/puddings/sign_out'>login form</a> becouse you don't need it anymore.</p>
+#                 <p>★ Added filters to <a class='in_text-link' href='/tasting_center'>TastingCenter</a> and now it's cooler.</p>
+#                 <p>★ Introducing new set of <a class='in_text-link' href='/settings'>backgrounds</a> and there is a green one in the set ;)</p>
+#                 <p>★ And navigation links are active links now.</p>")
+# puts "Patch Note created"
+
+PatchNote.create(version: "version 1.7.15",
+                description: "<p>Something new, something wild...</p>
+                <p>★ Added autocomplete for match places to help you out.</p>
+                <p>★ Created by place statistics on <a class='in_text-link' href='/tournaments'>Tournaments</a> page so that you know where not to play again.</p>
+                <p>★ Now we are shuffling songs twice before picking <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> to add more randomization.</p>
+                <p>★ And, yes, you saw well, <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> page is a thing now.</p>")
 puts "Patch Note created"

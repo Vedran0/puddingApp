@@ -19,6 +19,8 @@ gem 'owlcarousel2'
 gem 'rest-client'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'lyricfy'
+gem 'wikipedia-client'
 
 group :development, :test do
   gem 'byebug'
