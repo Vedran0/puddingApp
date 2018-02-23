@@ -14,7 +14,11 @@
       First time drawn at <%= @song_of_the_day.song.song_of_the_days.first.created_at.strftime("%d. %B %Y") %>
       </p>
       <p><span class="song_of_the_day-subtitle">About Artist</span></p>
-      <p style="text-align: justify"><%= @artist_info %></p>
+      <% if @artist_info.nil? %>
+        <p><em>Can't find artist info</em></p>
+      <% else %>
+        <p style="text-align: justify"><%= @artist_info %></p>
+      <% end %>
       <p><span class="song_of_the_day-subtitle">Lyrics</span></p>
       <p><em><%= @lyrics.html_safe %></em></p>
     </div>
