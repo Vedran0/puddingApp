@@ -36,7 +36,6 @@ class Song < ActiveRecord::Base
   def get_artist_wiki_summary
     require 'wikipedia'
     page = Wikipedia.find( artist )
-    binding.pry
     page.summary
   end
 
