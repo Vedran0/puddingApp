@@ -125,3 +125,11 @@
 #                 <p>★ Now we are shuffling songs twice before picking <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> to add more randomization.</p>
 #                 <p>★ And, yes, you saw well, <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> page is a thing now.</p>")
 # puts "Patch Note created"
+
+PatchNote.create(version: "version 1.8.17",
+                description: "<p>We are prepareeed!!</p>
+                <p>In preparation for upcoming big patch i fixed some of the stuff.</p>
+                <p>★ Fixed <a class='in_text-link' href='/time-travel'>Time Travel</a> pagination links.</p>
+                <p>★ Quick fixed main navigation to fit your mobile phone screen.</p>
+                <p>★ Added <a class='in_text-link' href='/issues'>Issue Reporting</a> so we can record our problems with app or suggestions. I want to collect all the problems and suggestions so i can resolve it all in upcoming patch.</p>")
+puts "Patch Note created"
