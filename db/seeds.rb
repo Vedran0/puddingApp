@@ -118,10 +118,10 @@
 #                 <p>★ And navigation links are active links now.</p>")
 # puts "Patch Note created"
 
-PatchNote.create(version: "version 1.7.15",
-                description: "<p>Something new, something wild...</p>
-                <p>★ Added autocomplete for match places to help you out.</p>
-                <p>★ Created by place statistics on <a class='in_text-link' href='/tournaments'>Tournaments</a> page so that you know where not to play again.</p>
-                <p>★ Now we are shuffling songs twice before picking <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> to add more randomization.</p>
-                <p>★ And, yes, you saw well, <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> page is a thing now.</p>")
-puts "Patch Note created"
+# PatchNote.create(version: "version 1.7.15",
+#                 description: "<p>Something new, something wild...</p>
+#                 <p>★ Added autocomplete for match places to help you out.</p>
+#                 <p>★ Created by place statistics on <a class='in_text-link' href='/tournaments'>Tournaments</a> page so that you know where not to play again.</p>
+#                 <p>★ Now we are shuffling songs twice before picking <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> to add more randomization.</p>
+#                 <p>★ And, yes, you saw well, <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> page is a thing now.</p>")
+# puts "Patch Note created"

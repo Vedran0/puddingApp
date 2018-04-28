@@ -90,9 +90,9 @@
 .what_is_this-button{
   user-select: none;
   cursor: pointer;
-  position: absolute;
-  right: 5px;
-  top: 100px;
+  position: fixed;
+  left: 5px;
+  bottom: 15px;
 }
 
 /*------------------------------------*\

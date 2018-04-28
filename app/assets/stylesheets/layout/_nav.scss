@@ -1,6 +1,7 @@
 .nav-title-wrapper{
   display: flex;
   align-items: center;
+  margin-right: 30px;
 }
 
 .nav-title-icon{
@@ -26,7 +27,9 @@
   align-items: flex-end;
   padding-top: 10px;
 }
-
+.nav-links{
+  margin-top: 20px;
+}
 .nav-link{
   cursor: pointer;
   overflow: hidden;
