@@ -1,0 +1,10 @@
+<h1>Issues</h1>
+<div class="report-issue-button">
+  <%= link_to "Report Issue", new_issue_path, class: "button button-green" %>
+</div>
+<div class="issues-wrapper">
+  <% @issues.each do |issue| %>
+    <div class="js_issue-<%= issue.id %>"><%= render 'issue', issue: issue %></div>
+  <% end %>
+</div>
+<div class="button button-blue what_is_this-button">What!?</div>

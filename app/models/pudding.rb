@@ -30,6 +30,8 @@ class Pudding < ActiveRecord::Base
   has_many :answered
   has_many :questions, through: :answered
 
+  has_many :issues
+
   devise :database_authenticatable, :trackable
 
   def winning(tournament)

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "toolkit", to: "pages#toolkit"
   get "about", to: "pages#about"
   devise_for :puddings
+  resources :issues
+  put "issue_resolve", to: "issues#resolve"
   resources :questions
   resources :answerings,        only: [:new, :create]
   get "settings", to: "settings#edit"

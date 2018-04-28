@@ -10,7 +10,7 @@
       <div class="pagination-wrapper">
         <div class="pagination-element-outer-wrapper outer-left">
           <div class="pagination-element-wrapper inner-left">
-            <%= link_to 'Previous', "/time_travel?page=#{@song_of_the_days.first_page? ? @song_of_the_days.total_pages : @song_of_the_days.current_page-1}", class: "pagination-element js_previous", remote: true %>
+            <%= link_to 'Previous', "/time-travel?page=#{@song_of_the_days.first_page? ? @song_of_the_days.total_pages : @song_of_the_days.current_page-1}", class: "pagination-element js_previous", remote: true %>
           </div>
         </div>
         <div class="datepicker-wrapper">
@@ -21,7 +21,7 @@
         </div>
         <div class="pagination-element-outer-wrapper outer-right">
           <div class="pagination-element-wrapper inner-right">
-            <%= link_to 'Next', "/time_travel?page=#{@song_of_the_days.last_page? ? 1 : @song_of_the_days.current_page+1}", class: "pagination-element js_next", remote: true %>
+            <%= link_to 'Next', "/time-travel?page=#{@song_of_the_days.last_page? ? 1 : @song_of_the_days.current_page+1}", class: "pagination-element js_next", remote: true %>
           </div>
         </div>
       </div>

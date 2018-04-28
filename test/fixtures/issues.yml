@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: issues
+#
+#  id         :integer          not null, primary key
+#  text       :string
+#  resolved   :boolean          default(FALSE)
+#  pudding_id :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  resolved: false
+  pudding_id: 1
+
+two:
+  text: MyString
+  resolved: false
+  pudding_id: 1

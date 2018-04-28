@@ -158,6 +158,27 @@
 }
 
 /*------------------------------------*\
+** TEXT AREA
+\*------------------------------------*/
+textarea{
+  font-family: $base-font-family;
+  resize: none;
+  border-radius: 15px;
+  border: none;
+  height: 300px;
+  font-size: 20px;
+  color: $brown;
+  border: dashed 2px $brown;
+  padding: 10px;
+}
+
+.textarea{
+  padding: 20px;
+  background-color: $white;
+  width: 500px;
+}
+
+/*------------------------------------*\
 ** RENGE FIELD
 \*------------------------------------*/
 $thumb-color: $yellow;

@@ -1,3 +1,3 @@
 $(".js-songs").html("<%= j render 'song_of_the_days/song_of_the_days' %>");
-$(".js_previous").attr("href", "/time_travel?page="+<%= @song_of_the_days.first_page? ? @song_of_the_days.total_pages : @song_of_the_days.current_page-1 %>);
-$(".js_next").attr("href", "/time_travel?page="+<%= @song_of_the_days.last_page? ? '1' : @song_of_the_days.current_page+1 %>);
+$(".js_previous").attr("href", "/time-travel?page="+<%= @song_of_the_days.first_page? ? @song_of_the_days.total_pages : @song_of_the_days.current_page-1 %>);
+$(".js_next").attr("href", "/time-travel?page="+<%= @song_of_the_days.last_page? ? '1' : @song_of_the_days.current_page+1 %>);
