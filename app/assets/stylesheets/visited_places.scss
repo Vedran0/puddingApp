@@ -1,0 +1,21 @@
+// Place all the styles related to the visited_places controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.map_outer-wrapper{
+  padding: 10px;
+  background-color: white;
+  border-radius: 30px;
+}
+.map_inner-wrapper{
+  padding: 20px;
+  border: 2px dashed $brown;
+  border-radius: 20px;
+}
+.map_wrapper{
+  padding: 20px;
+}
+.regions_div{
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}

@@ -1,0 +1,19 @@
+<h1>Visited Places</h1>
+<%= render 'visited_places/load_map' %>
+<div class="map_outer-wrapper">
+  <div class="map_inner-wrapper">
+    <div id="regions_div" style="width: 100%;"></div>
+
+    <div class="form-field">
+      <%= link_to '+Add visited country', new_visited_place_path(place_type: 'country'), class: "button button-green" %>
+    </div>
+  </div>
+</div>
+<h1>Tickets</h1>
+    <% @visited_places.each do |visited_place| %>
+      <%= visited_place.name %>
+      <%= visited_place.visited_at %>
+      <%= visited_place.place_type %>
+      <%= link_to 'Edit', edit_visited_place_path(visited_place) %>
+      <%= link_to 'Destroy', visited_place, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>

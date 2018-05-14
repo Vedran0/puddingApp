@@ -1,0 +1,34 @@
+<%= form_for(@visited_place) do |f| %>
+  <%= render partial: 'layouts/error_messages', as: :object, object: @visited_place %>
+
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper">
+        <div class="form-field-label">Country</div>
+          <%= f.select :name, options_for_select(available_countries), class: "select" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper datetime-fields">
+        <div class="form-field-label">Visit Date</div>
+        <%= f.date_select :visited_at, start_year: 2016 %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :place_type %>
+  </div>
+
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper">
+        <%= f.submit "Submit", class: "button button-green" %>
+        <%= link_to "Back", visited_places_path, class: "button button-red" %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :visited_places
   root "pages#home"
   resources :patch_notes
   resources :post_its, path: "notes"
