@@ -5,7 +5,7 @@ module VisitedPlacesHelper
   end
 
   def available_countries
-    (all_countries - VisitedPlace.pluck(:name)).sort
+    (all_countries - VisitedPlace.pluck(:name)-["Croatia"]).sort
   end
 
   def visited_places
