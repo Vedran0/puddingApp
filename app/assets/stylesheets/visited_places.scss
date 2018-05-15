@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .map_outer-wrapper{
   padding: 10px;
-  background-color: white;
+  background-color: $white;
   border-radius: 30px;
+  margin-bottom: 30px;
 }
 .map_inner-wrapper{
   padding: 20px;
@@ -18,4 +19,65 @@
   width: 100%;
   text-align: center;
   padding: 15px;
+}
+
+.tickets-wrapper{
+  text-align: center;
+}
+.ticket-outer_wrapper{
+  background-color: $white;
+  display: inline-block;
+  margin: 20px;
+  width: 200px;
+}
+.ticket-inner_wrapper{
+}
+.ticket-place{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $grey;
+  color: $white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 40px;
+  min-height: 100px;
+}
+.ticket-date{
+  color: $brown;
+  padding: 20px;
+  font-size: 30px;
+  border-bottom: 1px dashed $brown;
+}
+.ticket-controls{
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+}
+.ticket-big_text{
+  font-size: 28px;
+}
+.ticket-rotation-1{
+  transform: translate(0px, 20px) rotate(10deg);
+}
+.ticket-rotation-2{
+  transform: translate(0px, 18px) rotate(8deg);
+}
+.ticket-rotation-3{
+  transform: translate(0px, 16px) rotate(6deg);
+}
+.ticket-rotation-4{
+  transform: translate(0px, 14px) rotate(4deg);
+}
+.ticket-rotation-5{
+  transform: translate(0px, -14px) rotate(-4deg);
+}
+.ticket-rotation-6{
+  transform: translate(0px, -16px) rotate(-6deg);
+}
+.ticket-rotation-7{
+  transform: translate(0px, -18px) rotate(-8deg);
+}
+.ticket-rotation-8{
+  transform: translate(0px, -20px) rotate(-10deg);
 }

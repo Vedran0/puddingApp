@@ -10,6 +10,7 @@
   function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable([
       ['Country'],
+      ['Croatia'],
       <% visited_places.each do |country| %>
         <%= raw country.to_json %>,
       <% end %>

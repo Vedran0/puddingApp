@@ -3,7 +3,7 @@ class VisitedPlacesController < ApplicationController
 
   # GET /visited_places
   def index
-    @visited_places = VisitedPlace.all
+    @visited_places = VisitedPlace.all.order(visited_at: :asc)
   end
 
   # GET /visited_places/new
