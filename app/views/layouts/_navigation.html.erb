@@ -2,7 +2,8 @@
   <%= link_to root_path, class: "nav-title-wrapper" do %><%= image_tag "favicon.ico", class: "nav-title-icon" %><h2 class="nav-title">PuddingApp</h2><% end %>
   <div class="nav-links">
     <%= active_link_to "JukeBox", songs_path, class: "nav-link", active: [['songs', 'song_of_the_days'],[]] %>
-    <%= active_link_to "TastingCenter", beers_path, class: "nav-link" %>
+    <%= active_link_to "Places", visited_places_path, class: "nav-link" %>
+    <%#= active_link_to "TastingCenter", beers_path, class: "nav-link" %>
     <%= active_link_to "Tournaments", tournaments_path, class: "nav-link" %>
     <%#= active_link_to "Toolkit", toolkit_path, class: "nav-link" %>
     <%= active_link_to "Bucketlist", things_path, class: "nav-link" %>
