@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :visited_places
   root "pages#home"
   resources :patch_notes
   resources :post_its, path: "notes"
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
   resources :matches,           only: [:new, :create, :edit, :update, :destroy] do
     get :autocomplete_place, :on => :collection
   end
+  resources :visited_places,    only: [:index, :new, :create, :destroy], path: "visited-places"
 
   %w( 404 422 500 ).each do |code|
     get code, :to => "errors#show", :code => code

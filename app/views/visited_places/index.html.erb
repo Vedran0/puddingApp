@@ -10,20 +10,20 @@
   </div>
 </div>
 <h1>Tickets</h1>
-  <div class="tickets-wrapper">
-  <% @visited_places.each do |visited_place| %>
-    <div class="ticket-outer_wrapper ticket-rotation-<%= rand(1..8)  %> ticket-translation-<%= rand(1..8) %>">
-      <div class="ticket-inner_wrapper">
-        <div class="ticket-place <%= "ticket-big_text" if visited_place.name.size > 24 %>">
-          <%= visited_place.name %>
-        </div>
-        <div class="ticket-date">
-          <%= visited_place.visited_at.strftime("%d. %b. %Y.") %>
-        </div>
+<div class="tickets-wrapper">
+<% @visited_places.each do |visited_place| %>
+  <div class="ticket-outer_wrapper ticket-rotation-<%= rand(1..8)  %> ticket-translation-<%= rand(1..8) %>">
+    <div class="ticket-inner_wrapper">
+      <div class="ticket-place <%= "ticket-big_text" if visited_place.name.size > 24 %>">
+        <%= visited_place.name %>
       </div>
-      <div class="ticket-controls">
-      <%= link_to 'Delete', visited_place, method: :delete, class: "link-red", data: { confirm: 'Are you sure?' } %>
+      <div class="ticket-date">
+        <%= visited_place.visited_at.strftime("%d. %b. %Y.") %>
       </div>
     </div>
-  <% end %>
+    <div class="ticket-controls">
+    <%= link_to 'Delete', visited_place, method: :delete, class: "link-red", data: { confirm: 'Are you sure?' } %>
+    </div>
   </div>
+<% end %>
+</div>

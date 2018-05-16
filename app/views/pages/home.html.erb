@@ -44,14 +44,14 @@
 </div>
 
 <div style="text-align: center;">
-  <% if @last_tasted_beer %>
-    <div class="text-outer-wrapper">
+  <%# if @last_tasted_beer %>
+<!--     <div class="text-outer-wrapper">
       <div class="text-wrapper">
-        Last beer tasted <%= distance_of_time_in_words(@last_tasted_beer.created_at, DateTime.now) %> ago
+        Last beer tasted <%#= distance_of_time_in_words(@last_tasted_beer.created_at, DateTime.now) %> ago
       </div>
     </div>
-    <%= render 'beers/beer', beer: @last_tasted_beer, index: 0 %>
-  <% end %>
+ -->    <%#= render 'beers/beer', beer: @last_tasted_beer, index: 0 %>
+  <%# end %>
   <div class="text-outer-wrapper">
     <div class="text-wrapper">
       All Matches Score
