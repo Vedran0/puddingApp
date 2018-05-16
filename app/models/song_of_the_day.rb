@@ -15,16 +15,15 @@ class SongOfTheDay < ActiveRecord::Base
 
 # scope :today, -> {find_by(of_the_day: DateTime.now.to_date)}
 
-  def self.today
-    todays_song = self.find_or_initialize_by(of_the_day: DateTime.now.to_date)
-    if todays_song.new_record?
-      song = Song.all.shuffle.shuffle.sample
-      todays_song.song_id = song.id
-      todays_song.save
-    else
-      song = todays_song.song
-    end
-    song
+  def self.today?
+    self.find_by(of_the_day: DateTime.now.to_date) ? true : false
+  end
+
+  def self.draw
+    todays_song = self.new(of_the_day: DateTime.now.to_date)
+    song = Song.all.shuffle.shuffle.sample
+    todays_song.song_id = song.id
+    todays_song.save
   end
 
   def page(order = :id, per_page = 2)
