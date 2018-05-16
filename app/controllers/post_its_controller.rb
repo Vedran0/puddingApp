@@ -4,7 +4,7 @@ class PostItsController < ApplicationController
   before_action :check_resource_permission
 
   def index
-    @post_its = PostIt.all
+    @post_its = PostIt.all.order(created_at: :asc)
   end
 
   def new
