@@ -1,0 +1,18 @@
+<% if SongOfTheDay.today? %>
+  <%= render 'songs/song', song: SongOfTheDay.today %>
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper button-wrapper">
+        <%= link_to "Details", song_of_the_day_path, class: "button button-blue" %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="form-field">
+    <div class="form-field-outer-wrapper">
+      <div class="form-field-wrapper button-wrapper">
+        <%= link_to "Draw Song Of the Day", song_of_the_day_path, class: "button button-blue" %>
+      </div>
+    </div>
+  </div>
+<% end %>

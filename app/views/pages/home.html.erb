@@ -31,14 +31,7 @@
         Song of the day
       </div>
     </div>
-    <%= render 'songs/song', song: @song_of_the_day %>
-    <div class="form-field">
-      <div class="form-field-outer-wrapper">
-        <div class="form-field-wrapper button-wrapper">
-          <%= link_to "Details", song_of_the_day_path, class: "button button-blue" %>
-        </div>
-      </div>
-    </div>
+    <%= render 'song_of_the_days/song_of_the_day_homepage' %>
   </div>
 
 </div>

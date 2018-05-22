@@ -2,6 +2,7 @@ class SongOfTheDaysController < ApplicationController
   before_action :set_about_page, only: :index
 
   def show
+    SongOfTheDay.today
     @song_of_the_day = SongOfTheDay.last
     @lyrics = @song_of_the_day.song.get_lyrics
     @artist_info = @song_of_the_day.song.get_artist_wiki_summary

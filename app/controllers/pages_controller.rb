@@ -3,7 +3,6 @@ before_action :set_about_page, only: :toolkit
 before_action :check_resource_permission, only: :home
 
   def home
-    @song_of_the_day = SongOfTheDay.today
     @random_thing = Thing.to_do.sample
     @last_tasted_beer = Beer.last
     @puddings = Pudding.all

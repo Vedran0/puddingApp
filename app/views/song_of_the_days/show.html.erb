@@ -9,7 +9,7 @@
     <div class="song_of_the_day-info">
       <p><span class="song_of_the_day-subtitle">About Song of the Day</span></p>
       <p>
-      Drawn today at <%= @song_of_the_day.created_at.strftime("%H:%m") %><br/>
+      Drawn today at <%= @song_of_the_day.created_at.strftime("%H:%M") %><br/>
       Was song of the day for <span class="song-of-the-day-show-counter"><%= @song_of_the_day.song.song_of_the_days.size %></span> times including today<br/>
       First time drawn at <%= @song_of_the_day.song.song_of_the_days.first.created_at.strftime("%d. %B %Y") %>
       </p>
