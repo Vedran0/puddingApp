@@ -21,6 +21,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'lyricfy'
 gem 'wikipedia-client'
+gem 'serviceworker-rails'
 
 group :development, :test do
   gem 'byebug'

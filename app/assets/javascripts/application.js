@@ -16,3 +16,4 @@
 //= require jquery-ui
 //= require owlcarousel2/owl.carousel
 //= require_tree .
+//= require serviceworker-companion
