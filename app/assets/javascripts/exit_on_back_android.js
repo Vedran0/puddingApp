@@ -1,4 +1,4 @@
-var testInBrowser = false; // set this to true to test in browser
+var testInBrowser = true; // set this to true to test in browser
 if (   testInBrowser 
     || 
        /Android/i.test(navigator.userAgent)
@@ -30,7 +30,7 @@ function showCloseDialog() {
   s.appendChild(document.createElement('BR'));
   var b = document.createElement('BUTTON');
   b.style='font-size:30px;font-family:arial;background:none!important;border:none;color:blue;font-weight:bold;';
-  b.innerHTML='Cancel'
+  b.innerHTML='Cancel';
   b.addEventListener('click',function(){outsideResolve()});
   s.appendChild(b);
   s.appendChild(document.createElement('BR'));
