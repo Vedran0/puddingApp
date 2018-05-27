@@ -7,6 +7,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag %>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes"></head>
+
 </head>
 <body class="background-pattern-gray">
   <%= render 'layouts/devise_header' %>
