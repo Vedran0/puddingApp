@@ -79,15 +79,20 @@
   
   input:checked + .menu + ul {
     opacity: 1;
+    transform: translate(0, 0);
   }
   ul {
+    transform: translate(1000px, 0);
     z-index: 101;
     position: absolute;
-    top: 100%;
-    left: 46%;
-    transform: translate(-50%,0);
+    left: 0;
+    right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50px;
     opacity: 0;
-    transition: .5s 0s ease-in-out;
+    width: 70%;
+    transition: 0.5s 0s ease-out;
   }
   a {
     margin-bottom: 1em;
@@ -96,9 +101,23 @@
     text-decoration: none;
     text-align: center;
     color: $brown;
+    .nav-title-icon{
+      width: 45px;
+    }
     h2 {
+      display: inline-block;
+      margin-bottom: 0;
+      margin-left: 10px;
       color: $yellow;
       font-size: 40px;
     }
   }
+  a.active{
+    color: $green;
+    font-size: 30px;
+  }
+  a.mobile_nav-title-wrapper{
+      display: flex;
+      align-items: flex-start;
+    }
 }
