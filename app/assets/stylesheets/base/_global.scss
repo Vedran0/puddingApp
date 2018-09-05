@@ -65,3 +65,9 @@ textarea:focus, input:focus{
 *:focus {
     outline: none;
 }
+
+ @media only screen and (max-width: $medium) {
+  main{
+    padding: 15px 0px 0 0px;
+  }
+}
