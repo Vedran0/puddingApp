@@ -56,11 +56,11 @@
 
 
 @media only screen and (max-width: $medium) {
-  .about-wrapper, .patch_note-description-wrapper{
+  .about-wrapper{
     border-radius: 0;
     padding: 10px 0;
   }
-  .about, .patch_note-description{
+  .about{
     border: none;
     border-top: 2px dashed $yellow;
     border-bottom: 2px dashed $yellow;
@@ -68,6 +68,18 @@
     padding: 40px 20px;
     h1{
       font-size: 40px;
+    }
+  }
+
+  .patch_note-description-wrapper{
+    width: auto;
+    margin: 2px;
+    padding: 5px;
+  }
+
+  .patch_note-description{
+    p{
+      font-size: 20px;
     }
   }
 

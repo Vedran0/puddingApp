@@ -10,18 +10,51 @@
       </div>
     </div>
   </div>
-  <h1 class="js_patch_notes">Patch Notes</h1>
-  <% @patch_notes.each do |note| %>
-    <div class="patch_note-description-wrapper">
-      <div class="patch_note-description">
-        <h2><%= note.version %></h2>
-        <%= note.description.html_safe %>
-        <em><p class="patch_note-date">Released on <%= note.created_at.strftime("%A, %B the #{note.created_at.day.ordinalize} of %Y") %></p></em>
+  <div class="desktop-only">
+    <h1 class="js_patch_notes">Patch Notes</h1>
+    <% @patch_notes.each do |note| %>
+      <div class="patch_note-description-wrapper">
+        <div class="patch_note-description">
+          <h2><%= note.version %></h2>
+          <%= note.description.html_safe %>
+          <em><p class="patch_note-date">Released on <%= note.created_at.strftime("%A, %B the #{note.created_at.day.ordinalize} of %Y") %></p></em>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
+  <h1 class="js_patch_notes">Patch Notes</h1>
+  <div class="mobile-only owl-carousel">
+    <% @patch_notes.each do |note| %>
+      <div class="patch_note-description-wrapper">
+        <div class="patch_note-description">
+          <h2><%= note.version %></h2>
+          <%= note.description.html_safe %>
+          <em><p class="patch_note-date">Released on <%= note.created_at.strftime("%A, %B the #{note.created_at.day.ordinalize} of %Y") %></p></em>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
 <script>
+$(".owl-carousel").owlCarousel({
+  loop:false,
+  responsive:{
+      0:{
+          items:1,
+      },
+      600:{
+          items:1,
+      },
+      900:{
+          items:1,
+      },
+      1200:{
+          items:4,
+      }
+  }
+});
+
 <% if params[:new_patch_note] == "t" %>
   $(function(){
     var $container = $("html,body");

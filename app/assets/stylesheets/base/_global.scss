@@ -66,8 +66,21 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+  .mobile-only{
+    display: none;
+  }
+  .desktop-only{
+    display: block;
+  }
+
  @media only screen and (max-width: $medium) {
   main{
     padding: 15px 0px 0 0px;
+  }
+  .mobile-only{
+    display: block;
+  }
+  .desktop-only{
+    display: none;
   }
 }
