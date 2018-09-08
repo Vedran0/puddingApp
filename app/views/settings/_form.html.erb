@@ -8,15 +8,18 @@
   </div>
 </div>
 
-<% ["default", "green", "blue", "gray", "polka_dot_green", "polka_dot_blue", "polka_dot_brown", "polka_dot_yellow", "vertical_red", "vertical_green", "vertical_yellow", "vertical_grey"].each do |background| %>
-<div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
-  <div class="background-option-wrapper">
-    <div class="background-option background-pattern-<%= background %>">
-      
+
+<div class="owl-carousel">
+  <% ["default", "green", "blue", "gray", "polka_dot_green", "polka_dot_blue", "polka_dot_brown", "polka_dot_yellow", "vertical_red", "vertical_green", "vertical_yellow", "vertical_grey"].each do |background| %>
+  <div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
+    <div class="background-option-wrapper">
+      <div class="background-option background-pattern-<%= background %>">
+        
+      </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>
 
 <div class="form-field">
   <div class="form-field-outer-wrapper">
@@ -26,15 +29,17 @@
   </div>
 </div>
 
-<% ["default", "blue", "red", "green"].each do |post_it_color| %>
-<div class="background-option-outer-wrapper js_post_it_color js_post_it_color-<%= post_it_color %>" value="<%= post_it_color %>" onclick="textColorOptionClicked($(this))" >
-  <div class="background-option-wrapper">
-    <div class="background-option settings-text sticker-color-<%= post_it_color %>">
-      Chose Meee!
+<div class="owl-carousel">
+  <% ["default", "blue", "red", "green"].each do |post_it_color| %>
+  <div class="background-option-outer-wrapper js_post_it_color js_post_it_color-<%= post_it_color %>" value="<%= post_it_color %>" onclick="textColorOptionClicked($(this))" >
+    <div class="background-option-wrapper">
+      <div class="background-option settings-text sticker-color-<%= post_it_color %>">
+        Chose Meee!
+      </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>
   <div class="field">
     <%= f.hidden_field :post_it_color %>
     <%= f.hidden_field :background %>
@@ -66,5 +71,23 @@
     $(clicked).children("div").css( "border", "3px dashed green" );
     $("#setting_post_it_color").attr("value", clicked.attr("value"));
   }
+
+  $(".owl-carousel").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        900:{
+            items:1,
+        },
+        1200:{
+            items:4,
+        }
+    }
+  });
 
 </script>
