@@ -6,7 +6,7 @@
   </span>
   <ul>
     <li>
-      <%= link_to root_path, class: "mobile_nav-title-wrapper" do %><%= image_tag "favicon.ico", class: "nav-title-icon" %><h2>PuddingApp</h2><% end %>
+      <%= link_to root_path, class: "mobile_nav-title-wrapper" do %><%#= image_tag "favicon.ico", class: "nav-title-icon" %><h2>PuddingApp</h2><% end %>
     </li>
     <li>
       <%= active_link_to "JukeBox", songs_path, active: [['songs', 'song_of_the_days'],[]] %>

@@ -373,8 +373,17 @@ input[type=number] {
   margin: 15px auto;
 }
 
+.form-field-outer-wrapper--text_field{
+  display: inline-block;
+  padding: 5px;
+  background-color: $white;
+  border-radius: 50px;
+  margin: 15px auto;
+}
+
 .form-field-wrapper{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: $white;
@@ -382,6 +391,25 @@ input[type=number] {
   border-radius: 50px;
   border: 2px $brown dashed;
   text-align: center;
+}
+
+@media only screen and (max-width: $medium) {
+  .form-field-outer-wrapper--text_field{
+    width: 90%;
+    .form-field-wrapper{
+      flex-direction: column;
+      padding-top: 0px;
+      .form-field-label{
+        font-size: 22px;
+      }
+    }
+    .text-field{
+      width: 90%;
+    }
+    .text-field:focus {
+      width: 100%;
+    }
+  }
 }
 
 .button-wrapper{

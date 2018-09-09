@@ -1,4 +1,13 @@
 <h1>Notes</h1>
+<div class="form-field">
+  <div class="form-field-outer-wrapper">
+    <div class="form-field-wrapper">
+      <div class="form-field-label">All Notes (<%= @post_its.size %>)</div>
+    </div>
+  </div>
+</div>
+
+<div class="desktop-only">
   <div class="sticker-wrapper">
     <% @post_its.each do |post_it| %>
       <div class="sticker sticker-color-<%= post_it.pudding.setting.post_it_color %>"><%= post_it.message %>
@@ -7,6 +16,38 @@
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="mobile-only">
+  <div class="sticker-wrapper owl-carousel">
+    <% @post_its.each do |post_it| %>
+      <div class="sticker sticker-color-<%= post_it.pudding.setting.post_it_color %>"><%= post_it.message %>
+        <div class="date"><%= post_it.created_at.strftime("%H:%M  %d.%m.%Y") %></div>
+        <%= link_to 'Delete', post_it, class: "link-red", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <div class="button button-blue what_is_this-button">What!?</div>
 <%= link_to '+AddNote', new_post_it_path, class: "button button-green fixed-control" %>
+
+<script>
+$(".owl-carousel").owlCarousel({
+  loop:false,
+  responsive:{
+      0:{
+          items:1,
+      },
+      600:{
+          items:1,
+      },
+      900:{
+          items:1,
+      },
+      1200:{
+          items:4,
+      }
+  }
+});	
+</script>

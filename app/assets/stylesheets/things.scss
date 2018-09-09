@@ -4,11 +4,12 @@
   justify-content: center;
 }
 .thing-outer-wrapper{
-  margin: 10px;
+  margin: auto;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 350px;
+  height: 350px;
   width: 300px;
   background-color: $white;
   border-radius: 160px 160px 30px 30px;

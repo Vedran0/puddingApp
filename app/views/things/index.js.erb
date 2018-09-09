@@ -1,1 +1,19 @@
 $(".things-wrapper").html("<%= j render 'things/things' %>");
+$(".owl-carousel").owlCarousel('destroy');
+$(".owl-carousel").owlCarousel({
+	loop:false,
+	responsive:{
+	    0:{
+	        items:1,
+	    },
+	    600:{
+	        items:1,
+	    },
+	    900:{
+	        items:1,
+	    },
+	    1200:{
+	        items:4,
+	    }
+	}
+});

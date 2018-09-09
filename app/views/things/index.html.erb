@@ -31,7 +31,7 @@
   </div>
 </div>
 
-<div class="things-wrapper">
+<div class="things-wrapper owl-carousel">
   <%= render 'things/things' %>
 </div>
 
@@ -41,5 +41,22 @@
 <script>
   $("input,select").change(function(){
     $(this).closest("form").submit();
+  });
+  $(".owl-carousel").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        900:{
+            items:1,
+        },
+        1200:{
+            items:4,
+        }
+    }
   });
 </script>

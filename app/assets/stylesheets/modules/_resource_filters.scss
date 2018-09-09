@@ -69,3 +69,10 @@
   box-shadow: 0 2px darken($yellow, 15%);
   transform: translateY(2px);
 }
+
+@media only screen and (max-width: $medium) {
+  .resource-filter-element{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

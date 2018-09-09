@@ -11,29 +11,62 @@
       Next Holiday: <%= holiday.name %>
     </div>
   </div>
-  <div id="clockdiv" class="countdown_clock">
-    <div class="digits-outer-wrapper">
-      <div class="digits-inner-wrapper">
-        <div class="smalltext">Days</div>
-        <div class="days digits <%= "red-background" if holiday.next? %>"></div>
+  <div class="desktop-only">
+    <div id="clockdiv" class="countdown_clock">
+      <div class="digits-outer-wrapper">
+        <div class="digits-inner-wrapper">
+          <div class="smalltext">Days</div>
+          <div class="days digits <%= "red-background" if holiday.next? %>"></div>
+        </div>
+      </div>
+      <div class="digits-outer-wrapper">
+        <div class="digits-inner-wrapper">
+          <div class="smalltext">Hours</div>
+          <div class="hours digits <%= "red-background" if holiday.next? %>"></div>
+        </div>
+      </div>
+      <div class="digits-outer-wrapper">
+        <div class="digits-inner-wrapper">
+          <div class="smalltext">Minutes</div>
+          <div class="minutes digits <%= "red-background" if holiday.next? %>"></div>
+        </div>
+      </div>
+      <div class="digits-outer-wrapper">
+        <div class="digits-inner-wrapper">
+          <div class="smalltext">Seconds</div>
+          <div class="seconds digits <%= "red-background" if holiday.next? %>"></div>
+        </div>
       </div>
     </div>
-    <div class="digits-outer-wrapper">
-      <div class="digits-inner-wrapper">
-        <div class="smalltext">Hours</div>
-        <div class="hours digits <%= "red-background" if holiday.next? %>"></div>
-      </div>
-    </div>
-    <div class="digits-outer-wrapper">
-      <div class="digits-inner-wrapper">
-        <div class="smalltext">Minutes</div>
-        <div class="minutes digits <%= "red-background" if holiday.next? %>"></div>
-      </div>
-    </div>
-    <div class="digits-outer-wrapper">
-      <div class="digits-inner-wrapper">
-        <div class="smalltext">Seconds</div>
-        <div class="seconds digits <%= "red-background" if holiday.next? %>"></div>
+  </div>
+
+  <div class="mobile-only">
+    <div id="mobile--clockdiv" class="countdown_clock">
+      <div class="digits-wrapper">
+        <div class="text_digit-outer_wrapper <%= "red-background" if holiday.next? %>">
+          <div class="text_digit-wrapper">
+            <div class="smalltext">Days</div>
+            <div class="days digits"></div>
+          </div>
+        </div>
+        <div class="text_digit-outer_wrapper <%= "red-background" if holiday.next? %>">
+          <div class="text_digit-wrapper">
+            <div class="smalltext">Hours</div>
+            <div class="hours digits"></div>
+          </div>
+        </div>
+        <div class="text_digit-outer_wrapper <%= "red-background" if holiday.next? %>">
+          <div class="text_digit-wrapper">
+            <div class="smalltext">Minutes</div>
+            <div class="minutes digits"></div>
+          </div>
+        </div>
+        <div class="text_digit-outer_wrapper <%= "red-background" if holiday.next? %>">
+          <div class="text_digit-wrapper">
+            <div class="smalltext">Seconds</div>
+            <div class="seconds digits"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -84,6 +117,7 @@
 
    var deadline = new Date(<%= this_or_next_year(holiday) %>, <%= holiday.date.month-1 %>, <%= holiday.date.day %>, 0, 0, 0, 0);
    initializeClock('clockdiv', deadline);
+   initializeClock('mobile--clockdiv', deadline);
    });
   </script>
 <% end %>

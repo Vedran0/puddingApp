@@ -1,8 +1,8 @@
-<h1>Prove that you are Pudding</h1>
+<h1 class="desktop-only">Prove that you are Pudding</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"form", autocomplete:"off"}) do |f| %>
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Your Name</div>
         <%= f.text_field :name, autofocus: true, placeholder: "Name...", class: "text-field" %>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Password</div>
         <%= f.password_field :password, placeholder: "Password...", class: "text-field" %>
