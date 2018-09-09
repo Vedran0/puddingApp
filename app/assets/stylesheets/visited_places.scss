@@ -81,3 +81,16 @@
 .ticket-rotation-8{
   transform: translate(0px, -20px) rotate(-10deg);
 }
+
+@media only screen and (max-width: $medium) {
+  .map_outer-wrapper{
+    padding: 10px 0;
+    border-radius: 0;
+  }
+  .map_inner-wrapper{
+    padding: 8px 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}

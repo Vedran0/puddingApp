@@ -1,4 +1,23 @@
 <h1>Visited Places</h1>
+<div class="resource-filter">
+  <div class="resource-filter-outer-wrapper">
+    <%= form_for visited_places_path, method: :get do |f| %>
+      <div class="resource-filter-wrapper">
+        <div class="resource-filter-element">
+          <div class="resource-filter-button-label">Region</div>
+           <select id="region" name="region" class="select" style="width: 130px;" onchange="$(this).closest('form').submit()">
+            <option value="world" <%= "selected" if params[:region] == "world" %>>World</option>
+            <option value= 150 <%= "selected" if params[:region] == "150" %>>Europe</option>
+            <option value= 002 <%= "selected" if params[:region] == "002" %>>Africa</option>
+            <option value= 019 <%= "selected" if params[:region] == "019" %>>Americas</option>
+            <option value= 142 <%= "selected" if params[:region] == "142" %>>Asia</option>
+            <option value= 009 <%= "selected" if params[:region] == "009" %>>Oceania</option>
+          </select>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 <%= render 'visited_places/load_map' %>
 <div class="map_outer-wrapper">
   <div class="map_inner-wrapper">
@@ -27,3 +46,4 @@
   </div>
 <% end %>
 </div>
+<div class="button button-blue what_is_this-button">What!?</div>

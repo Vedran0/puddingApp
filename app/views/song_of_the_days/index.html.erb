@@ -16,7 +16,7 @@
         <div class="datepicker-wrapper">
           <div class="datepicker-label">Pick a Date</div>
           <%= form_tag song_of_the_days_path, method: :get, id: "time_travel_datepicker", remote: true do |f| %>
-           <input type="text" name="date_picked" class="datepicker time_travel_datepicker" placeholder="Click Here...">
+           <input type="text" name="date_picked" class="datepicker time_travel_datepicker" placeholder="Click Here..." readonly="readonly">
           <% end %>
         </div>
         <div class="pagination-element-outer-wrapper outer-right">
@@ -48,6 +48,7 @@
   });
 
   $(function() {
-    $('.datepicker').datepicker({ beforeShowDay: available, dateFormat: 'dd-mm-yy' });
+    $('.datepicker').datepicker({ beforeShowDay: available, dateFormat: 'dd-mm-yy', disableTextInput: true,
+ });
   });
 </script>

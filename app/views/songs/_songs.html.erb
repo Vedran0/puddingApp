@@ -14,8 +14,9 @@
               <%= link_to 'Previous', "/jukebox?page=#{@songs.first_page? ? @songs.total_pages : @songs.current_page-1}", class: "pagination-element", remote: true %>
             </div>
           </div>
+
           <% @songs.total_pages.times do |index| %>
-            <div class="pagination-element-outer-wrapper center <%= "active" if @songs.current_page-1 == index %>">
+            <div class="pagination-element-outer-wrapper center <%= "active" if @songs.current_page-1 == index %> desktop-only">
               <div class="pagination-element-wrapper">
                 <%= link_to index+1, "/jukebox?page=#{index+1}", onclick: "$(this).addClass('active')", class: "pagination-element", remote: true %>
               </div>
