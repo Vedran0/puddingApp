@@ -265,6 +265,62 @@ $hearts-max: $hearts-size*.7;
   background-repeat: repeat;
   }
 
+.background-pattern-hearts-black{
+$hearts-bgcolor: $black;
+$hearts-transparent: rgba(255, 255, 255, 0);
+
+$hearts-color-1: $red;
+$hearts-color-1-t: transparentize($hearts-color-1, 1);
+$hearts-color-2: $red;
+$hearts-color-2-t: transparentize($hearts-color-2, 1);
+
+$hearts-size: 4em;
+$hearts-big-size: $hearts-size*2;
+$hearts-min: $hearts-size*.3;
+$hearts-max: $hearts-size*.7;
+  background: 
+    linear-gradient(135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    linear-gradient(-135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+
+
+    linear-gradient(135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    linear-gradient(-135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0,
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0
+    ;
+  background-size:  $hearts-big-size $hearts-big-size;
+  background-color: $hearts-bgcolor;
+  background-repeat: repeat;
+  }
+
 .background-pattern-diagonal-green{
   background: linear-gradient(45deg,
     $green 25%,
