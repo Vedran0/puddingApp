@@ -2,43 +2,55 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .tournament-outer-wrapper{
-  width: 400px;
+  width: 300px;
   background-color: $white;
-  margin: 15px 15px;
-  padding: 15px;
-  border-radius: 50px;
-  .tournament-wrapper{
-    padding: 30px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    border-radius: 40px;
-    .tournament-section{
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-    }
-    .tournament-title{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 15px;
-      a{
-        transform: translateX(-30px);
-        padding: 3px 20px 3px 30px;
-      }
-    }
-    p{
-      color: $brown;
-      font-size: 1.4rem;
-      margin: 5px 0;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 30px;
+  margin: 10px;
+  svg{transition: all ease-in 0.3s;}
+}
+
+.tournament-outer-wrapper:hover{
+  svg{
+    transform: rotate(15deg);
+    transition: all ease-out 0.3s;
   }
+}
+
+.tournament-inner-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 30px;
+  p{
+    color: $brown;
+    font-size: 1.4rem;
+    margin: 5px 0;
+  }
+  h3{
+    color: $yellow;
+  }
+}
+
+.die-active{
+  fill: $green;
+}
+
+.die-finished{
+  fill: $yellow;
+}
+
+.die{
+  margin-bottom: 10px;
 }
 
 .tournament-active{
@@ -139,97 +151,31 @@
 .tournament-pudding-name{
   font-size: 40px;
 }
-/*------------------------------------*\
-** RIBBON
-\*------------------------------------*/
-
-.badge-ribbon {
-  margin-left: 30px;
-  position: relative;
-  background: $yellow;
-  height: 50px;
-  width: 50px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  z-index: 3;
-}
-
-.badge-ribbon:before, .badge-ribbon:after{
-  content: '';
-  position: absolute;
-  border-bottom: 35px solid $yellow;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  top: 35px;
-  left: -5px;
-  -webkit-transform: rotate(-140deg);
-  -moz-transform: rotate(-140deg);
-  -ms-transform: rotate(-140deg);
-  -o-transform: rotate(-140deg);
-}
-
-.badge-ribbon:after{
-  left: auto;
-  right: -5px;
-  -webkit-transform: rotate(140deg);
-  -moz-transform: rotate(140deg);
-  -ms-transform: rotate(140deg);
-  -o-transform: rotate(140deg);
-}
-
-.winner-ribbon {
-  margin-left: 30px;
-  position: absolute;
-  background: $yellow;
-  height: 50px;
-  width: 50px;
-  color: $white;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  z-index: 3;
-}
-
-.winner-ribbon:before, .winner-ribbon:after{
-  content: '';
-  position: absolute;
-  border-bottom: 35px solid $yellow;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  top: 35px;
-  left: -5px;
-  -webkit-transform: rotate(-140deg);
-  -moz-transform: rotate(-140deg);
-  -ms-transform: rotate(-140deg);
-  -o-transform: rotate(-140deg);
-}
-
-.winner-ribbon:after{
-  left: auto;
-  right: -5px;
-  -webkit-transform: rotate(140deg);
-  -moz-transform: rotate(140deg);
-  -ms-transform: rotate(140deg);
-  -o-transform: rotate(140deg);
-}
-.winner-ribbon-wrapper{
-  transform: translate(-10px, 70px);
-}
 
 @media only screen and (max-width: $medium) {
   .tournament-outer-wrapper{
-    width: auto;
+    margin: auto;
   }
-  .tournament-title{
-    text-align: center;
+  .tournament-show-title{
+    font-size: 50px;
+  }
+  .tournament-pudding-score{
+    font-size: 50px;
+  }
+  .tournament-pudding-name{
+    font-size: 25px;
+  }
+  .tournament-show-title-outer-wrapper{
+    padding: 5px;
+    border-radius: 30px;
+  }
+  .tournament-pudding-score-outer-wrapper{
+    width: 150px;
+    height: 150px;
+    border-radius: 35px;
+    padding: 5px;
+  }
+  .tournament-pudding-score-wrapper{
+    border-radius: 30px;
   }
 }

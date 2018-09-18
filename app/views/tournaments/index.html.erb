@@ -1,6 +1,6 @@
 <h1>Tournaments</h1>
 
-<div class="tournaments-wrapper desktop-only">
+<!-- <div class="tournaments-wrapper desktop-only">
   <% @tournaments.each_with_index do |tournament, index| %>
       <div class="tournament-outer-wrapper">
         <div class="tournament-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
@@ -8,6 +8,19 @@
             <div class="badge-ribbon"><%= index+1 %></div>
             <%= link_to tournament.name, tournament, class:"link-big" %>
           </div>
+
+        </div>
+      </div>
+  <% end %>
+</div><br/> -->
+
+<div class="mobile-only">
+  <div class="tournaments-wrapper owl-carousel">
+    <% @tournaments.each_with_index do |tournament, index| %>
+      <%= link_to tournament, class: "tournament-outer-wrapper" do %>
+        <div class="tournament-inner-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
+          <h3><%= tournament.name %></h3>
+          <%= render 'tournaments/die', active: tournament.active? %>
           <div class="tournament-section">
             <p><%= scoreboard(tournament) %></p>
           </div>
@@ -15,49 +28,75 @@
             <p><%= time_left(tournament) %></p>
           </div>
         </div>
-      </div>
-  <% end %>
-</div><br/>
-
-<div class="tournaments-wrapper mobile-only owl-carousel">
-  <% @tournaments.each_with_index do |tournament, index| %>
-      <div class="tournament-outer-wrapper">
-        <div class="tournament-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
-          <div class="tournament-title">
-            <%= link_to tournament.name, tournament, class:"link-big" %>
-          </div>
-          <div class="tournament-section">
-            <p><%= scoreboard(tournament) %></p>
-          </div>
-          <div class="tournament-section">
-            <p><%= time_left(tournament) %></p>
-          </div>
-        </div>
-      </div>
-  <% end %>
-</div><br/>
-
-<h2>Total points by place</h2>
-<div class="matches-wrapper">
-  <% @places.each do |place| %>
-    <div class="place_match-outer-wrapper">
-      <div class="place_match-wrapper">
-        <div class="place_match-place"><%= place %></div>
-        <div class="place_match-results-wrapper">
-          <% Pudding.all.each do |pudding| %>
-            <div class="place_match-result-wrapper">
-              <div class="place_match-player-name"><%= pudding.name %></div>
-              <div class="place_match-result <%= matches_by_place_score_color(pudding, place) %>">
-                <%= Match.pudding_points_by_place(pudding, place) %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
+<div class="desktop-only">
+  <div class="tournaments-wrapper">
+    <% @tournaments.each_with_index do |tournament, index| %>
+      <%= link_to tournament, class: "tournament-outer-wrapper" do %>
+        <div class="tournament-inner-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
+          <h3><%= tournament.name %></h3>
+          <%= render 'tournaments/die', active: tournament.active? %>
+          <div class="tournament-section">
+            <p><%= scoreboard(tournament) %></p>
+          </div>
+          <div class="tournament-section">
+            <p><%= time_left(tournament) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<h2>Total points by place</h2>
+<div class="mobile-only">
+  <div class="matches-wrapper owl-carousel">
+    <% @places.each do |place| %>
+      <div class="place_match-outer-wrapper">
+        <div class="place_match-wrapper">
+          <div class="place_match-place"><%= place %></div>
+          <div class="place_match-results-wrapper">
+            <% Pudding.all.each do |pudding| %>
+              <div class="place_match-result-wrapper">
+                <div class="place_match-player-name"><%= pudding.name %></div>
+                <div class="place_match-result <%= matches_by_place_score_color(pudding, place) %>">
+                  <%= Match.pudding_points_by_place(pudding, place) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="desktop-only">
+  <div class="matches-wrapper">
+    <% @places.each do |place| %>
+      <div class="place_match-outer-wrapper">
+        <div class="place_match-wrapper">
+          <div class="place_match-place"><%= place %></div>
+          <div class="place_match-results-wrapper">
+            <% Pudding.all.each do |pudding| %>
+              <div class="place_match-result-wrapper">
+                <div class="place_match-player-name"><%= pudding.name %></div>
+                <div class="place_match-result <%= matches_by_place_score_color(pudding, place) %>">
+                  <%= Match.pudding_points_by_place(pudding, place) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 <div class="button button-blue what_is_this-button">What!?</div>
 <%= link_to '+AddTournament', new_tournament_path, class: "button button-green fixed-control" %>
 
