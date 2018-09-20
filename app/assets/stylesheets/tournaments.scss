@@ -94,6 +94,7 @@
 .tournament-show-title{
   color: $yellow;
   font-size: 70px;
+  padding: 10px;
 }
 
 .tournament-show-dates{
@@ -178,4 +179,12 @@
   .tournament-pudding-score-wrapper{
     border-radius: 30px;
   }
+  .tournament-show-links{
+    position: relative;
+    margin: 10px 0;
+  }
+}
+
+.trophy{
+  fill: $yellow;
 }

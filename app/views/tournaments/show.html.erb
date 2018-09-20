@@ -1,7 +1,7 @@
 <div class="tournament-show-title-outer-wrapper">
   <div class="tournament-show-title-wrapper">
     <div class="tournament-show-title">
-      <%= @tournament.name %>
+      <%= @tournament.name %> dsad sadsd
     </div>
     <div class="tournament-show-dates">
       <%= @tournament.created_at.strftime("%d.%m.%Y.") %> - <%= @tournament.end_date.strftime("%d.%m.%Y.") %>
@@ -16,8 +16,8 @@
   <% @tournament.puddings.each do |pudding| %>
     <div class="tournament-pudding-score-outer-wrapper">
       <div class="tournament-pudding-score-wrapper">
-        <%= winner_ribbon(pudding, @tournament) %>
         <div class="tournament-pudding-score <%= score_color(pudding, @tournament) %>">
+          <%= winner_ribbon(pudding, @tournament) %>
           <%= @tournament.pudding_points(pudding) %>
         </div>
         <div class="tournament-pudding-name">
@@ -29,8 +29,37 @@
 </div>
 <%= link_to '+AddMatch', new_match_path(tournament_id: @tournament.id), class: "button button-blue fixed-control" if @tournament.active? %>
 <h2>Matches</h2>
-<div class="matches-wrapper">
+
+<div class="mobile-only">
+  <div class="matches-wrapper owl-carousel">
+    <% @tournament.matches.each do |match| %>
+      <%= render match %>
+    <% end %>
+  </div>
+</div>
+
+<div class="matches-wrapper desktop-only">
   <% @tournament.matches.each do |match| %>
     <%= render match %>
   <% end %>
 </div>
+
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        900:{
+            items:1,
+        },
+        1200:{
+            items:4,
+        }
+    }
+  }); 
+</script>

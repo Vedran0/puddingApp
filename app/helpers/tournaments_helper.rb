@@ -26,7 +26,7 @@ module TournamentsHelper
   end
 
   def winner_ribbon(pudding, tournament)
-    "<div class='winner-ribbon-wrapper'><div class='winner-ribbon'>1.</div></div>".html_safe if !tournament.active? && pudding.winning(tournament)
+    render 'tournaments/trophy', width: 20 if !tournament.active? && pudding.winning(tournament)
   end
 
 end
