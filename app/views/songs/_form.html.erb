@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/error_messages', as: :object, object: @song %>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Name</div>
         <%= f.text_field :name, placeholder: "Name...", class: "text-field" %>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Artist</div>
         <%= f.text_field :artist, placeholder: "Artist...", class: "text-field" %>
@@ -20,7 +20,7 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">URL</div>
         <%= f.text_field :url, placeholder: "URL...", class: "text-field" %>

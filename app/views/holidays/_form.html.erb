@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/error_messages', as: :object, object: @holiday %>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Name</div>
         <%= f.text_field :name, placeholder: "Holiday name...", class: "text-field" %>
@@ -11,16 +11,16 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper datetime-fields">
         <div class="form-field-label">Date</div>
-        <%= f.date_select :date, { discard_year: true } %>
+        <div><%= f.date_select :date, { discard_year: true } %></div>
       </div>
     </div>
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Message</div>
         <%= f.text_field :message, placeholder: "Message...", class: "text-field" %>

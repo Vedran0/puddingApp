@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/error_messages', as: :object, object: @match %>
   <%= f.hidden_field :tournament_id, value: f.object.tournament.id %>
 
-  <div class="form-field-outer-wrapper">
+  <div class="form-field-outer-wrapper--text_field">
     <div class="form-field-wrapper">
       <div class="form-field-label">Place</div>
       <%= f.text_field :place, placeholder: "Name of the place...", class: "text-field", id: "place" %>

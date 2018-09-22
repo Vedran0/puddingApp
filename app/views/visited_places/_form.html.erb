@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/error_messages', as: :object, object: @visited_place %>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Country</div>
           <%= f.select :name, options_for_select(available_countries), class: "select" %>
@@ -11,10 +11,10 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper datetime-fields">
         <div class="form-field-label">Visit Date</div>
-        <%= f.date_select :visited_at, start_year: 2016 %>
+          <div><%= f.date_select :visited_at, start_year: 2016 %></div>
       </div>
     </div>
   </div>
