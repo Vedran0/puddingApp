@@ -46,8 +46,7 @@ class VisitedPlacesController < ApplicationController
     end
 
     def set_about_page
-      @about_page = "<p>Wanna travel?</p>
-                      <p>The world is ours!</p>
-                      <p>Conquer the world!</p>"
+      @about_page = "<p>You and me</p>
+                      <p>Alone against the world!</p>"
     end
 end

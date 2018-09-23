@@ -138,7 +138,8 @@ PatchNote.create(version: "version 1.11.27",
                 description: "<p>Happy Birthday, PuddingApp!!</p>
                 <p>Can you believe it? A whole year have passed.</p>
                 <p>★ It's MOBILEEEE!! - The app is adjusted to fit your favorite device.</p>
-                <p>★ Added a few new backgrounds and one is inspired by one of your shirts :)</p>
+                <p>★ Quitted Tasting Center but not drinking with you.</p>
+                <p>★ Added a few new <a class='in_text-link' href='/settings'>Backgrounds</a> and one is inspired by one of your shirts :)</p>
                 <p>★ Finally fixed <a class='in_text-link' href='/notes'>Notes</a> ordering!</p>
                 <p>★ You have to draw song of the day now, because... why not?</p>
                 <p>★ <a class='in_text-link' href='/visited-places'>Places</a> have been added to track our traveling adventures.</p>
