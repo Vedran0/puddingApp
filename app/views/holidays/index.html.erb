@@ -16,18 +16,23 @@
 <script>
   $(".owl-carousel").owlCarousel({
     loop:false,
+    startPosition: $(".holiday-outer-wrapper").index($(".holiday-<%= Holiday.next.id %>").first()),
     responsive:{
         0:{
             items:1,
+            loop:true
         },
         600:{
             items:2,
+            loop:true
         },
         900:{
             items:3,
+            loop:true
         },
         1200:{
             items:4,
+            loop:true
         }
     }
   });

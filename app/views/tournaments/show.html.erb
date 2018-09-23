@@ -1,7 +1,8 @@
+<%= link_to '&#60 Go Back'.html_safe, tournaments_path, class: "button button-yellow what_is_this-button" %>
 <div class="tournament-show-title-outer-wrapper">
   <div class="tournament-show-title-wrapper">
     <div class="tournament-show-title">
-      <%= @tournament.name %> dsad sadsd
+      <%= @tournament.name %>
     </div>
     <div class="tournament-show-dates">
       <%= @tournament.created_at.strftime("%d.%m.%Y.") %> - <%= @tournament.end_date.strftime("%d.%m.%Y.") %>
@@ -12,6 +13,7 @@
     </div>
   </div>
 </div>
+
 <div class="tournament-score">
   <% @tournament.puddings.each do |pudding| %>
     <div class="tournament-pudding-score-outer-wrapper">
@@ -27,7 +29,7 @@
     </div>
   <% end %>
 </div>
-<%= link_to '+AddMatch', new_match_path(tournament_id: @tournament.id), class: "button button-blue fixed-control" if @tournament.active? %>
+<%= link_to '+AddMatch', new_match_path(tournament_id: @tournament.id), class: "button button-green fixed-control" if @tournament.active? %>
 <h2>Matches</h2>
 
 <div class="mobile-only">
@@ -47,6 +49,7 @@
 <script>
   $(".owl-carousel").owlCarousel({
     loop:false,
+    startPosition: <%= @tournament.matches.size - 1 %>,
     responsive:{
         0:{
             items:1,

@@ -22,7 +22,7 @@
 </div>
 
 <div class="mobile-only">
-  <div class="owl-carousel">
+  <div class="owl-carousel owl-carousel-one">
     <% ["default", "green", "blue", "gray", "polka_dot_green", "polka_dot_blue", "polka_dot_brown", "polka_dot_yellow", "vertical_red", "vertical_green", "vertical_yellow", "vertical_grey", "hearts", "hearts-green", "hearts-black", "diagonal-green", "diagonal-yellow"].each do |background| %>
     <div class="background-option-outer-wrapper js_background js_background-<%= background %>" value="<%= background %>" onclick="backgroundOptionClicked($(this))" >
       <div class="background-option-wrapper">
@@ -56,7 +56,7 @@
 </div>
 
 <div class="mobile-only">
-  <div class="owl-carousel">
+  <div class="owl-carousel owl-carousel-two">
     <% ["default", "blue", "red", "green"].each do |post_it_color| %>
     <div class="background-option-outer-wrapper js_post_it_color js_post_it_color-<%= post_it_color %>" value="<%= post_it_color %>" onclick="textColorOptionClicked($(this))" >
       <div class="background-option-wrapper">
@@ -101,15 +101,39 @@
     $("#setting_post_it_color").attr("value", clicked.attr("value"));
   }
 
-
-  $(".owl-carousel").owlCarousel({
+  // alert($("js_background").index($(".js_background-diagonal-yellow")));
+  $(".owl-carousel-one").owlCarousel({
     loop:false,
+    startPosition: $(".js_background").index($(".js_background-<%= current_pudding.setting.background %>").first()),
     responsive:{
         0:{
             items:1,
+            loop:true
         },
         600:{
             items:1,
+            loop:true
+        },
+        900:{
+            items:1,
+        },
+        1200:{
+            items:4,
+        }
+    }
+  });
+
+  $(".owl-carousel-two").owlCarousel({
+    loop:false,
+    startPosition: $(".js_post_it_color").index($(".js_post_it_color-<%= current_pudding.setting.post_it_color %>").first()),
+    responsive:{
+        0:{
+            items:1,
+            loop:true
+        },
+        600:{
+            items:1,
+            loop:true
         },
         900:{
             items:1,

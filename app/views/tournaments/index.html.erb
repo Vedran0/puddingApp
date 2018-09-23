@@ -15,7 +15,7 @@
 </div><br/> -->
 
 <div class="mobile-only">
-  <div class="tournaments-wrapper owl-carousel">
+  <div class="tournaments-wrapper owl-carousel owl-carousel-tournaments">
     <% @tournaments.each_with_index do |tournament, index| %>
       <%= link_to tournament, class: "tournament-outer-wrapper" do %>
         <div class="tournament-inner-wrapper tournament-<%= tournament.active? ? 'active' : 'finished' %>">
@@ -55,7 +55,7 @@
 
 <h2>Total points by place</h2>
 <div class="mobile-only">
-  <div class="matches-wrapper owl-carousel">
+  <div class="matches-wrapper owl-carousel owl-carousel-places">
     <% @places.each do |place| %>
       <div class="place_match-outer-wrapper">
         <div class="place_match-wrapper">
@@ -101,8 +101,9 @@
 <%= link_to '+AddTournament', new_tournament_path, class: "button button-green fixed-control" %>
 
 <script>
-  $(".owl-carousel").owlCarousel({
+  $(".owl-carousel-tournaments").owlCarousel({
     loop:false,
+    startPosition: <%= @tournaments.size - 1 %>,
     responsive:{
         0:{
             items:1,
@@ -115,6 +116,27 @@
         },
         1200:{
             items:4,
+        }
+    }
+  }); 
+  $(".owl-carousel-places").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+            loop: true
+        },
+        600:{
+            items:1,
+            loop: true
+        },
+        900:{
+            items:1,
+            loop: true
+        },
+        1200:{
+            items:4,
+            loop: true
         }
     }
   }); 
