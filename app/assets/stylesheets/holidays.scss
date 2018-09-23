@@ -116,6 +116,7 @@
   padding: 50px 20px;
   border: dashed 2px $green;
   border-radius: 200px 200px;
+  text-align: center;
   h1{
     color: $yellow;
   }
@@ -123,5 +124,23 @@
     color: $brown;
     font-size: 30px;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: $medium) {
+  .holiday-description-wrapper{
+    width: 100%;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .holiday-description{
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    p{
+      margin-bottom: 0;
+    }
   }
 }
