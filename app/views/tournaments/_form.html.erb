@@ -2,7 +2,7 @@
   <%= render partial: 'layouts/error_messages', as: :object, object: @tournament %>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Name</div>
         <%= f.text_field :name, placeholder: "Tournament name...", class: "text-field" %>
@@ -11,10 +11,10 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper datetime-fields">
         <div class="form-field-label">End Date</div>
-        <%= f.date_select :end_date, start_year: DateTime.now.year %>
+        <div><%= f.date_select :end_date, start_year: DateTime.now.year %></div>
       </div>
     </div>
   </div>

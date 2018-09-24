@@ -81,6 +81,13 @@
   flex-direction: column;
 }
 
+.fixed-back{
+  position: fixed;
+  top: 15px;
+  left: 5px;
+  z-index: 2;
+}
+
 .fixed-control{
   position: fixed;
   bottom: 15px;

@@ -1,6 +1,8 @@
 .issues-wrapper{
   text-align: center;
   width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
 
 .issue-outer_wrapper{
@@ -8,8 +10,8 @@
   background-color: $white;
   padding: 10px;
   border-radius: 15px;
-  width: 500px;
-  margin-top: 20px;
+  width: auto;
+  margin: 20px 5px 0 5px;
 }
 
 .issue-wrapper{

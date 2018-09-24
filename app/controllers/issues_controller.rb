@@ -44,7 +44,7 @@ class IssuesController < ApplicationController
   end
 
   def resolve
-    @issue.resolved = !@issue.resolved
+    @issue.resolved = params[:status] == "Resolve" ? true : false
     @issue.save
     respond_to do |format|
       @issue.resolved ? flash.now[:notice] = "Nice! You have resolved an issue." : flash.now[:notice] = "Issue is reopened."

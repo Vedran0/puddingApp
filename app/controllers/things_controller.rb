@@ -49,7 +49,7 @@ class ThingsController < ApplicationController
   end
 
   def change_status
-    @thing.done = !@thing.done
+    @thing.done = params[:status] == 'Done' ? true : false
     @thing.done_date = @thing.done ? DateTime.now : nil
     @thing.save
     respond_to do |format|

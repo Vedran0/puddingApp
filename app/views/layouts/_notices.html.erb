@@ -1,17 +1,38 @@
-<% flash.each do |name, msg| %>
-  <div class="notification-wrapper <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
-    <% if msg.is_a?(String) and msg.length > 0 %>
-          <div class="notification js_close_flash">
-            <div data-alert>
-              <%= msg %>
+<div class="desktop-only">
+  <% flash.each do |name, msg| %>
+    <div class="notification-wrapper <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+      <% if msg.is_a?(String) and msg.length > 0 %>
+            <div class="notification js_close_flash">
+              <div data-alert>
+                <%= msg %>
+              </div>
             </div>
-          </div>
-    <% end %>
-  </div>
-<% end %>
-
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<div class="mobile-only">
+  <% flash.each do |name, msg| %>
+    <div class="mobile-notification-wrapper <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+      <% if msg.is_a?(String) and msg.length > 0 %>
+            <div class="mobile-notification">
+              <div data-alert>
+                <%= msg %>
+              </div>
+            </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 <script>
 $(function(){
+  $(".mobile-notification-wrapper").css({'transform':'translateX(800px)'});
+  $(".mobile-notification-wrapper").delay(4000)
+  .queue(function (next) { 
+    $(this).css({'transform':'translateX(1600px)'});
+    //$(this).slideToggle();
+    next();
+  });
   $(".notification-wrapper").css("width", "300px");
   $(".js_close_flash").fadeIn(800);
   $(".js_close_flash").delay(4500).fadeOut();

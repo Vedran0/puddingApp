@@ -4,6 +4,6 @@
     <p class="issue-text <%= "crossed" if issue.resolved %>"><em>"<%= issue.text %>"</em></p>
       <%= link_to "Edit", edit_issue_path(issue), class: "link-yellow" %>
       <%= link_to "Delete", issue_path(issue), method: :delete, data: {confirm: "Are you sure?"}, class: "link-red" %>
-      <%= link_to resolve_action_text(issue), issue_resolve_path(id: issue), remote: true, method: :put, class: "link-green" %>
+      <%= link_to resolve_action_text(issue), issue_resolve_path(id: issue, status: resolve_action_text(issue)), remote: true, method: :put, class: "link-green" %>
   </div>
 </div>

@@ -1,3 +1,4 @@
+<h2>Wellcome Home</h2>
 <%= render 'patch_notes/new_patch' if new_patch_to(current_pudding)%>
 <div class="flex flex-space-around flex-wrap">
   <div class="countdown-clock-wrapper">
@@ -66,8 +67,38 @@
   </div>
 </div>
 
-<div class="matches-wrapper">
-  <% @last_matches.each do |match| %>
-    <%= render match %>
-  <% end %>
+<div class="mobile-only">
+  <div class="matches-wrapper owl-carousel owl-carousel-matches">
+    <% @last_matches.each do |match| %>
+      <%= render match %>
+    <% end %>
+  </div>
 </div>
+
+<div class="desktop-only">
+  <div class="matches-wrapper">
+    <% @last_matches.each do |match| %>
+      <%= render match %>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  $(".owl-carousel-matches").owlCarousel({
+    loop:false,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:1,
+        },
+        900:{
+            items:1,
+        },
+        1200:{
+            items:4,
+        }
+    }
+  }); 
+</script>

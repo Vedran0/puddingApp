@@ -49,8 +49,8 @@
   margin: 5px;
   padding: 10px;
   background-color: $white;
-  display: inline-block;
-  min-width: 300px;
+  //display: inline-block;
+  width: 300px;
 }
 .place_match-wrapper{
   border-radius: 25px;
@@ -74,4 +74,15 @@
 }
 .place_match-result{
   font-size: 30px;
+}
+
+@media only screen and (max-width: $medium) {
+  .place_match-outer-wrapper{
+    margin: auto;
+  }
+  .match-outer-wrapper{
+    margin: auto;
+    display: block;
+    width: 300px;
+  }
 }

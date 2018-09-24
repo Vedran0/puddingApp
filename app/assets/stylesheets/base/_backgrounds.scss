@@ -96,27 +96,6 @@
   background-size: auto auto;
 }
 
-
-// NOT YET FINISHED
-/*$madras-color-one: rgba(0,80,70,0.5);
-$madras-color-three: rgba(10,119,60,0.5);
-$madras-color-five: rgba(17,50,124,0.5);
-$madras-color-seven: rgb(255, 255, 255);
-$madras-color-six: rgba(0,0,0,0);
-$madras-color-four: rgba(255,255,255,0);
-$madras-color-two: rgba(220,119,220,0);
-
-.background-pattern-madras_green{
-  box-sizing: content-box;
-  border: none;
-  color: rgb(255, 255, 255);
-  text-overflow: clip;
-  background: repeating-linear-gradient(45deg, rgba(0,0,0,0) 5px, $madras-color-one 5px, $madras-color-one 10px, $madras-color-two 10px, $madras-color-two 35px, $madras-color-three 35px, $madras-color-three 40px, $madras-color-one 40px, $madras-color-one 50px, $madras-color-six 50px, $madras-color-six 60px, $madras-color-three 60px, $madras-color-three 70px, $madras-color-five 70px, $madras-color-five 80px, $madras-color-four 80px, $madras-color-four 90px, $madras-color-three 90px, $madras-color-three 110px, $madras-color-two 110px, $madras-color-two 120px, $madras-color-one 120px, $madras-color-one 140px), repeating-linear-gradient(135deg, rgba(0,0,0,0) 5px, $madras-color-one 5px, $madras-color-one 10px, $madras-color-two 10px, $madras-color-two 35px, $madras-color-three 35px, $madras-color-three 40px, $madras-color-one 40px, $madras-color-one 50px, $madras-color-six 50px, $madras-color-six 60px, $madras-color-three 60px, $madras-color-three 70px, $madras-color-five 70px, $madras-color-five 80px, $madras-color-four 80px, $madras-color-four 90px, $madras-color-three 90px, $madras-color-three 110px, $madras-color-two 110px, $madras-color-two 140px, $madras-color-one 140px, $madras-color-one 160px), $madras-color-seven;
-  background-origin: padding-box;
-  background-clip: border-box;
-  background-size: auto auto;
-}*/
-
 .background-pattern-vertical_yellow{
   box-sizing: content-box;
   //width: 320px;
@@ -171,6 +150,238 @@ $madras-color-two: rgba(220,119,220,0);
   background-repeat: repeat;
 }
 
+
+
+//HEARTS
+.background-pattern-hearts{
+$hearts-bgcolor: #FFE9A3;
+$hearts-transparent: rgba(255, 255, 255, 0);
+
+$hearts-color-1: #E83A25;
+$hearts-color-1-t: transparentize($hearts-color-1, 1);
+$hearts-color-2: #98CC96;
+$hearts-color-2-t: transparentize($hearts-color-2, 1);
+
+$hearts-size: 4em;
+$hearts-big-size: $hearts-size*2;
+$hearts-min: $hearts-size*.3;
+$hearts-max: $hearts-size*.7;
+  background: 
+    linear-gradient(135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    linear-gradient(-135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+
+
+    linear-gradient(135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    linear-gradient(-135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0,
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0
+    ;
+  background-size:  $hearts-big-size $hearts-big-size;
+  background-color: $hearts-bgcolor;
+  background-repeat: repeat;
+  }
+
+.background-pattern-hearts-green{
+$hearts-bgcolor: #98CC96;
+$hearts-transparent: rgba(255, 255, 255, 0);
+
+$hearts-color-1: $red;
+$hearts-color-1-t: transparentize($hearts-color-1, 1);
+$hearts-color-2: $white;
+$hearts-color-2-t: transparentize($hearts-color-2, 1);
+
+$hearts-size: 4em;
+$hearts-big-size: $hearts-size*2;
+$hearts-min: $hearts-size*.3;
+$hearts-max: $hearts-size*.7;
+  background: 
+    linear-gradient(135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    linear-gradient(-135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+
+
+    linear-gradient(135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    linear-gradient(-135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0,
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0
+    ;
+  background-size:  $hearts-big-size $hearts-big-size;
+  background-color: $hearts-bgcolor;
+  background-repeat: repeat;
+  }
+
+.background-pattern-hearts-black{
+$hearts-bgcolor: $black;
+$hearts-transparent: rgba(255, 255, 255, 0);
+
+$hearts-color-1: $red;
+$hearts-color-1-t: transparentize($hearts-color-1, 1);
+$hearts-color-2: $red;
+$hearts-color-2-t: transparentize($hearts-color-2, 1);
+
+$hearts-size: 4em;
+$hearts-big-size: $hearts-size*2;
+$hearts-min: $hearts-size*.3;
+$hearts-max: $hearts-size*.7;
+  background: 
+    linear-gradient(135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    linear-gradient(-135deg,
+      $hearts-color-1 $hearts-min,
+      $hearts-color-1-t $hearts-min
+      ) 0 #{$hearts-size},
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-1 $hearts-min*.85,
+      $hearts-color-1-t $hearts-min*.87
+      ) 0 -#{$hearts-size},
+
+
+    linear-gradient(135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    linear-gradient(-135deg,
+      $hearts-color-2 $hearts-min,
+      $hearts-color-2-t $hearts-min
+      ) $hearts-size 0,
+    
+    radial-gradient(circle at #{$hearts-big-size - $hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0,
+    radial-gradient(circle at #{$hearts-min*.7} $hearts-size*1.85,
+      $hearts-color-2 $hearts-min*.85,
+      $hearts-color-2-t $hearts-min*.87
+      ) $hearts-size 0
+    ;
+  background-size:  $hearts-big-size $hearts-big-size;
+  background-color: $hearts-bgcolor;
+  background-repeat: repeat;
+  }
+
+.background-pattern-diagonal-green{
+  background: linear-gradient(45deg,
+    $green 25%,
+    #ffffff 25.1%,
+    #ffffff 50%,
+    $green 50.1%,
+    $green 75%,
+    #ffffff 75.1%,
+    #ffffff 0);
+  background-size: 100px 100px;
+}
+
+
+.background-pattern-diagonal-yellow{
+  background: linear-gradient(45deg,
+    $red 25%,
+    $white 25.1%,
+    $white 50%,
+    $red 50.1%,
+    $red 75%,
+    $white 75.1%,
+    $white 0);
+  background-size: 100px 100px;
+}
+
+/*.background-pattern-tablecloth{
+  $bg-primary: $red;
+  $bg-secondary: $red;
+  background:
+    repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 1em,
+    rgba($bg-secondary,0.4) 0,
+    rgba($bg-secondary,0.1) 2em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-secondary,0.3) 0,
+    rgba($bg-secondary,0.2) 4em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-primary,0.6) 0,
+    rgba($bg-primary,0.2) 2em
+  ),
+  repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 1em,
+    rgba($bg-secondary,0.4) 0,
+    rgba($bg-secondary,0.1) 2em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-secondary,0.3) 0,
+    rgba($bg-secondary,0.2) 4em,
+    transparent 0,
+    transparent 1em,
+    rgba($bg-primary,0.4) 0,
+    rgba($bg-primary,0.1) 2em
+  ), #FFF;
+  background-blend-mode: multiply;
+}*/
 
 [class^="background-pattern-"] {
   background-attachment: fixed;

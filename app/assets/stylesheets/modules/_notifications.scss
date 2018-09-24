@@ -28,3 +28,20 @@
   color: $white;
   background-color: $red;
 }
+
+.mobile-notification-wrapper{
+  z-index: 98;
+  left: -800px;
+  padding: 5px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  transition: all 500ms cubic-bezier(0.13,0.73,0.66,0.63);
+}
+
+.mobile-notification{
+  //display: none;
+  border: 2px dashed $white;
+  padding: 5px 70px 5px 70px;
+  text-align: center;
+}

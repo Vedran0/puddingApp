@@ -35,6 +35,7 @@
 <script>
 $(".owl-carousel").owlCarousel({
   loop:false,
+  startPosition: <%= @post_its.size-1 %>,
   responsive:{
       0:{
           items:1,

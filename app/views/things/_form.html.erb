@@ -1,7 +1,7 @@
 <%= form_for @thing, class: "form" do |f| %>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">Describe a goal</div>
         <%= f.text_field :description, class: "text-field" %>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="form-field">
-    <div class="form-field-outer-wrapper">
+    <div class="form-field-outer-wrapper--text_field">
       <div class="form-field-wrapper">
         <div class="form-field-label">How hard it is?</div>
         <% heaviness = [["Very easy","1"],["Easy","2"],["We will do it","3"],["We CAN do it!","4"],["One day","5"]] %>

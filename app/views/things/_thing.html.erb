@@ -5,5 +5,5 @@
   <div class="thing-hardness" style="color: <%= achievement_heaviness_color(thing.achievement_heaviness) %>"><%= achievement_heaviness_text(thing.achievement_heaviness) %></div>
   <%= link_to 'Edit', edit_thing_path(thing), class: "link-yellow" %>
   <%= link_to 'Destroy', thing, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-red" %>
-  <%= link_to "#{thing.done ? 'Undone' : 'Done'}", change_status_path(id: thing.id), class: "link-green", remote: true %>
+  <%= link_to "#{thing.done ? 'Undone' : 'Done'}", change_status_path(id: thing.id, status: "#{thing.done ? 'Undone' : 'Done'}"), class: "link-green", remote: true %>
 </div>

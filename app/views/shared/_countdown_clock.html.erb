@@ -2,7 +2,8 @@
   <div class="holiday-description-wrapper">
     <div class="holiday-description">
       <h1>Today is <%= holiday.name %>!</h1>
-      <p><%= holiday.message %></p>
+      <p class="holiday-message" style="display: none;"><%= holiday.message %></p>
+      <a id="startConfetti" class="button button-green" style="cursor: pointer;">Start Celebrating</a>
     </div>
   </div>
 <% else %>

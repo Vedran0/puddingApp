@@ -104,6 +104,20 @@
   transform: translateY(3px);
 }
 
+.button-gray {
+  background-color: $light_gray;
+  box-shadow: 0 5px darken($light_gray, 10%);
+  transition: 0.3s background-color ease-in;
+}
+.button-gray:hover{
+  background-color: lighten($light_gray, 5%);
+}
+.button-gray:active{
+  background-color: darken($light_gray, 3%);
+  box-shadow: 0 2px darken($light_gray, 5%);
+  transform: translateY(3px);
+}
+
 .ok_button-outer-wrapper{
   background-color: $white;
   display: inline-block;
@@ -433,6 +447,7 @@ input[type=number] {
   transform: translate(-3px, -3px);
   user-select: none;
   transition: 0.3s background-color ease-in;
+  color: $white;
 }
 .number-field-control:active{
   transform: translateX(1px);
