@@ -175,3 +175,10 @@ $madras-color-two: rgba(220,119,220,0);
 [class^="background-pattern-"] {
   background-attachment: fixed;
 }
+
+@media only screen and (max-width: $medium) {
+  [class^="background-pattern-"] {
+    background-attachment: fixed;
+    z-index: -10;
+  }
+}

@@ -15,5 +15,8 @@
 // require turbolinks
 //= require jquery-ui
 //= require owlcarousel2/owl.carousel
-//= require_tree .
+// require_tree .
+//= require forms
+//= require places_autocomplete
 //= require serviceworker-companion
+//= require manifest
