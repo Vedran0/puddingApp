@@ -19,3 +19,4 @@
 //= require forms
 //= require places_autocomplete
 //= require serviceworker-companion
+//= require confetti
