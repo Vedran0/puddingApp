@@ -3,7 +3,7 @@
 
   <%= f.hidden_field :pudding_id, value: current_pudding.id %>
 
-  <%= f.text_area :message, class: "js_message", style: "position: absolute; z-index: -9;" %>
+  <%= f.text_area :message, class: "js_message", style: "opacity: 0; position: absolute; z-index: -9;" %>
   <div class="sticker sticker-color-<%= current_pudding.setting.post_it_color %>" style="margin: auto;"></div>
 
   <div class="form-field-outer-wrapper">
