@@ -8,18 +8,14 @@ class ApplicationController < ActionController::Base
   end
 
   def get_default_quotes
-    quotes = ["The soft heart is a heart made of pudding!",
-              "A beautiful pudding delights the eye; a wise pudding, the understanding; a pure one, the soul.",
-              "He was a wise man who invented pudding.",
-              "A room without puddings is like a body without a soul.",
-              "So many puddings, so little time.",
-              "Take into account that great love and great achievements involve great pudding.",
-              "In the end, it’s not the years in your life that count. It’s the number of puddings you ate.",
-              "Without pudding, life would be a mistake.",
-              "We accept the pudding we think we deserve.",
-              "Good friends, good pudding, and a sleepy conscience: this is the ideal life.",
-              "We are all in the gutter, but some of us are looking at the pudding.",
-              "The man who does not eat pudding has no advantage over the man who cannot eat pudding."
+    quotes = ["A good pudding is a continual Christmas.",
+              "Christmas, my pudding, is love in action.",
+              "Christmas is a pudding stuffed with sugary goodness.",
+              "My idea of Christmas, whether old-fashioned or modern, is very simple: pudding others.",
+              "Christmas waves a magic wand over the world, and behold, everything is puddingy and more beautiful.",
+              "He who has not Christmas in his pudding heart will never find it under a tree.",
+              "Teacher says every time a bell rings, an angel gets his pudding.",
+              "Blessed is the season which engages the whole world in a conspiracy of love and pudding."
                  ]
   end
 
