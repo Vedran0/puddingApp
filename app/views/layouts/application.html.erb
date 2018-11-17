@@ -28,9 +28,11 @@
   <%= render 'modals/modal', about_page: @about_page if @about_page %>
   <%#= render 'layouts/footer' %>
   <script>
-    $(function(){
-      $.fn.snow({ minSize: 5, maxSize: 50, newOn: 700 });
-    });
+    <% if current_pudding.setting.snow_switch %>
+      $(function(){
+        $.fn.snow({ minSize: 5, maxSize: 10, newOn: 200 });
+      });
+    <% end %>
   </script>
 </body>
 </html>

@@ -20,7 +20,7 @@ class SettingsController < ApplicationController
     end
 
     def setting_params
-      params.require(:setting).permit(:background, :post_it_color)
+      params.require(:setting).permit(:background, :post_it_color, :snow_switch)
     end
 
     def to_param
