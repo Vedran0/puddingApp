@@ -65,10 +65,10 @@ h1 {
   @include font-size($h1-font-sizes);
 }
 h1.app-title{
-  text-shadow: -1px 0 #3e2723, 0 1px #3e2723, 1px 0 #3e2723, 0 -1px #3e2723;
+  //text-shadow: -1px 0 $red, 0 1px $red, 1px 0 $red, 0 -1px $red;
   font-size: 70px;
   text-align: center;
-  color: $yellow;
+  color: $white;
   margin: 0;
   padding-top: 10px;
 }

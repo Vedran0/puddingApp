@@ -29,6 +29,7 @@
     <div class="form-field-outer-wrapper">
       <div class="form-field-wrapper">
         <%= f.submit "Log in", class: "button button-green" %>
+        <div class="button button-blue" style="cursor: pointer;" onclick="snow()">Snow</div>
       </div>
     </div>
   </div>
@@ -42,3 +43,14 @@
     </div>
   </div>
 </div>
+
+<audio id="sound_effect" class="audio_player" autoplay>
+    <source src="/joy_to_the_world.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  $("#sound_effect")[0].play();
+  function snow(){
+    $.fn.snow({ minSize: 5, maxSize: 10, newOn: 200 });
+  };
+</script>
