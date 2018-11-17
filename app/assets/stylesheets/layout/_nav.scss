@@ -9,17 +9,18 @@
 }
 
 .nav-title{
-  text-shadow: -1px 0 #3e2723, 0 1px #3e2723, 1px 0 #3e2723, 0 -1px #3e2723;
+  text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
   width: 30%;
   font-size: 45px;
   padding: 5px 30px 0 0px;
   margin: 0;
-  color: $yellow;
+  color: $red;
   transition: 0.3s color ease-in;
 }
 .nav-title:hover{
-  color: lighten($brown, 30%);
+  color: $green;
 }
+
 .nav{
   display: flex;
   justify-content: center;
@@ -36,7 +37,7 @@
   overflow: hidden;
   border: 2px #4e342e;
   text-align: center;
-  color: #4e342e;
+  color: $white;
   border-bottom: 2px dashed transparent;
   transition: all 0.2s ease-in;
   margin: 0 15px;
@@ -44,15 +45,15 @@
 }
 
 .nav-link:active {
-  border-bottom: #4e342e;
+  border-bottom: $white;
 }
 
 
 .nav-link:hover, .nav-link:focus{
-  border-bottom: 2px dashed #4e342e;
+  border-bottom: 2px dashed $white;
   transition: all 0.3s ease-in;
 }
 
 .nav-link.active{
-  border-bottom: 2px dashed $brown;
+  border-bottom: 2px dashed $white;
 }

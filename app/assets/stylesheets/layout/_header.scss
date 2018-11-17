@@ -1,17 +1,18 @@
 .devise-header{
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(42,88,55,0.9);
   padding-bottom: 15px;
   transition: 0.3s all ease-out;
   margin-bottom: 20px;
 }
 
 .header{
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(42,88,55,0.9);
   transition: 0.3s all ease-out;
+  box-shadow: 0px 1px 1px white;
 }
 
 .devise-header:hover, .header:hover{
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(42,88,55,1);
 }
 
 .header-fixed{
