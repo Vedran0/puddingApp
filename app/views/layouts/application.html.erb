@@ -27,5 +27,10 @@
   </main>
   <%= render 'modals/modal', about_page: @about_page if @about_page %>
   <%#= render 'layouts/footer' %>
+  <script>
+    $(function(){
+      $.fn.snow({ minSize: 5, maxSize: 50, newOn: 700 });
+    });
+  </script>
 </body>
 </html>

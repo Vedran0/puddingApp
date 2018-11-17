@@ -17,5 +17,6 @@
 //= require owlcarousel2/owl.carousel
 // require_tree .
 //= require forms
+//= require jquery.snow.js
 //= require places_autocomplete
 //= require serviceworker-companion
