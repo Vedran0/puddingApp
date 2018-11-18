@@ -32,7 +32,11 @@ class Pudding < ActiveRecord::Base
 
   has_many :issues
 
+  has_one :calendar_number
+
   devise :database_authenticatable, :trackable
+
+  accepts_nested_attributes_for :calendar_number
 
   def winning(tournament)
     tournament.pudding_winning == self ? true : false

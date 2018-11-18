@@ -1,0 +1,59 @@
+<h1 class="test">Christmas Calendar</h1>
+<div class="calendar owl-carousel">
+	<% @calendar_numbers.numbers_drawn.each do |item| %>
+		<div class="calendar_item-wrapper">
+			<div class="calendar_item-inner_wrapper">
+				<%= image_tag "calendar_items/#{item}.svg", class: "calendar_item" %>
+			</div>
+		</div>
+	<% end %>
+
+	<% ((1..20).to_a.map(&:to_s).shuffle-@calendar_numbers.numbers_drawn).each_with_index do |item, index| %>
+		<div class="calendar_item-wrapper">
+			<div class="calendar_item-inner_wrapper">
+				<%= image_tag "calendar_items/#{item}.svg", class: "calendar_item" %>
+				<% if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>
+					<%= link_to add_calendar_number_path(number: item), class: "calendar_number-wrapper calendar_number_#{item}", remote: true do %>
+						<p class="calendar_number"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+					<% end %>
+				<% else %>
+					<div class="calendar_number-wrapper calendar_number_#{item}">
+						<p class="calendar_number"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>
+
+<audio id="sound_effect" class="audio_player" volume="0.1">
+    <source src="/christmas_open.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  $(".owl-carousel").owlCarousel({
+    loop:false,
+    startPosition: <%= @calendar_numbers.numbers_drawn.size < 1 ? 0 : @calendar_numbers.numbers_drawn.size - 1 %>,
+    responsive:{
+        0:{
+            items:1,
+            loop:false
+        },
+        600:{
+            items:2,
+            loop:false
+        },
+        900:{
+            items:3,
+            loop:false
+        },
+        1200:{
+            items:4,
+            loop:false
+        }
+    }
+  });
+  $(document).on('click', '.test', function(){
+  	$('.owl-carousel').trigger('to.owl.carousel', 5);
+  })
+</script>

@@ -10,6 +10,10 @@ before_action :check_resource_permission, only: :home
     @last_post_it = PostIt.where.not(pudding_id: current_pudding.id).last
   end
 
+  def christmas_calendar
+    @calendar_numbers = current_pudding.calendar_number || current_pudding.create_calendar_number
+  end
+
   def toolkit
     
   end

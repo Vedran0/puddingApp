@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :post_its, path: "notes"
   get "toolkit", to: "pages#toolkit"
   get "about", to: "pages#about"
+  get "christmas_calendar", to: "pages#christmas_calendar", path: "christmas-calendar"
+  get "add_calendar_number", to: "calendar_numbers#add_number"
   devise_for :puddings
   resources :issues
   put "issue_resolve", to: "issues#resolve"
