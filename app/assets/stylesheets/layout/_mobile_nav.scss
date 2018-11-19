@@ -105,6 +105,7 @@
     color: $white;
     &.red{
       color: $red;
+      font-size: 25px;
       text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
     }
     &.active{
@@ -114,8 +115,8 @@
       width: 45px;
     }
     h2 {
-      text-shadow: //-1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white,
-               0 1px 0 $white,
+      text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+               /*0 1px 0 $white,
                0 2px 0 $white,
                0 3px 0 $white,
                0 4px 0 $white,
@@ -126,7 +127,7 @@
                0 3px 5px rgba(0,0,0,.2),
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
-               0 20px 20px rgba(0,0,0,.15);
+               0 20px 20px rgba(0,0,0,.15);*/
       display: inline-block;
       margin-bottom: 0;
       margin-left: 10px;

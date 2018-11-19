@@ -12,6 +12,7 @@ before_action :check_resource_permission, only: :home
 
   def christmas_calendar
     @calendar_numbers = current_pudding.calendar_number || current_pudding.create_calendar_number
+    @calendar_numbers_left = (1..24).to_a.map(&:to_s).shuffle-@calendar_numbers.numbers_drawn
   end
 
   def toolkit

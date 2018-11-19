@@ -8,22 +8,43 @@
 		</div>
 	<% end %>
 
-	<% ((1..20).to_a.map(&:to_s).shuffle-@calendar_numbers.numbers_drawn).each_with_index do |item, index| %>
+	<% @calendar_numbers_left.each_with_index do |item, index| %>
 		<div class="calendar_item-wrapper">
 			<div class="calendar_item-inner_wrapper">
 				<%= image_tag "calendar_items/#{item}.svg", class: "calendar_item" %>
 				<% if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>
 					<%= link_to add_calendar_number_path(number: item), class: "calendar_number-wrapper calendar_number_#{item}", remote: true do %>
-						<p class="calendar_number"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+						<p class="calendar_number drawable"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
 					<% end %>
 				<% else %>
-					<div class="calendar_number-wrapper calendar_number_#{item}">
+					<div class="calendar_number-wrapper calendar_number_<%= item %>">
 						<p class="calendar_number"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
 					</div>
 				<% end %>
 			</div>
 		</div>
 	<% end %>
+</div>
+
+<div class="calendar">
+    <% @calendar_numbers.numbers_drawn.each_with_index do |item, index| %>
+        <div class="small_calendar_item-wrapper">
+            <div class="small_calendar_item-inner_wrapper" data-index=<%= index %>>
+                <%= image_tag "calendar_items/#{item}.svg", class: "small_calendar_item" %>
+            </div>
+        </div>
+    <% end %>
+
+    <% @calendar_numbers_left.each_with_index do |item, index| %>
+        <div class="small_calendar_item-wrapper">
+            <div class="small_calendar_item-inner_wrapper" data-index=<%= @calendar_numbers.numbers_drawn.size+index %>>
+                <%= image_tag "calendar_items/#{item}.svg", class: "small_calendar_item" %>
+                <div class="small_calendar_number-wrapper calendar_number_<%= item %>">
+                    <p class="small_calendar_number <%= "drawable" if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+                </div>
+            </div>
+        </div>
+    <% end %>
 </div>
 
 <audio id="sound_effect" class="audio_player" volume="0.1">
@@ -53,7 +74,7 @@
         }
     }
   });
-  $(document).on('click', '.test', function(){
-  	$('.owl-carousel').trigger('to.owl.carousel', 5);
+  $(document).on('click', '.small_calendar_item-inner_wrapper', function(){
+  	$('.owl-carousel').trigger('to.owl.carousel', $(this).data("index"));
   })
 </script>
