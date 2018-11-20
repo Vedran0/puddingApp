@@ -1,0 +1,21 @@
+<% if Date.today.month == 11 && current_pudding.calendar_number.numbers_drawn.size < Date.today.day && !current_page?(christmas_calendar_path) %>
+	<div class="side_notification-outer_wrapper closed">
+		<div class="side_notification-inner_wrapper">
+			<div class= "side_notification-opener">
+				<%= image_tag 'calendar_items/calendar.svg', class: "side_notification-icon" %>
+				<span><%= Date.today.day-current_pudding.calendar_number.numbers_drawn.size %></span>
+			</div>
+			<div class="side_notification-link">
+				<%= link_to christmas_calendar_path do %>
+					<span><%= new_calendar_days %></span>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(".side_notification-opener").on("click", function(){
+			$(".side_notification-outer_wrapper").toggleClass("closed");
+		})
+	</script>
+<% end %>

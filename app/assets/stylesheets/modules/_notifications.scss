@@ -45,3 +45,55 @@
   padding: 5px 70px 5px 70px;
   text-align: center;
 }
+
+.side_notification-outer_wrapper{
+  z-index: 3;
+  background-color: $green;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 200px;
+  height: 75px;
+  padding: 5px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 300ms cubic-bezier(0.13,0.73,0.66,0.63);
+  &.closed{
+    transform: translateX(135px);
+  }
+}
+
+.side_notification-inner_wrapper{
+  border: white 2px dashed;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-even;
+}
+.side_notification-opener{
+  margin-top: 5px;
+  display: flex;
+  width: 75px;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  span{
+    color: $yellow;
+    line-height: 1.2;
+  }
+}
+
+.side_notification-link{
+  text-align: center;
+  span{
+    color: $yellow;
+    font-size: 18px;
+    margin: 5px;
+  }
+}
+.side_notification-icon{
+  width: 30px;
+  margin: auto;
+}

@@ -26,6 +26,7 @@
     <%= yield %>
   </main>
   <%= render 'modals/modal', about_page: @about_page if @about_page %>
+  <%= render 'layouts/side_notification' %>
   <%#= render 'layouts/footer' %>
   <script>
     <% if current_pudding.setting.snow_switch %>
