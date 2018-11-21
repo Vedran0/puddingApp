@@ -29,7 +29,7 @@
     <div class="form-field-outer-wrapper">
       <div class="form-field-wrapper">
         <%= f.submit "Log in", class: "button button-green" %>
-        <div class="button button-blue" style="cursor: pointer;" onclick="snow()">Snow</div>
+        <div class="button button-blue snow" style="cursor: pointer;">Snow</div>
       </div>
     </div>
   </div>
@@ -49,8 +49,8 @@
 </audio>
 
 <script>
+  $(".snow").on("click", function(){
+    snowStorm.toggleSnow();
+  })
   $("#sound_effect")[0].play();
-  function snow(){
-        $.fn.snow({ minSize: 5, maxSize: 30, newOn: 300 });
-  };
 </script>

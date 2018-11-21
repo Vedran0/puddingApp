@@ -28,12 +28,10 @@
   <%= render 'modals/modal', about_page: @about_page if @about_page %>
   <%= render 'layouts/side_notification' %>
   <%#= render 'layouts/footer' %>
-  <script>
     <% if current_pudding.setting.snow_switch %>
-      $(function(){
-        $.fn.snow({ minSize: 5, maxSize: 30, newOn: 300 });
-      });
+      <script>
+        snowStorm.toggleSnow();
+      </script>
     <% end %>
-  </script>
 </body>
 </html>
