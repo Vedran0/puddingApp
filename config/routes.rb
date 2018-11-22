@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "christmas_calendar", to: "pages#christmas_calendar", path: "christmas-calendar"
   get "add_calendar_number", to: "calendar_numbers#add_number"
+  get "compose", to: "christmas_song#compose"
+  post "check_sequence", to: "christmas_song#check_sequence"
+  get "christmas_song", to: "christmas_song#christmas_song"
   devise_for :puddings
   resources :issues
   put "issue_resolve", to: "issues#resolve"

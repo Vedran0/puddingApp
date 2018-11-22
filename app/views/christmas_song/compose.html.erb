@@ -1,0 +1,154 @@
+<h1>Compose Christmas Poem</h1>
+<div class="poem-inner_wrapper">
+	<div class="poem-verse">
+		<div class="poem-line">
+			Kraj 
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			sjedili su
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			su jeli,
+		</div>
+		<div class="poem-line">
+			Kad su vidjeli kroz
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			gusti
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			bijeli.
+		</div>
+	</div>
+	<div class="poem-verse">
+		<div class="poem-line">
+			Navukli su 
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			,
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			na ruke,
+		</div>
+		<div class="poem-line">
+			I debele
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			da im ne
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			dupe.
+		</div>
+	</div>
+	<div class="poem-verse">
+		<div class="poem-line">
+			Skupljali su 
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			da
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			ožive,
+		</div>
+		<div class="poem-line">
+			Pjevušili su
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			dok išli su na
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			.
+		</div>
+	</div>
+	<div class="poem-verse">
+		<div class="poem-line">
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			svaki metar su otresali do
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			,
+		</div>
+		<div class="poem-line">
+			Gdje su se grijali uz
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			i
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			.
+		</div>
+	</div>
+	<div class="poem-verse">
+		<div class="poem-line">
+			Šarenim su
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			ukrasili
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			,
+		</div>
+		<div class="poem-line">
+			Zelenoga
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			koji
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			na sve strane.
+		</div>
+	</div>
+	<div class="poem-verse">
+		<div class="poem-line">
+			Pored
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			ljubili se ispod
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			,
+		</div>
+		<div class="poem-line">
+			Osli u
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			čekat Božić koji svima
+			<div class="icon-placeholder" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			žele.
+		</div>
+	</div>
+</div>
+
+<div class="icons_set-wrapper calendar">
+	<% @calendar_numbers.numbers_drawn.each_with_index do |item, index| %>
+        <div class="small_calendar_item-wrapper">
+            <div class="small_calendar_item-inner_wrapper" data-index=<%= index %>>
+                <%= image_tag "calendar_items/#{item}.svg", class: "small_calendar_item", draggable: "true", ondragstart: "drag(event)", id: "icon_#{item}" %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<style>
+	.poem-line{
+		display: flex;
+		align-items: center;
+	}
+	.poem-verse{
+		margin-bottom: 30px;
+	}
+	.poem-inner_wrapper{
+		margin: 10px;
+		background-color: #2A5837;
+		color: white;
+		padding: 10px;
+	}
+	.icon-placeholder{
+		width: 50px;
+		height: 50px;
+		border: dashed white 1px;
+		margin: 5px;
+	}
+	.icons_set-wrapper{
+		position: fixed;
+		bottom: 0;
+		background-color: white;
+		padding-top: 5px;
+	}
+</style>
+
+
+<script>
+	function allowDrop(ev) {
+	    ev.preventDefault();
+	}
+
+	function drag(ev) {
+		console.log("dragging");
+	    ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	function drop(ev) {
+	    ev.preventDefault();
+	    var data = ev.dataTransfer.getData("text");
+	    ev.target.appendChild(document.getElementById(data));
+	}
+</script>

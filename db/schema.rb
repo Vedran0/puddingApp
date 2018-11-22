@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181118133524) do
+ActiveRecord::Schema.define(version: 20181122202519) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -118,12 +118,13 @@ ActiveRecord::Schema.define(version: 20181118133524) do
 
   create_table "settings", force: :cascade do |t|
     t.integer  "pudding_id"
-    t.string   "background",      default: "default"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "post_it_color",   default: "default"
-    t.integer  "last_patch_seen", default: 1
-    t.boolean  "snow_switch",     default: false
+    t.string   "background",            default: "default"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "post_it_color",         default: "default"
+    t.integer  "last_patch_seen",       default: 1
+    t.boolean  "snow_switch",           default: false
+    t.boolean  "christmas_song_solved"
   end
 
   create_table "song_of_the_days", force: :cascade do |t|
