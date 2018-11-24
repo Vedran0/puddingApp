@@ -8,7 +8,7 @@
 	display: inline-block;
 	margin: 20px;
 	padding: 10px;
-	background-color: #2A5837;
+	background-color: $green;
 }
 .calendar_item-inner_wrapper{
 	position: relative;
@@ -16,9 +16,6 @@
 	border: dashed 2px white;
 	width: 250px;
 	height: 250px;
-}
-.calendar_item{
-
 }
 
 .calendar_number-wrapper{
@@ -30,7 +27,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #2A5837;
+	background-color: $green;
 	margin: 5px;
 }
 
@@ -41,11 +38,21 @@
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
+.small_calendar-outer_wrapper{
+	padding: 5px;
+	background-color: $white;
+}
+
+.small_calendar{
+	padding: 5px;
+	border: 2px dashed $blue;
+}
+
 .small_calendar_item-wrapper{
 	display: inline-block;
 	margin: 5px;
 	padding: 2px;
-	background-color: #2A5837;
+	background-color: $green;
 	cursor: pointer;
 }
 .small_calendar_item-inner_wrapper{
@@ -68,7 +75,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #2A5837;
+	background-color: $green;
 	margin: 2px;
 }
 
@@ -82,4 +89,16 @@
 
 .drawable{
 	color: $yellow;
+}
+
+@media only screen and (max-width: $medium) {
+	.small_calendar-outer_wrapper{
+		padding: 5px 0;
+	}
+
+	.small_calendar{
+		background-color: $white;
+		border-left: none;
+		border-right: none;
+	}
 }

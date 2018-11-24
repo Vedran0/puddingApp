@@ -18,5 +18,6 @@
 // require_tree .
 //= require forms
 //= require snow.js
+//= require confetti.js
 //= require places_autocomplete
 //= require serviceworker-companion

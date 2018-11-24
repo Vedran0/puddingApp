@@ -8,9 +8,9 @@ class ChristmasSongController < ApplicationController
 	def check_sequence
 		if ChristmasSong.new(christmas_song_params).valid?
 			current_pudding.setting.update(christmas_song_solved: true)
-			redirect_to finished_song_path
+			redirect_to christmas_song_path
 		else
-			redirect_to compose_path, alert: "Try Again"
+			redirect_to compose_path, alert: "Sorry, try Again"
 		end
 
 	end
@@ -27,7 +27,7 @@ class ChristmasSongController < ApplicationController
 
 	    def set_about_page
 	      @about_page = "<p>That calendar items collecting weren't for nothing.</p>
-	                    <p>Click items in bottom window to compose poem.</p>
+	                    <p>Click items in bottom window to compose a poem.</p>
 	                    <p>You can click on attached items to undo.</p>
 	                    <p>Have fun!</p>"
 	    end

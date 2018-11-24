@@ -26,26 +26,35 @@
 	<% end %>
 </div>
 
-<div class="calendar">
-    <% @calendar_numbers.numbers_drawn.each_with_index do |item, index| %>
-        <div class="small_calendar_item-wrapper">
-            <div class="small_calendar_item-inner_wrapper" data-index=<%= index %>>
-                <%= image_tag "christmas_items/#{item}.svg", class: "small_calendar_item" %>
-            </div>
-        </div>
-    <% end %>
-
-    <% @calendar_numbers_left.each_with_index do |item, index| %>
-        <div class="small_calendar_item-wrapper">
-            <div class="small_calendar_item-inner_wrapper" data-index=<%= @calendar_numbers.numbers_drawn.size+index %>>
-                <%= image_tag "christmas_items/#{item}.svg", class: "small_calendar_item" %>
-                <div class="small_calendar_number-wrapper calendar_number_<%= item %>">
-                    <p class="small_calendar_number <%= "drawable" if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+<div class="small_calendar-outer_wrapper">
+    <div class="calendar small_calendar">
+        <% @calendar_numbers.numbers_drawn.each_with_index do |item, index| %>
+            <div class="small_calendar_item-wrapper">
+                <div class="small_calendar_item-inner_wrapper" data-index=<%= index %>>
+                    <%= image_tag "christmas_items/#{item}.svg", class: "small_calendar_item" %>
                 </div>
             </div>
+        <% end %>
+
+        <% @calendar_numbers_left.each_with_index do |item, index| %>
+            <div class="small_calendar_item-wrapper">
+                <div class="small_calendar_item-inner_wrapper" data-index=<%= @calendar_numbers.numbers_drawn.size+index %>>
+                    <%= image_tag "christmas_items/#{item}.svg", class: "small_calendar_item" %>
+                    <div class="small_calendar_number-wrapper calendar_number_<%= item %>">
+                        <p class="small_calendar_number <%= "drawable" if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+        <div class="row">
+            <%= link_to "Read poem", christmas_song_path, class: "button button-green" if current_pudding.setting.christmas_song_solved %>
         </div>
-    <% end %>
+    </div>
 </div>
+
+
+
+<div class="button button-blue what_is_this-button">What!?</div>
 
 <audio id="sound_effect" class="audio_player" volume="0.1">
     <source src="/christmas_open.mp3" type="audio/mpeg">
@@ -64,11 +73,11 @@
             items:2,
             loop:false
         },
-        900:{
+        1200:{
             items:3,
             loop:false
         },
-        1200:{
+        1600:{
             items:4,
             loop:false
         }

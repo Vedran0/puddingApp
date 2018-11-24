@@ -11,9 +11,11 @@ before_action :check_resource_permission, only: :home
   end
 
   def christmas_calendar
-    # @about_page = ""
     @calendar_numbers = current_pudding.calendar_number || current_pudding.create_calendar_number
     @calendar_numbers_left = (1..24).to_a.map(&:to_s).shuffle-@calendar_numbers.numbers_drawn
+    @about_page = "<p>I packed some items in this advent calendar.</p>
+                    <p>A little bit of something for every advent day.</p>
+                    <p>Who knows, meybe you might need them soon ;)</p>"
   end
 
   def toolkit
