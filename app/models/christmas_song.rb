@@ -7,7 +7,9 @@ class ChristmasSong
   validate :icons_sequence
 
   def icons_sequence
-  	sequence.split(",") == sequence(",").sort
+  	unless sequence.split(",").map(&:to_i) == sequence.split(",").map(&:to_i).sort
+  		errors.add(:sequence, "Not good!")
+  	end
   end
 
 end

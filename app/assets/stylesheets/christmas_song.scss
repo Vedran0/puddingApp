@@ -1,0 +1,96 @@
+.poem-line{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.poem-verse{
+	margin-bottom: 30px;
+}
+.poem-outer_wrapper{
+	background-color: #2A5837;
+	padding: 5px;
+	display: inline-block;
+}
+
+.poem-inner_wrapper{
+	color: white;
+	padding: 20px;
+	border: dashed 2px $white;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding: 20px 60px;
+}
+.icon-placeholder{
+	width: 50px;
+	height: 50px;
+	border: dashed white 1px;
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.icons_set-wrapper{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $yellow;
+	padding-top: 5px;
+}
+
+.icons_set-inner_wrapper{
+	border-top: $white dashed 2px;
+	padding-top: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+.compose_item-wrapper{
+	margin: 5px;
+	padding: 2px;
+	background-color: $white;
+	cursor: pointer;
+}
+.compose_item-inner_wrapper{
+	position: relative;
+	padding: 2px;
+	border: dashed 1px $green;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.compose_item{
+	width: 40px;
+}
+
+.compose_number-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $white;
+	margin: 2px;
+}
+
+.compose_number{
+	color: #D73A31;
+	font-size: 50px;
+	margin: 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+}
+
+@media only screen and (max-width: $medium) {
+	.poem-inner_wrapper{
+		padding: 20px 10px;
+	}
+}

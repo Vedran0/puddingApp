@@ -2,7 +2,7 @@
 	<div class="side_notification-outer_wrapper closed hidden">
 		<div class="side_notification-inner_wrapper">
 			<div class= "side_notification-opener">
-				<%= image_tag 'calendar_items/calendar.svg', class: "side_notification-icon" %>
+				<%= image_tag 'christmas_items/calendar.svg', class: "side_notification-icon" %>
 				<span><%= Date.today.day-current_pudding.calendar_number.numbers_drawn.size %></span>
 			</div>
 			<div class="side_notification-link">
@@ -13,11 +13,26 @@
 		</div>
 	</div>
 
+<% elsif !current_pudding.setting.christmas_song_solved && current_pudding.calendar_number.numbers_drawn.size > 23 && !current_page?(compose_path) %>
+	<div class="side_notification-outer_wrapper closed hidden">
+		<div class="side_notification-inner_wrapper">
+			<div class= "side_notification-opener">
+				<%= image_tag 'christmas_items/poem.svg', class: "side_notification-icon" %>
+				<span>POEM</span>
+			</div>
+			<div class="side_notification-link">
+				<%= link_to compose_path do %>
+					<span>Compose a christmas poem with your items!</span>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
 <% elsif !current_pudding.setting.snow_switch && !current_page?(settings_path) %>
 	<div class="side_notification-outer_wrapper closed hidden">
 		<div class="side_notification-inner_wrapper">
 			<div class= "side_notification-opener">
-				<%= image_tag 'calendar_items/5.svg', class: "side_notification-icon" %>
+				<%= image_tag 'christmas_items/4.svg', class: "side_notification-icon" %>
 				<span>SNOW</span>
 			</div>
 			<div class="side_notification-link">
@@ -28,6 +43,7 @@
 		</div>
 	</div>
 <% end %>
+
 <script>
 	setTimeout(function(){
 		$(".side_notification-outer_wrapper").removeClass("hidden");
