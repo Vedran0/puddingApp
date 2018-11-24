@@ -54,6 +54,14 @@ class Pudding < ActiveRecord::Base
     sum
   end
 
+  def count_numbers_drawn
+    if calendar_number
+      calendar_number.numbers_drawn.size
+    else
+      0
+    end
+  end
+
   def total_points_status
     total_points >= Pudding.where.not(id: id).first.total_points ? "winning" : "losing"
   end
