@@ -147,13 +147,13 @@
 #                 <p>Happy Birthday, my pudding!</p>")
 # puts "Patch Note created"
 
-PatchNote.create(version: "Christmas 2018 edition",
-                description: "<p>It's the moooost wonderful time of our app!</p>
-                <p>Later than last year but i promise it's more awesome this year.</p>
-                <p>★ In this patch i changed... well... <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Everything'>everything</a> as expected :)</p>
-                <p>Have a merry Christmas my <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Pudding'>pudding</a></p>
-                <p>And remember: <a class='in_text-link' target='_blank' href='https://www.youtube.com/watch?v=yXQViqx6GMY'>All i want for Christmas is youuuuu!</a> :*</p>")
-puts "Patch Note created"
+# PatchNote.create(version: "Christmas 2018 edition",
+#                 description: "<p>It's the moooost wonderful time of our app!</p>
+#                 <p>Later than last year but i promise it's more awesome this year.</p>
+#                 <p>★ In this patch i changed... well... <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Everything'>everything</a> as expected :)</p>
+#                 <p>Have a merry Christmas my <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Pudding'>pudding</a></p>
+#                 <p>And remember: <a class='in_text-link' target='_blank' href='https://www.youtube.com/watch?v=yXQViqx6GMY'>All i want for Christmas is youuuuu!</a> :*</p>")
+# puts "Patch Note created"
 
 
 =begin
