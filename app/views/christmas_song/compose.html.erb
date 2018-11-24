@@ -109,8 +109,14 @@
 		</div>
 	</div>
 
+	
 	<div class="icons_set-wrapper calendar">
 		<div class="icons_set-inner_wrapper">
+			<div class="icons_set-slider_button-wrapper">
+				<div class="icons_set-slider_button icons_set-closed">
+					<%= image_tag "icons/arrow-right.svg", width: 20 %>
+				</div>
+			</div>
 			<% @calendar_numbers.numbers_drawn.each_with_index do |item, index| %>
 		        <div class="compose_item-wrapper">
 		            <div class="compose_item-inner_wrapper" data-id=<%= item %>>
@@ -120,7 +126,9 @@
 		    <% end %>
 		</div>
 	</div>
+
 </div>
+<div class="button button-blue what_is_this-button">What!?</div>
 
 <script>
 	$(".compose_item").on("click", function(){
@@ -134,6 +142,7 @@
 			$(".compose_item-inner_wrapper[data-id='"+id+"']").append($detached);
 		}
 	})
+
 	$("#new_christmas_song").submit(function(e){
 		if($(".icon-placeholder.empty").length < 1){
 			var sequence = [];
@@ -144,5 +153,29 @@
 		}else{
 			e.preventDefault();
 		}
+	})
+
+	$(".icons_set-slider_button").on("click", function(){
+		$(this).toggleClass("icons_set-closed");
+		var height = $(".icons_set-wrapper").height()-35;
+		if($(this).hasClass("icons_set-closed")){
+			$(".icons_set-wrapper").css({
+				"transform": "translateY("+height+"px)",
+			})
+			$(".what_is_this-button").removeClass("move_away").addClass("move_in");
+		}else{
+			$(".icons_set-wrapper").css({
+				"transform": "translateY(0)"
+			})
+			$(".what_is_this-button").addClass("move_away").removeClass("move_in");
+		}
+	})
+
+	$(function(){
+		var height = $(".icons_set-wrapper").height();
+		$(".icons_set-wrapper").css({
+				"transform": "translateY("+(height-35)+"px)",
+		})
+		$("body").css({"padding-bottom": height+30+"px"});
 	})
 </script>
