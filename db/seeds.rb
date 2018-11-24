@@ -134,22 +134,27 @@
 #                 <p>★ Added <a class='in_text-link' href='/issues'>Issue Reporting</a> so we can record our problems with app or suggestions. I want to collect all the problems and suggestions so i can resolve it all in upcoming patch.</p>")
 # puts "Patch Note created"
 
-PatchNote.create(version: "version 1.11.27",
-                description: "<p>Happy Birthday, PuddingApp!!</p>
-                <p>Can you believe it? A whole year have passed.</p>
-                <p>★ It's MOBILEEEE!! - The app is adjusted to fit your favorite device.</p>
-                <p>★ Quitted Tasting Center but not drinking with you.</p>
-                <p>★ Added a few new <a class='in_text-link' href='/settings'>Backgrounds</a> and one is inspired by one of your shirts :)</p>
-                <p>★ Finally fixed <a class='in_text-link' href='/notes'>Notes</a> ordering!</p>
-                <p>★ You have to draw song of the day now, because... why not?</p>
-                <p>★ <a class='in_text-link' href='/visited-places'>Places</a> have been added to track our traveling adventures.</p>
-                <p>★ There are many more changes but you will have to discover them by yourself.</p>
-                <p>Happy Birthday, my pudding!</p>")
+# PatchNote.create(version: "version 1.11.27",
+#                 description: "<p>Happy Birthday, PuddingApp!!</p>
+#                 <p>Can you believe it? A whole year have passed.</p>
+#                 <p>★ It's MOBILEEEE!! - The app is adjusted to fit your favorite device.</p>
+#                 <p>★ Quitted Tasting Center but not drinking with you.</p>
+#                 <p>★ Added a few new <a class='in_text-link' href='/settings'>Backgrounds</a> and one is inspired by one of your shirts :)</p>
+#                 <p>★ Finally fixed <a class='in_text-link' href='/notes'>Notes</a> ordering!</p>
+#                 <p>★ You have to draw song of the day now, because... why not?</p>
+#                 <p>★ <a class='in_text-link' href='/visited-places'>Places</a> have been added to track our traveling adventures.</p>
+#                 <p>★ There are many more changes but you will have to discover them by yourself.</p>
+#                 <p>Happy Birthday, my pudding!</p>")
+# puts "Patch Note created"
+
+PatchNote.create(version: "Christmas 2018 edition",
+                description: "<p>It's the moooost wonderful time of our app!</p>
+                <p>Later than last year but i promise it's more awesome this year.</p>
+                <p>★ In this patch i changed... well... <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Everything'>everything</a> as expected :)</p>
+                <p>Have a merry Christmas my <a class='in_text-link' target='_blank' href='https://en.wikipedia.org/wiki/Pudding'>pudding</a></p>
+                <p>And remember: <a class='in_text-link' target='_blank' href='https://www.youtube.com/watch?v=yXQViqx6GMY'>All i want for Christmas is youuuuu!</a> :*</p>")
 puts "Patch Note created"
 
+
 =begin
-- places
-- fixed ordering notes
-- draw song of the day
-- 
 =end
