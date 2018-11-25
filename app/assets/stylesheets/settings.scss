@@ -25,3 +25,39 @@
 .settings-text{
   background-color: #fcf59b;
 }
+
+.other_pudding_settings-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.other_pudding_settings{
+  width: 100px;
+  height: 100px;
+}
+
+.other_background{
+  background-size: 100px;
+  border-radius: 10px;
+}
+
+.other_text{
+  background-color: #fcf59b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.other_pudding_setting-outer_wrapper{
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: $white;
+}
+.other_pudding_setting-inner_wrapper{
+  padding: 5px;
+  border-radius: 10px;
+  border: dashed 2px $green;
+}
