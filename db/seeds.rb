@@ -1,7 +1,7 @@
 # Pudding.create(name: "Vedran", email: "vedranmijatovic0@gmail.com", password: "password1234")
 # Pudding.create(name: "Elizabeta", email: "el.antunovic0@gmail.com", password: "password1234")
 # puts "Pudding created"
-
+ 
 # Pudding.all.each do |pudding|
 #   Setting.create(pudding_id: pudding.id)
 # end
@@ -43,11 +43,11 @@
 #                 path_name: "settings",
 #                 date_available: DateTime.new(2017, 9, 29, 0, 0, 0))
 # puts "Questions created"
-
+ 
 # Question.all do |question|
 #   Answered.create(pudding_id: Pudding.first, question_id: question.id)
 # end
-
+ 
 # Song.create(artist: "Artista", name: "Nuttin A Go So", url: "https://www.youtube.com/watch?v=0TnVU-Q0-Xs")
 # Song.create(artist: "Artista", name: "November Rain", url: "https://www.youtube.com/watch?v=8SbUC-UaAxE")
 # Song.create(artist: "Artista", name: "Bum Bum Bum", url: "https://www.youtube.com/watch?v=llyiQ4I-mcQ")
@@ -68,15 +68,15 @@
 # Song.create(artist: "Artista", name: "Honey", url: "https://www.youtube.com/watch?v=753_mUwbOJ4")
 # Song.create(artist: "Artista", name: "Escape", url: "https://www.youtube.com/watch?v=TazHNpt6OTo")
 # puts "Songs created"
-
+ 
 # PatchNote.create(version: "version 1.0.0",
 #                 description: "<p>Wellcome to PuddingApp!!</p><p>Here you will be informed of all recent fixes, changes and new features of our small application.</p><p>Enjoy your stay :)</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.1.2",
 #                 description: "<p>Here are our new changes, i hope you like it!</p><p>★ New <a class='in_text-link' href='/tasting_center'>beer types</a> added: <i>Dark Beer</i> and <i>Red Beer</i> so we can drink them all!.</p><p>★ Now you can rewind time and see the song of any day you want in our JukeBox. The <a class='in_text-link' href='/time_travel'>time travel</a> is reaaaal!!</p><p>★ You love polka dot! You just don't know it yet. Try out new <a class='in_text-link' href='/settings'>background patterns</a> called \"Polka Dot\"</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.3.6",
 #                 description: "<p>Behold, the goodness of improvements!</p>
 #                 <p>★ Changed color of <a class='in_text-link' href='/500'>error text</a> on error pages.</p>
@@ -86,7 +86,7 @@
 #                 <p>★ Fixed <a class='in_text-link' href='/jukebox'>play random</a> button bug becouse bugs are mean, bugs are bad.</p>
 #                 <p>★ Added <a class='in_text-link' href='/settings'>madras pink</a> background pattern which will be available for limited time.</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.4.9",
 #                 description: "<p>Changes are GOOD!</p>
 #                 <p>★ Added new page for <a class='in_text-link' href='/holidays'>Holidays</a> so you don't miss them again.</p>
@@ -95,20 +95,20 @@
 #                 <p>★ Implemented <a class='in_text-link' href='/jukebox'>song of the day</a> counter becouse we are so curious about how many times Again was again.</p>
 #                 <p>★ And as you already saw \"madras pink\" background is removed as promised.</p>")
 # puts "Patch Note created"
-
+ 
 # Question.create(text: "Festival svih festivala?",
 #                 answer: "love festival",
 #                 resource: "holidays",
 #                 path_name: "holidays",
 #                 date_available: DateTime.new(2018, 1, 27, 0, 0, 0))
-
+ 
 # Holiday.create(name: "Rakunovo", message: "Sretno Rakunovooo!!", date: Date.new.change(year: 2000, month: 2, day: 16))
 # Holiday.create(name: "Love Festival", message: "The power of love!", date: Date.new.change(year: 2000, month: 6, day: 6))
 # Holiday.create(name: "Redemption Day", message: "Redemption daaaay!", date: Date.new.change(year: 2000, month: 9, day: 26))
 # Holiday.create(name: "Story Telling", message: "Let me tell you a story...", date: Date.new.change(year: 2000, month: 10, day: 1))
 # Holiday.create(name: "Boom Boom Day", message: "I want you in my room...", date: Date.new.change(year: 2000, month: 11, day: 25))
 # Holiday.create(name: "GIF Day", message: "Send me some GIFs", date: Date.new.change(year: 2000, month: 12, day: 9))
-
+ 
 # PatchNote.create(version: "version 1.5.13",
 #                 description: "<p>Wait, what!? A new patch again!?</p>
 #                 <p>★ Finaly fixed info window positions!! Weeee.</p>
@@ -117,7 +117,7 @@
 #                 <p>★ Introducing new set of <a class='in_text-link' href='/settings'>backgrounds</a> and there is a green one in the set ;)</p>
 #                 <p>★ And navigation links are active links now.</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.7.15",
 #                 description: "<p>Something new, something wild...</p>
 #                 <p>★ Added autocomplete for match places to help you out.</p>
@@ -125,7 +125,7 @@
 #                 <p>★ Now we are shuffling songs twice before picking <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> to add more randomization.</p>
 #                 <p>★ And, yes, you saw well, <a class='in_text-link' href='/song-of-the-day'>Song of the Day</a> page is a thing now.</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.8.17",
 #                 description: "<p>We are prepareeed!!</p>
 #                 <p>In preparation for upcoming big patch i fixed some of the stuff.</p>
@@ -133,7 +133,7 @@
 #                 <p>★ Quick fixed main navigation to fit your mobile phone screen.</p>
 #                 <p>★ Added <a class='in_text-link' href='/issues'>Issue Reporting</a> so we can record our problems with app or suggestions. I want to collect all the problems and suggestions so i can resolve it all in upcoming patch.</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "version 1.11.27",
 #                 description: "<p>Happy Birthday, PuddingApp!!</p>
 #                 <p>Can you believe it? A whole year have passed.</p>
@@ -146,7 +146,7 @@
 #                 <p>★ There are many more changes but you will have to discover them by yourself.</p>
 #                 <p>Happy Birthday, my pudding!</p>")
 # puts "Patch Note created"
-
+ 
 # PatchNote.create(version: "Christmas 2018 edition",
 #                 description: "<p>It's the moooost wonderful time of our app!</p>
 #                 <p>Later than last year but i promise it's more awesome this year.</p>
