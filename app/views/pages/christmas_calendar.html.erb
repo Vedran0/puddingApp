@@ -46,10 +46,13 @@
                 </div>
             </div>
         <% end %>
-        <div class="row">
-            <%= link_to "Read poem", christmas_song_path, class: "button button-green" if current_pudding.setting.christmas_song_solved %>
-        </div>
     </div>
+</div>
+<div class="row" style="text-align: center;">
+    <% if current_pudding.setting.christmas_song_solved  %>
+        <%= link_to "Read poem", christmas_song_path, class: "button button-yellow" %>
+        <%= link_to "Compose Again", compose_path, class: "button button-yellow" %>
+    <% end %>
 </div>
 
 
