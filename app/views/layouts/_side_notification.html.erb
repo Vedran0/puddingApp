@@ -13,7 +13,7 @@
 		</div>
 	</div>
 
-<% elsif !current_pudding.setting.christmas_song_solved && current_pudding.count_numbers_drawn > 23 && !current_page?(compose_path) %>
+<% elsif !@settings.christmas_song_solved && current_pudding.count_numbers_drawn > 23 && !current_page?(compose_path) %>
 	<div class="side_notification-outer_wrapper closed hidden">
 		<div class="side_notification-inner_wrapper">
 			<div class= "side_notification-opener">
@@ -28,7 +28,22 @@
 		</div>
 	</div>
 
-<% elsif !current_pudding.setting.snow_switch && !current_page?(settings_path) %>
+<% elsif !@settings.christmas_lights_switch && !current_page?(settings_path) %>
+	<div class="side_notification-outer_wrapper closed hidden">
+		<div class="side_notification-inner_wrapper">
+			<div class= "side_notification-opener">
+				<%= image_tag 'christmas_items/20.svg', class: "side_notification-icon" %>
+				<span>LIGHTS</span>
+			</div>
+			<div class="side_notification-link">
+				<%= link_to settings_path do %>
+					<span>Turn ON the light switch!</span>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+<% elsif !@settings.snow_switch && !current_page?(settings_path) %>
 	<div class="side_notification-outer_wrapper closed hidden">
 		<div class="side_notification-inner_wrapper">
 			<div class= "side_notification-opener">

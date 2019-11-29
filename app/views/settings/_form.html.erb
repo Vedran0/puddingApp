@@ -4,11 +4,22 @@
   <div class="resource-filter-wrapper">
     <div class="resource-filter-element">
       <div class="resource-filter-button-label">Let it snow</div>
-        <div class="btn-switch">
-            <input type="radio" <%= "checked" if f.object.snow_switch %> id="yes" name="setting[snow_switch]" value="true" class="btn-switch__radio btn-switch__radio_yes" />
-            <input type="radio" <%= "checked" unless f.object.snow_switch %> id="no" name="setting[snow_switch]" value="false" class="btn-switch__radio btn-switch__radio_no" />
-            <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Yes</span></label>
-            <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">No</span></label>
+        <div class="resource-filter-element">
+          <div class="btn-switch">
+              <input type="radio" <%= "checked" if f.object.snow_switch %> id="yes" name="setting[snow_switch]" value="true" class="btn-switch__radio btn-switch__radio_yes" />
+              <input type="radio" <%= "checked" unless f.object.snow_switch %> id="no" name="setting[snow_switch]" value="false" class="btn-switch__radio btn-switch__radio_no" />
+              <label for="yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Yes</span></label>
+              <label for="no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">No</span></label>
+          </div>
+        </div>
+        <div class="resource-filter-element">
+          <div class="resource-filter-button-label">Light it up</div>
+          <div class="btn-switch">
+              <input type="radio" <%= "checked" if f.object.christmas_lights_switch %> id="lights-yes" name="setting[christmas_lights_switch]" value="true" class="btn-switch__radio btn-switch__radio_yes" />
+              <input type="radio" <%= "checked" unless f.object.christmas_lights_switch %> id="lights-no" name="setting[christmas_lights_switch]" value="false" class="btn-switch__radio btn-switch__radio_no" />
+              <label for="lights-yes" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Yes</span></label>
+              <label for="lights-no" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">No</span></label>
+          </div>
         </div>
       </div>
     </div>
@@ -111,6 +122,7 @@
   <div class="field">
     <%= f.hidden_field :post_it_color %>
     <%= f.hidden_field :background %>
+    <%= hidden_field_tag :return_to, value: @return_to %>
   </div>
 
   <div class="form-field-outer-wrapper">

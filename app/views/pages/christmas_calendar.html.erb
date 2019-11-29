@@ -12,7 +12,7 @@
 		<div class="calendar_item-wrapper">
 			<div class="calendar_item-inner_wrapper">
 				<%= image_tag "christmas_items/#{item}.svg", class: "calendar_item" %>
-				<% if Date.today.month > 11 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>
+				<% if Date.today.month > 10 && Date.today.day > index+@calendar_numbers.numbers_drawn.size %>
 					<%= link_to add_calendar_number_path(number: item), class: "calendar_number-wrapper calendar_number_#{item}", remote: true do %>
 						<p class="calendar_number drawable"><%= index+@calendar_numbers.numbers_drawn.size+1 %></p>
 					<% end %>

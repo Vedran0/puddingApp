@@ -8,7 +8,7 @@ class SettingsController < ApplicationController
 
   def update
     if @setting.update(setting_params)
-      redirect_to session.delete(:return_to), notice: 'Your settings are saved.'
+      redirect_to session.delete(:return_to) || root_path, notice: 'Your settings are saved.'
     else
       render :edit
     end
@@ -20,7 +20,7 @@ class SettingsController < ApplicationController
     end
 
     def setting_params
-      params.require(:setting).permit(:background, :post_it_color, :snow_switch)
+      params.require(:setting).permit(:background, :post_it_color, :snow_switch, :christmas_lights_switch)
     end
 
     def to_param

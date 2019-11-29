@@ -1,4 +1,5 @@
-<header class="header header-fixed">
+<header class="header-fixed">
   <%= render 'layouts/navigation' %>
   <%= render 'layouts/mobile_nav' %>
+	<%= render 'layouts/christmas_lights' if @settings.christmas_lights_switch %>
 </header>
